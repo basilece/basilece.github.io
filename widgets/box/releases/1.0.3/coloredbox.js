@@ -38,5 +38,5 @@
 		}
 	}
 
-	customElements.define("com-sap-basilece-coloredbox", ColoredBox);
+	customElements.define("com-basilece-coloredbox", ColoredBox);
 })();

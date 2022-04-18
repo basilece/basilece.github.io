@@ -49,5 +49,5 @@
 		}
 	}
 
-	customElements.define("com-sap-basilece-coloredbox-builder", ColoredBoxBuilderPanel);
+	customElements.define("com-basilece-coloredbox-builder", ColoredBoxBuilderPanel);
 })();

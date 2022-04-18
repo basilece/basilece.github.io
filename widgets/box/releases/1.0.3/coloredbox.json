@@ -1,5 +1,5 @@
 {
-	"id": "com.sap.baseilece.coloredbox",
+	"id": "com.basilece.coloredbox",
 	"version": "1.0.3",
 	"name": "Colored Box",
 	"description": "A colored box",
@@ -11,21 +11,21 @@
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-sap-basilece-coloredbox",
+			"tag": "com-basilece-coloredbox",
 			"url": "https://basilece.github.io/widgets/box/coloredbox.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		},
 		{
 			"kind": "styling",
-			"tag": "com-sap-basilece-coloredbox-styling",
+			"tag": "com-basilece-coloredbox-styling",
 			"url": "https://basilece.github.io/widgets/box/coloredbox_styling.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		},
 		{
 			"kind": "builder",
-			"tag": "com-sap-basilece-coloredbox-builder",
+			"tag": "com-basilece-coloredbox-builder",
 			"url": "https://basilece.github.io/widgets/box/coloredbox_builder.js",
 			"integrity": "",
 			"ignoreIntegrity": true
