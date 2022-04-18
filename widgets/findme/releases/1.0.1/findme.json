@@ -32,10 +32,9 @@
 		}
 	],
 	"properties": {
-		"myText": {
-			"type": "string",
-			"description": "My Text Value",
-			"default": "This is the myText at first"
+		"dateVal": {
+			"type": "Date",
+			"description": "This is the selected date"
 		},
 		"width": {
 			"type": "integer",
@@ -47,22 +46,23 @@
 		}
 	},
 	"methods": {
-		"setText": {
-			"description": "Set the Text of the JS",
-			"parameters": [
-				{
-					"name": "newText",
-					"type": "string",
-					"description": "Now the text will be"
-				}
-			],
-			"body": "this.myText = newText;"
-		},
-		"getText": {
-			"returnType": "string",
-			"description": "Returns the my Text.",
-			"body": "return this.myText;"
+
+	"getDateVal": {
+		"returnType": "Date",
+		"description": "get the date. (start date if range selection is enabled)",
+		"parameters": [],
+		"body": "return this.dateVal;"
+},
+"setDateVal": {
+	"description": "set the date. (start date if range selection is enabled)",
+	"parameters": [
+		{
+			"name": "dv",
+			"type": "Date",
+			"description": "The new date"
 		}
+	],
+	"body": "this.dateVal = dv;"
 	},
 	"events": {
 		"onClick": {
