@@ -4,7 +4,7 @@
  "name": "Colored Box",
  "description": "A colored box",
  "newInstancePrefix": "ColoredBox",
- "icon": "https://www.sample.com/customwidgets/coloredbox/icon.png",
+ "icon": "https://basilece.github.io/widgets/box/icon.png",
  "vendor": "SAP",
  "eula": "",
  "license": "",
@@ -12,15 +12,14 @@
  {
  "kind": "main",
    "tag": "com-sap-sample-coloredbox",
- "url": "https://www.sample.com/customwidgets/coloredbox/
-coloredbox.js",
+ "url": "https://basilece.github.io/widgets/box/coloredbox.js",
  "integrity": "",
  "ignoreIntegrity": true
  },
  {
  "kind": "styling",
  "tag": "com-sap-sample-coloredbox-styling",
- "url": "https://www.sample.com/customwidgets/coloredbox/
+ "url": "https://basilece.github.io/widgets/box/
 coloredbox_styling.js",
  "integrity": "",
  "ignoreIntegrity": true
@@ -28,7 +27,7 @@ coloredbox_styling.js",
  {
  "kind": "builder",
  "tag": "com-sap-sample-coloredbox-builder",
- "url": "https://www.sample.com/customwidgets/coloredbox/
+ "url": "https://basilece.github.io/widgets/box/
 coloredbox_builder.js",
  "integrity": "",
  "ignoreIntegrity": true
