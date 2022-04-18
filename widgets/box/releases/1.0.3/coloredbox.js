@@ -38,5 +38,5 @@
 		}
 	}
 
-	customElements.define("com-basilece-coloredbox", ColoredBox);
+	customElements.define("basilece-coloredbox", ColoredBox);
 })();

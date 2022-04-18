@@ -49,5 +49,5 @@
 		}
 	}
 
-	customElements.define("com-basilece-coloredbox-builder", ColoredBoxBuilderPanel);
+	customElements.define("basilece-coloredbox-builder", ColoredBoxBuilderPanel);
 })();
