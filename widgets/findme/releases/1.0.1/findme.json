@@ -4,43 +4,38 @@
 	"name": "FindMe SAC Widget",
 	"description": "FindMe SAC Widget",
 	"newInstancePrefix": "FindMe SAC Widget",
-	"icon": "https://basilece.github.io/widgets/box/icon.png",
+	"icon": "https://basilece.github.io/widgets/findme/releases/1.0.1/icon.png",
 	"vendor": "basilece",
 	"eula": "",
 	"license": "",
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-sap-basilece-coloredbox",
-			"url": "https://basilece.github.io/widgets/box/coloredbox.js",
+			"tag": "basilece-findme",
+			"url": "https://basilece.github.io/widgets/findme/releases/1.0.1/findme.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		},
 		{
 			"kind": "styling",
-			"tag": "com-sap-basilece-coloredbox-styling",
-			"url": "https://basilece.github.io/widgets/box/coloredbox_styling.js",
+			"tag": "basilece-findme-styling",
+			"url": "https://basilece.github.io/widgets/findme/releases/1.0.1/findme_styling.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		},
 		{
 			"kind": "builder",
-			"tag": "com-sap-basilece-coloredbox-builder",
-			"url": "https://basilece.github.io/widgets/box/coloredbox_builder.js",
+			"tag": "basilece-findme-builder",
+			"url": "https://basilece.github.io/widgets/findme/releases/1.0.1/findme_builder.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
 	],
 	"properties": {
-		"color": {
+		"myText": {
 			"type": "string",
-			"description": "Background color",
-			"default": "red"
-		},
-		"opacity": {
-			"type": "number",
-			"description": "Opacity",
-			"default": 1
+			"description": "My Text Value",
+			"default": "This is the myText at first"
 		},
 		"width": {
 			"type": "integer",
@@ -52,26 +47,26 @@
 		}
 	},
 	"methods": {
-		"setColor": {
-			"description": "Sets the background color.",
+		"setText": {
+			"description": "Set the Text of the JS",
 			"parameters": [
 				{
-					"name": "newColor",
+					"name": "newText",
 					"type": "string",
-					"description": "The new background color"
+					"description": "Now the text will be"
 				}
 			],
-			"body": "this.color = newColor;"
+			"body": "this.myText = newText;"
 		},
-		"getColor": {
+		"getText": {
 			"returnType": "string",
-			"description": "Returns the background color.",
-			"body": "return this.color;"
+			"description": "Returns the my Text.",
+			"body": "return this.myText;"
 		}
 	},
 	"events": {
 		"onClick": {
-			"description": "Called when the user clicks the Colored Box."
+			"description": "Called when the user clicks the Widget."
 		}
 	}
 }

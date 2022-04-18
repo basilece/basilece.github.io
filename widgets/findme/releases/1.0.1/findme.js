@@ -12,7 +12,7 @@
 		</style>
 	`;
 
-	class ColoredBox extends HTMLElement {
+	class FindMe extends HTMLElement {
 		constructor() {
 			super();
 			let shadowRoot = this.attachShadow({mode: "open"});
@@ -29,8 +29,8 @@
 		}
 
 		onCustomWidgetAfterUpdate(changedProperties) {
-			if ("color" in changedProperties) {
-				this.style["background-color"] = changedProperties["color"];
+			if ("myText" in changedProperties) {
+				this.$value = changedProperties["myText"];
 			}
 			if ("opacity" in changedProperties) {
 				this.style["opacity"] = changedProperties["opacity"];
@@ -38,5 +38,5 @@
 		}
 	}
 
-	customElements.define("com-sap-basilece-coloredbox", ColoredBox);
+	customElements.define("basilece-findme", FindMe);
 })();

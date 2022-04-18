@@ -21,7 +21,7 @@
 		</style>
 	`;
 
-	class ColoredBoxBuilderPanel extends HTMLElement {
+	class FindMeBuilderPanel extends HTMLElement {
 		constructor() {
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
@@ -49,5 +49,5 @@
 		}
 	}
 
-	customElements.define("com-sap-basilece-coloredbox-builder", ColoredBoxBuilderPanel);
+	customElements.define("basilece-findme-builder", FindMeBuilderPanel);
 })();
