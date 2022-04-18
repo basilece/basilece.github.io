@@ -40,13 +40,6 @@
 			}));
 		}
 
-		set opacity(newOpacity) {
-			this._shadowRoot.getElementById("builder_opacity").value = newOpacity;
-		}
-
-		get opacity() {
-			return this._shadowRoot.getElementById("builder_opacity").value;
-		}
 	}
 
 	customElements.define("basilece-findme-builder", FindMeBuilderPanel);
