@@ -3,11 +3,11 @@
 	template.innerHTML = `
 		<form id="form">
 			<fieldset>
-				<legend>Colored Box Properties</legend>
+				<legend>Custom Properties</legend>
 				<table>
 					<tr>
-						<td>Opacity</td>
-						<td><input id="builder_opacity" type="text" size="5" maxlength="5"></td>
+						<td>Some Property</td>
+						<td><input id="builder_property" type="text" size="5" maxlength="5"></td>
 					</tr>
 				</table>
 				<input type="submit" style="display:none;">
@@ -34,7 +34,7 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							opacity: this.opacity
+							SomeProperty: this.SomeProperty
 						}
 					}
 			}));
