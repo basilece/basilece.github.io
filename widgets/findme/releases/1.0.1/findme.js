@@ -24,18 +24,35 @@
 			this._props = {};
 		}
 
-		onCustomWidgetBeforeUpdate(changedProperties) {
-			this._props = { ...this._props, ...changedProperties };
+		init(skipChildrenCheck) {
+				if (skipChildrenCheck !== true && this.children.length === 2) return; //constructor called during drag+drop
+				if (!this.querySelector("link")) {
+						this.appendChild(tmpl.content.cloneNode(true));
+				}
+
+				var ctor = new sap.m.DatePicker();
+
+				this.DP = new ctor ({
+						change: function () {
+								this.fireChanged();
+								this.dispatchEvent(new Event("onChange"));
+						}.bind(this)
+				});
+
+
+
+
+
+
 		}
 
-		onCustomWidgetAfterUpdate(changedProperties) {
-			if ("myText" in changedProperties) {
-				this.$value = changedProperties["myText"];
-			}
-			if ("opacity" in changedProperties) {
-				this.style["opacity"] = changedProperties["opacity"];
-			}
+
+		set dateVal(value) {
+				if (value == undefined || !this.DP) return;
+				if (typeof (value) === "string") value = new Date(value);
+				this.DP.setDateValue(value);
 		}
+
 	}
 
 	customElements.define("basilece-findme", FindMe);
