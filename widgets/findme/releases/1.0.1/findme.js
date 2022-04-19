@@ -29,8 +29,7 @@
 //			console.log(`${this._props["TextVal"]}`);
 //		}	
        
-
-        set TextVal(value) {
+        set TextVal(newText) {
            
            let request = new XMLHttpRequest();
 	       request.open("GET", "http://apilayer.net/api/validate?access_key=<acess_key>&vat_number=LU26375245");
