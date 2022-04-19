@@ -22,11 +22,11 @@
 				this.dispatchEvent(event);
 			});
 			this._props = {};
-			
-			var ctor = sap.m.input;
-			
-			this.IT = new ctor ().addStyleClass("w3-input") ;
-			 
+			console.log("We are here");
+//			var ctor = sap.m.input;
+//			
+//			this.IT = new ctor ().addStyleClass("w3-input") ;
+//			 
 			
 		}
 		 
@@ -35,9 +35,9 @@
 //			console.log(`${this._props["TextVal"]}`);
 //		}	
        
-        set TextVal(value) {
-	       this.IT.getValue(value);
-        }
+//        set TextVal(value) {
+//	       this.IT.getValue(value);
+//        }
         
 //       checkVAT(){
 //	       let request = new XMLHttpRequest();
