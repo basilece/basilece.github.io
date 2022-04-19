@@ -22,6 +22,12 @@
 				this.dispatchEvent(event);
 			});
 			this._props = {};
+			
+			var ctor = sap.m.input;
+			
+			this.IT = new ctor ().addStyleClass("w3-input") ;
+			 
+			
 		}
 		 
 //		onCustomWidgetBeforeUpdate(changedProperties) {
@@ -30,9 +36,7 @@
 //		}	
        
         set TextVal(value) {
-           if (value == undefined) return; 
-           value = "This is the value now";
-           return value;
+	       this.IT.getValue(value);
         }
         
 //       checkVAT(){
