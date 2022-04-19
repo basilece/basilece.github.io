@@ -15,21 +15,8 @@
 			"url": "https://basilece.github.io/widgets/findme/releases/1.0.1/findme.js",
 			"integrity": "",
 			"ignoreIntegrity": true
-		},
-		{
-			"kind": "styling",
-			"tag": "basilece-findme-styling",
-			"url": "https://basilece.github.io/widgets/findme/releases/1.0.1/findme_styling.js",
-			"integrity": "",
-			"ignoreIntegrity": true
-		},
-		{
-			"kind": "builder",
-			"tag": "basilece-findme-builder",
-			"url": "https://basilece.github.io/widgets/findme/releases/1.0.1/findme_builder.js",
-			"integrity": "",
-			"ignoreIntegrity": true
 		}
+
 	],
 	"properties": {
 		"TextVal": {
@@ -52,9 +39,9 @@
 		"returnType": "string",
 		"description": "Returning the Text",
 		"parameters": [],
-		"body": "return this.dateVal;"
+		"body": "return this.TextVal;"
 },
-"getTextVal": {
+"setTextVal": {
 	"description": "Set the text",
 	"parameters": [
 		{

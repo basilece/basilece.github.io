@@ -29,24 +29,12 @@
 				if (!this.querySelector("link")) {
 						this.appendChild(tmpl.content.cloneNode(true));
 				}
-
-				var ctor = new sap.m.Text();
-
-				this.myText = new ctor ()
-
-
-
-
-
+          var simple_text = new string;
 
 		}
 
+	  this.TextVal = "this is a sample text";
 
-		set TextVal(value) {
-				if (value == undefined || !this.myText) return;
-			
-				this.myText.setTextValue(value);
-		}
 
 	}
 
