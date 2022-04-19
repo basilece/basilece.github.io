@@ -24,10 +24,10 @@
 			this._props = {};
 		}
 		 
-		onCustomWidgetBeforeUpdate(changedProperties) {
-			this._props = { ...this._props, ...changedProperties };
-			console.log(`${this._props["TextVal"]}`);
-		}	
+//		onCustomWidgetBeforeUpdate(changedProperties) {
+//			this._props = { ...this._props, ...changedProperties };
+//			console.log(`${this._props["TextVal"]}`);
+//		}	
        
 
        
