@@ -29,8 +29,10 @@
 //			console.log(`${this._props["TextVal"]}`);
 //		}	
        
-        set TextVal(newText) {
-           
+        set TextVal(value) {
+           if (value == undefined) return; 
+           value = "This is the value now";
+           return value;
         }
         
 //       checkVAT(){
