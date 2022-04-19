@@ -29,11 +29,7 @@
 			console.log(`${this._props["TextVal"]}`);
 		}	
        
-        set TextVal(){
-	        return TextVal + " something more ";
-	        console.log(["I was there : ",TextVal]);
-	        
-       }
+
        
         
        checkVAT(){
