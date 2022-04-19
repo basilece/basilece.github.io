@@ -5,7 +5,7 @@
 		:host {
 			border-radius: 25px;
 			border-width: 4px;
-			border-color: black;
+			border-color: white;
 			border-style: solid;
 			display: block;
 		}
@@ -26,6 +26,7 @@
 		 
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
+			console.log(`${this._props["TextVal"]}`);
 		}	
        
         set TextVal(){
