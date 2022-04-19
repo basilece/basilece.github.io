@@ -27,8 +27,10 @@
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
 		}	
-
-		
+       
+        set TextVal(){
+	        return TextVal + " something more ";
+       }
 
 	}
 	customElements.define("basilece-findme", FindMe);
