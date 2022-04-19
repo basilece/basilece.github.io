@@ -32,6 +32,12 @@
 		onCustomWidgetAfterUpdate(changedProperties) {
 			
 			
+		}
+		
+		
+		set TextVal(newText){
+			
+			
 		}	
 
 	}

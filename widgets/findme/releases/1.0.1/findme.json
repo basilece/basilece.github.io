@@ -22,15 +22,8 @@
 		"TextVal": {
 			"type": "string",
 			"description": "This is the text"
-		},
-		"width": {
-			"type": "integer",
-			"default": 100
-		},
-		"height": {
-			"type": "integer",
-			"default": 100
 		}
+		
 	},
 
 	"methods": {
@@ -45,12 +38,12 @@
 	"description": "Set the text",
 	"parameters": [
 		{
-			"name": "txt",
+			"name": "newText",
 			"type": "string",
 			"description": "The new text"
 		}
 	],
-	"body": "this.TextVal = txt;"
+	"body": "this.TextVal = newText;"
 	}
 },
 	"events": {
