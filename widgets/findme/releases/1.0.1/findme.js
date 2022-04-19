@@ -24,23 +24,16 @@
 			this._props = {};
 		}
 
-		init(skipChildrenCheck) {
-				if (skipChildrenCheck !== true && this.children.length === 2) return; //constructor called during drag+drop
-				if (!this.querySelector("link")) {
-						this.appendChild(tmpl.content.cloneNode(true));
-				}
-          var simple_text = new string;
 
-		}
-  set TextVal(value) {
-		return "this is the text value";
-		//this is a comment to check update
-	}
-	
-	
-
+		onCustomWidgetBeforeUpdate(changedProperties) {
+			this._props = { ...this._props, ...changedProperties };
+		}	
+		
+		onCustomWidgetAfterUpdate(changedProperties) {
+			
+			
+		}	
 
 	}
-
 	customElements.define("basilece-findme", FindMe);
 })();

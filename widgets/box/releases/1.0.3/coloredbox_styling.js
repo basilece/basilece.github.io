@@ -35,7 +35,7 @@
 		}
 
 		set color(newColor) {
-			this._shadowRoot.getElementById("styling_color").value = newColor;
+			this._shadowRoot.getElementById("styling_color").value = "yellow";
 		}
 
 		get color() {
