@@ -32,8 +32,10 @@
           var simple_text = new string;
 
 		}
+  set TextVal(value) {
+		return "this is the text value";
+	}
 
-	  this.TextVal = "this is a sample text";
 
 
 	}
