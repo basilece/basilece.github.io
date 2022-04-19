@@ -35,8 +35,8 @@
 		}
 		
 		
-		set TextVal(newText){
-			
+		set TextVal(value){
+			value = newText;
 			
 		}	
 
