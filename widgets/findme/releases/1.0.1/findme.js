@@ -27,10 +27,7 @@
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
 		}	
-		
-		set TextVal(newText) {
-			 return "whatever";
-			}
+
 		
 
 	}
