@@ -21,7 +21,8 @@
 	"properties": {
 		"TextVal": {
 			"type": "string",
-			"description": "This is the text"
+			"description": "This is the text",
+			"default" : "This is the initial text"
 		}
 		
 	},
