@@ -44,11 +44,7 @@
 		         else{console.log("something went wrong with API")};
 	          }
 	       
-       }
-       
-       
-       
-	
+           
        }
 
 	}
