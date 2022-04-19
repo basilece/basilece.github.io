@@ -3,7 +3,7 @@
 	"version": "1.0.1",
 	"name": "FindMe SAC Widget",
 	"description": "FindMe SAC Widget",
-	"newInstancePrefix": "FindMe SAC Widget",
+	"newInstancePrefix": "Findme",
 	"icon": "https://basilece.github.io/widgets/findme/releases/1.0.1/icon.png",
 	"vendor": "basilece",
 	"eula": "",

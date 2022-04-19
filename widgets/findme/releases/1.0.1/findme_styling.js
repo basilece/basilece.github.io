@@ -37,3 +37,4 @@
 	}
 
 customElements.define("basilece-findme-styling", FindMeStylingPanel);
+})();

@@ -30,14 +30,9 @@
 						this.appendChild(tmpl.content.cloneNode(true));
 				}
 
-				var ctor = new sap.m.DatePicker();
+				var ctor = new sap.m.Text();
 
-				this.DP = new ctor ({
-						change: function () {
-								this.fireChanged();
-								this.dispatchEvent(new Event("onChange"));
-						}.bind(this)
-				});
+				this.myText = new ctor ()
 
 
 
@@ -47,10 +42,10 @@
 		}
 
 
-		set dateVal(value) {
-				if (value == undefined || !this.DP) return;
-				if (typeof (value) === "string") value = new Date(value);
-				this.DP.setDateValue(value);
+		set TextVal(value) {
+				if (value == undefined || !this.myText) return;
+			
+				this.myText.setTextValue(value);
 		}
 
 	}
