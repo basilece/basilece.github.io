@@ -42,6 +42,7 @@
 			             console.log(JSON.parse(request.response));
 		             }
 		         else{console.log("something went wrong with API")};
+		         TextVal =  request.status.toString;
 	          }
 	       
            
