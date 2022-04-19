@@ -34,19 +34,26 @@
 		"description": "Returning the Text",
 		"parameters": [],
 		"body": "return this.TextVal;"
-},
-"setTextVal": {
-	"description": "Set the text",
-	"parameters": [
-		{
-			"name": "newText",
-			"type": "string",
-			"description": "The new text"
+      },
+    "getVATCheck": {
+		"returnType": "string",
+		"description": "Execute the check",
+		"parameters": [],
+		"body": "return this.checkVAT;"
+      },
+      
+	"setTextVal": {
+		"description": "Set the text",
+		"parameters": [
+			{
+				"name": "newText",
+				"type": "string",
+				"description": "The new text"
+			}
+		],
+		"body": "this.TextVal = newText;"
 		}
-	],
-	"body": "this.TextVal = newText;"
-	}
-},
+	},
 	"events": {
 		"onClick": {
 			"description": "Called when the user clicks the Widget."
