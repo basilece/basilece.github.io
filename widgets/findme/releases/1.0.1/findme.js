@@ -22,7 +22,7 @@
 				this.dispatchEvent(event);
 			});
 			this._props = {};
-			console.log("We are here");
+			
 //			var ctor = sap.m.input;
 //			
 //			this.IT = new ctor ().addStyleClass("w3-input") ;
