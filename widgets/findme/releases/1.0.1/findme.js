@@ -29,7 +29,7 @@
 		}	
 		
 		set TextVal(newText) {
-			 return newText;
+			 return "whatever";
 			}
 		
 
