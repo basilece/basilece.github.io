@@ -32,9 +32,9 @@
 		}
 	],
 	"properties": {
-		"dateVal": {
-			"type": "Date",
-			"description": "This is the selected date"
+		"TextVal": {
+			"type": "string",
+			"description": "This is the text"
 		},
 		"width": {
 			"type": "integer",
@@ -48,22 +48,22 @@
 
 	"methods": {
 
-	"getDateVal": {
-		"returnType": "Date",
-		"description": "get the date. (start date if range selection is enabled)",
+	"getTextVal": {
+		"returnType": "string",
+		"description": "Returning the Text",
 		"parameters": [],
 		"body": "return this.dateVal;"
 },
-"setDateVal": {
-	"description": "set the date. (start date if range selection is enabled)",
+"getTextVal": {
+	"description": "Set the text",
 	"parameters": [
 		{
-			"name": "dv",
-			"type": "Date",
-			"description": "The new date"
+			"name": "txt",
+			"type": "string",
+			"description": "The new text"
 		}
 	],
-	"body": "this.dateVal = dv;"
+	"body": "this.TextVal = txt;"
 	}
 },
 	"events": {
