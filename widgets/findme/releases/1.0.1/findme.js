@@ -34,6 +34,26 @@
 	        console.log(["I was there : ",TextVal]);
 	        
        }
+       
+        
+       checkVAT(){
+	       let request = new XMLHttpRequest();
+	       request.open("GET", "http://apilayer.net/api/validate?access_key=6ede50e416101cbf766e3744ee6eda6d&vat_number=LU26375245");
+	       request.send();
+	       request.onload = () => {
+		         console.log(request);
+		         if (request.status === 200){
+			             console.log(JSON.parse(request.response));
+		             }
+		         else{console.log("something went wrong with API")};
+	          }
+	       
+       }
+       
+       
+       
+	
+       }
 
 	}
 	customElements.define("basilece-findme", FindMe);
