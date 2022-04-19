@@ -30,6 +30,8 @@
        
         set TextVal(){
 	        return TextVal + " something more ";
+	        console.log(["I was there : ",TextVal]);
+	        
        }
 
 	}
