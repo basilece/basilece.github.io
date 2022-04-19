@@ -34,12 +34,10 @@
 			
 		}
 		
+	   setTextVal(){
+		this.title = newText;
+	}
 		
-		set TextVal(value){
-			value = newText;
-			
-		}	
-
 	}
 	customElements.define("basilece-findme", FindMe);
 })();
