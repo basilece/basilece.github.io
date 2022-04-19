@@ -9,7 +9,6 @@
             this.init();
             this.checkForUpdates();
         }
-
         async checkForUpdates() {
             try {
                 const contribution = await (await fetch("https://widgets.nkappler.de/datepicker/releases/latest/datepicker.json")).json();

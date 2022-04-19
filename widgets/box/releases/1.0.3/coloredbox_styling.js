@@ -43,4 +43,5 @@
 		}
 	}
 
-customElements.define("basilece-coloredbox-styling", ColoredBoxStylingPanel);
+    customElements.define("basilece-coloredbox-styling", ColoredBoxStylingPanel); 
+});
