@@ -34,14 +34,8 @@
 		"description": "Returning the Text",
 		"parameters": [],
 		"body": "return this.TextVal;"
-      },
-    "getVATCheck": {
-		"returnType": "string",
-		"description": "Execute the check",
-		"parameters": [],
-		"body": "return this.checkVAT;"
-      },
-      
+      },     
+ 
 	"setTextVal": {
 		"description": "Set the text",
 		"parameters": [
