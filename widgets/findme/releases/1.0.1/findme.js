@@ -23,21 +23,17 @@
 			});
 			this._props = {};
 		}
-
-
+		 
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
 		}	
 		
-		onCustomWidgetAfterUpdate(changedProperties) {
-			
-			
-		}
+		set TextVal(newText) {
+			 return newText;
+			}
 		
-	   set TextVal(){
-		return newText;
-	  }
-		
+
 	}
 	customElements.define("basilece-findme", FindMe);
-})();
+
+});
