@@ -23,7 +23,7 @@
 		                    //this.firePress();
 		                    //this.dispatchEvent(new Event("onSubmit"));
 		                  }.bind(this)  })
-		                  
+		              
                	    this.IT.placeAt(this);
 
                   var ctor = sap.m.Button;
@@ -32,7 +32,7 @@
 		                    this.firePress();
 		                    this.dispatchEvent(new Event("onPress"));
 		                  }.bind(this)  })
-		            this.BT.text = "Validate";         
+		            this.BT["text"] = "Validate";      
                	    this.BT.placeAt(this);
             }
             
