@@ -1,7 +1,6 @@
 (function() {
 	let template = document.createElement("template");
-	template.innerHTML =  `<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/findme/releases/1.0.1/theme.css"/>`;
-
+    template.innerHTML = `<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/findme/releases/1.0.1/theme.css"/>`;
 	class DatePicker extends HTMLElement {
 		constructor() {
 			super();
