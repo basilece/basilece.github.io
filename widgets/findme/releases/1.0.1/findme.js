@@ -45,7 +45,7 @@
             
                checkVAT(VAT){
 				       let request = new XMLHttpRequest();
-				       request.open("GET", "http://apilayer.net/api/validate?access_key=379d15d2ece6c0c42bb57a1ce55423eb&vat_number=" + VAT);
+				       request.open("GET", "https://apilayer.net/api/validate?access_key=379d15d2ece6c0c42bb57a1ce55423eb&vat_number=" + VAT);
 				       request.send();
 				       request.onload = () => {
 					         console.log(request);
