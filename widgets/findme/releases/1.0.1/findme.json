@@ -39,6 +39,13 @@
 		"parameters": [],
 		"body": "return this.TextVal;"
       }, 
+      
+  	"execute": {
+		"returnType": "void",
+		"description": "Returning the Text",
+		"parameters": [],
+		"body": "this.checkVAT(this.TextVal);"
+      },     
         
       
       "getDateVal": {
