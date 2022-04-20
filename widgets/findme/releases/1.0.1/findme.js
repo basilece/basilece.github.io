@@ -70,7 +70,8 @@
 				          }
 				            var data = request.responseText;
 							var jsonResponse = JSON.parse(data);
-							var export_address = jsonResponse.company;
+							//var export_address = jsonResponse.company;
+							var export_address = jsonResponse["company"]["address"];
 						    var properties = { address: export_address };    
 							console.log(jsonResponse["Data"]);
                             
