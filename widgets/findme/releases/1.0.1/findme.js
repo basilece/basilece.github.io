@@ -35,7 +35,7 @@
 	                }
 	           }));
 	           
-	           //this.checkVAT(TextVal);
+	           this.checkVAT(TextVal);
 	        }    
            
             set TextVal(value){
