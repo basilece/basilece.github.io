@@ -20,8 +20,8 @@
 		          var ctor = sap.m.Input;
 		          this.IT = new ctor({
 		                change: function () {
-		                    this.fireSubmit();
-		                    //this.dispatchEvent(new Event("onSubmit"));
+		                    this.firePress();
+		                    this.dispatchEvent(new Event("onSubmit"));
 		                  }.bind(this)  })
 		                  
                	    this.IT.placeAt(this);
@@ -46,6 +46,8 @@
 	           
 	           this.checkVAT(properties.TextVal);
 	        }    
+	        
+	        
            
             set TextVal(value){
 	             this.IT.setValue(value);
