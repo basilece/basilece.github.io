@@ -18,28 +18,28 @@
                 this.appendChild(template.content.cloneNode(true));
                }
 		            var ctor = sap.m.Input;
-		          this.DP = new ctor({
+		          this.IT = new ctor({
 		                change: function () {
 		                    this.fireSubmit();
 		                    this.dispatchEvent(new Event("onSubmit"));
 		                  }.bind(this)  })
 		                  
-               	    this.DP.placeAt(this);
+               	    this.IT.placeAt(this);
             }
             
        		 fireSubmit() {
-	            var properties = { TextVal: this.DP.getValue() };            
+	            var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
 	                detail: {
 	                    properties: properties
 	                }
 	           }));
 	           
-	           this.checkVAT(this.DP.getValue());
+	           this.checkVAT(properties.TextVal);
 	        }    
            
             set TextVal(value){
-	             this.DP.setValue(value);
+	             this.IT.setValue(value);
             }
             
             
@@ -59,40 +59,6 @@
 				          return request.status.toString;
              }
 		
-		//Start new lines of code
-//		 init() {
-//            if (this.children.length === 2) return; //constructor called during drag+drop
-//            if (!this.querySelector("link")) {
-//                this.appendChild(template.content.cloneNode(true));
-//            }
-//            var ctor = sap.m.DatePicker;
-//            if (this._enablerange) { ctor = sap.m.DateRangeSelection; }
-//            this.DP = new ctor({
-//                change: function () {
-//                    this.fireChanged();
-//                    this.dispatchEvent(new Event("onChange"));
-//                }.bind(this)
-//            }).addStyleClass("datePicker");
-//            this.DP.placeAt(this);
-//        }
-//
-//		 fireChanged() {
-//            var properties = { dateVal: this.DP.getDateValue() };
-//            if (this._enablerange) { properties.secondDateVal = this.DP.getSecondDateValue(); }
-//            this.dispatchEvent(new CustomEvent("propertiesChanged", {
-//                detail: {
-//                    properties: properties
-//                }
-//            }));
-//        }
-//
-//        set dateVal(value) {
-//            if (value == undefined || !this.DP) return;
-//            if (typeof (value) === "string") value = new Date(value);
-//            this.DP.setDateValue(value);
-//        }
-        
-		//End of lines of code
 
 
 
