@@ -41,7 +41,7 @@
       }, 
       
   	"execute": {
-		"returnType": "void",
+		"returnType": "boolean",
 		"description": "Returning the Text",
 		"parameters": [],
 		"body": "this.checkVAT(this.TextVal);"
