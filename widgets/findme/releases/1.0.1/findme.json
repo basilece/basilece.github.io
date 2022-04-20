@@ -71,8 +71,8 @@
 		}
 	},
 	"events": {
-		"onChange": {
-			"description": "Called when the user clicks the Widget."
+		"onSubmit": {
+			"description": "Called when the user hit Enter"
 		}
 	}
 }
