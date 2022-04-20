@@ -28,12 +28,13 @@
 
                   var ctor = sap.m.Button;
                 		          this.BT = new ctor({
+					    text:"Validate",  
+					    width:"100px", 					
 		                press: function () {
 		                    this.firePress();
 		                    this.dispatchEvent(new Event("onPress"));
 		                  }.bind(this)  })
-                   // document.getElementById("BT").style.textAlign = "center";
-                   // document.getElementById("BT").textContent = "Validate";
+   
                	    this.BT.placeAt(this);
             }
             
