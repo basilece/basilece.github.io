@@ -23,6 +23,10 @@
 			"type": "string",
 			"description": "This is the text",
 			"default" : "This is the initial text"
+		},
+		"dateVal": {
+			"type": "Date",
+			"description": "This is the date"
 		}
 		
 	},
@@ -34,7 +38,25 @@
 		"description": "Returning the Text",
 		"parameters": [],
 		"body": "return this.TextVal;"
-      },     
+      }, 
+      
+      "getDateVal": {
+			"returnType": "Date",
+			"description": "get the date. (start date if range selection is enabled)",
+			"parameters": [],
+			"body": "return this.dateVal;"
+		},
+		"setDateVal": {
+			"description": "set the date. (start date if range selection is enabled)",
+			"parameters": [
+				{
+					"name": "dv",
+					"type": "Date",
+					"description": "The new date"
+				}
+			],
+			"body": "this.dateVal = dv;"
+		},    
  
 	"setTextVal": {
 		"description": "Set the text",
