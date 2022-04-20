@@ -21,7 +21,7 @@
 		          this.IT = new ctor({
 		                change: function () {
 		                    this.fireSubmit();
-		                    this.dispatchEvent(new Event("onSubmit"));
+		                    this.dispatchEvent(new Event("onChange"));
 		                  }.bind(this)  })
 		                  
                	    this.IT.placeAt(this);

@@ -71,8 +71,8 @@
 		}
 	},
 	"events": {
-		"onSubmit": {
-			"description": "Called when the user hit Enter"
+		"onChange": {
+			"description": "Called when the value is changed"
 		}
 	}
 }
