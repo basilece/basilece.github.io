@@ -20,8 +20,8 @@
 		          var ctor = sap.m.Input;
 		          this.IT = new ctor({
 		                change: function () {
-		                    this.firePress();
-		                    this.dispatchEvent(new Event("onSubmit"));
+		                    //this.firePress();
+		                    //this.dispatchEvent(new Event("onSubmit"));
 		                  }.bind(this)  })
 		                  
                	    this.IT.placeAt(this);
