@@ -18,16 +18,31 @@
             if (!this.querySelector("link")) {
                 this.appendChild(template.content.cloneNode(true));
             }
-               var ctor = sap.m.Input();
-               this.IT = new ctor().addStyleClass("w3-input");
+            var ctor = sap.m.DatePicker;
+            if (this._enablerange) { ctor = sap.m.DateRangeSelection; }
+            this.DP = new ctor({
+                change: function () {
+                    this.fireChanged();
+                    this.dispatchEvent(new Event("onChange"));
+                }.bind(this)
+            }).addStyleClass("datePicker");
+            this.DP.placeAt(this);
         }
 
+		 fireChanged() {
+            var properties = { dateVal: this.DP.getDateValue() };
+            if (this._enablerange) { properties.secondDateVal = this.DP.getSecondDateValue(); }
+            this.dispatchEvent(new CustomEvent("propertiesChanged", {
+                detail: {
+                    properties: properties
+                }
+            }));
+        }
 
-
-        set TextVal(value) {
-            if (value == undefined || !this.IT) return;
-            if (typeof (value) === "string") value = new String(value);
-            this.IT.setValue(value);
+        set dateVal(value) {
+            if (value == undefined || !this.DP) return;
+            if (typeof (value) === "string") value = new Date(value);
+            this.DP.setDateValue(value);
         }
         
 
