@@ -27,6 +27,11 @@
 		"dateVal": {
 			"type": "Date",
 			"description": "This is the date"
+		},
+		
+		"address": {
+			"type": "String",
+			"description": "This is the address"
 		}
 		
 	},
@@ -38,6 +43,13 @@
 		"description": "Returning the Text",
 		"parameters": [],
 		"body": "return this.TextVal;"
+      }, 
+      
+ 	"getAdress": {
+		"returnType": "string",
+		"description": "Returning address",
+		"parameters": [],
+		"body": "return this.address;"
       }, 
       
       

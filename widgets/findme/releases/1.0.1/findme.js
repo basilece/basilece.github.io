@@ -63,18 +63,20 @@
 				       request.onload = () => {
 					         console.log(request);
 					         if (request.status === 200){
-						            
-						             
-						             
+        
 					             }
 					         else{console.log("something went wrong with API")};
 					         
 				          }
-				            var data=request.responseText;
+				            var data = request.responseText;
 							var jsonResponse = JSON.parse(data);
+						    var properties = { address: this.jsonResponse.company };    
 							console.log(jsonResponse["Data"]);
-				           return request.status.toString;
+                            
+                            			           
              }
+             
+             
 		
 
 
