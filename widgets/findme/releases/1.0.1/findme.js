@@ -28,12 +28,11 @@
 			
 			//
 		}
-		
-		init(skipChildrenCheck){
-			if (skipChildrenCheck !== true && this.children.length === 2) return; //constructor called during drag+drop
-            if (!this.querySelector("link")) {
+
+		init(){
+			 if (this.children.length === 2) return; //constructor called during drag+drop
+             if (!this.querySelector("link")) {
                 this.appendChild(tmpl.content.cloneNode(true));
-            }
             
 			  var ctor = sap.m.Input();
 			  this.IT = new ctor().addStyleClass("w3-input");
