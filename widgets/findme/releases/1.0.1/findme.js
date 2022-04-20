@@ -32,8 +32,8 @@
 		                    this.firePress();
 		                    this.dispatchEvent(new Event("onPress"));
 		                  }.bind(this)  })
-                    document.getElementById("BT").style.textAlign = "center";
-                    document.getElementById("BT").textContent = "Validate";
+                   // document.getElementById("BT").style.textAlign = "center";
+                   // document.getElementById("BT").textContent = "Validate";
                	    this.BT.placeAt(this);
             }
             
