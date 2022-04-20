@@ -28,7 +28,7 @@
 
                   var ctor = sap.m.Button;
                 		          this.BT = new ctor({
-		                change: function () {
+		                press: function () {
 		                    this.firePress();
 		                    this.dispatchEvent(new Event("onPress"));
 		                  }.bind(this)  })
