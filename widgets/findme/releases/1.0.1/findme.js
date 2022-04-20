@@ -63,13 +63,14 @@
 				       request.onload = () => {
 					         console.log(request);
 					         if (request.status === 200){
-						             console.log(JSON.parse(request.response));
+						            
 						             
 						             
 					             }
 					         else{console.log("something went wrong with API")};
 					         
 				          }
+				           console.log(JSON.parse(request.response));
 				          var json = JSON.parse(request.responseText);
 						  var vatData = json.Data;
 				          return request.status.toString;
