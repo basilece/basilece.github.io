@@ -30,7 +30,7 @@
 		},
 		
 		"address": {
-			"type": "String",
+			"type": "string",
 			"description": "This is the address"
 		}
 		
