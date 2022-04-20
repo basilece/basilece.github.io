@@ -33,7 +33,7 @@
 		 init() {
             if (this.children.length === 2) return; //constructor called during drag+drop
             if (!this.querySelector("link")) {
-                this.appendChild(tmpl.content.cloneNode(true));
+                this.appendChild(template.content.cloneNode(true));
             }
             var ctor = sap.m.DatePicker;
             if (this._enablerange) { ctor = sap.m.DateRangeSelection; }
