@@ -30,7 +30,7 @@
 		}
 		
 		init(){
-			  var ctor = new sap.m.Input();
+			  var ctor = sap.m.Input();
 			  this.IT = new ctor().addStyleClass("w3-input");
 		}
 		
