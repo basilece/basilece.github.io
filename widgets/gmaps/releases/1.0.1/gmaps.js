@@ -32,7 +32,7 @@
 		                    this.firePress();
 		                    this.dispatchEvent(new Event("onPress"));
 		                  }.bind(this)  })
-		            this.BT.text("Validate");    
+		             
                	    this.BT.placeAt(this);
                	    
                	    
