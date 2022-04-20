@@ -70,10 +70,10 @@
 					         else{console.log("something went wrong with API")};
 					         
 				          }
-				           console.log(JSON.parse(request.response));
-				          var json = JSON.parse(request.responseText);
-						  var vatData = json.Data;
-				          return request.status.toString;
+				            var data=request.responseText;
+							var jsonResponse = JSON.parse(data);
+							console.log(jsonResponse["Data"]);
+				           return request.status.toString;
              }
 		
 
