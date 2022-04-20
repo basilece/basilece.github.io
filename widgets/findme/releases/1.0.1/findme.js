@@ -21,7 +21,7 @@
 		          this.IT = new ctor({
 		                change: function () {
 		                    this.fireSubmit();
-		                    this.dispatchEvent(new Event("onSubmit"));
+		                    //this.dispatchEvent(new Event("onSubmit"));
 		                  }.bind(this)  })
 		                  
                	    this.IT.placeAt(this);
@@ -30,7 +30,7 @@
                 		          this.BT = new ctor({
 		                change: function () {
 		                    this.firePress();
-		                    this.dispatchEvent(new Event("onSubmit"));
+		                    this.dispatchEvent(new Event("onClick"));
 		                  }.bind(this)  })
 		                  
                	    this.BT.placeAt(this);
