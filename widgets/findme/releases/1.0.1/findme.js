@@ -73,8 +73,8 @@
 							//var export_address = jsonResponse.company;
 							var export_address = jsonResponse["company"]["address"];
 						    var properties = { address: jsonResponse["company"]["address"],
-						                       company: jsonResponse["company"],
-						                       country: jsonResponse["country"][name],
+						                       company: jsonResponse["company"]["name"],
+						                       country: jsonResponse["country"]["name"],
 						                       isvalid: jsonResponse["valid"]
 						                       }; 
 						    
