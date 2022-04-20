@@ -1,7 +1,7 @@
 (function() {
 	let template = document.createElement("template");
     template.innerHTML = `<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/findme/releases/1.0.1/theme.css"/>`;
-	class DatePicker extends HTMLElement {
+	class Findme extends HTMLElement {
 		constructor() {
 			super();
 			this.init();
@@ -52,5 +52,5 @@
 
 	}
 
-	customElements.define("basilece-findme", DatePicker);
+	customElements.define("basilece-findme", Findme);
 })();
