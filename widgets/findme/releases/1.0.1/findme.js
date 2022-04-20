@@ -46,7 +46,21 @@
             this.DP.placeAt(this);
         }
 
-		
+		 fireChanged() {
+            var properties = { dateVal: this.DP.getDateValue() };
+            if (this._enablerange) { properties.secondDateVal = this.DP.getSecondDateValue(); }
+            this.dispatchEvent(new CustomEvent("propertiesChanged", {
+                detail: {
+                    properties: properties
+                }
+            }));
+        }
+
+        set dateVal(value) {
+            if (value == undefined || !this.DP) return;
+            if (typeof (value) === "string") value = new Date(value);
+            this.DP.setDateValue(value);
+        }
 		//End of lines of code
 
 
