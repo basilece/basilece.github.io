@@ -30,7 +30,7 @@
                 		          this.BT = new ctor({
 		                change: function () {
 		                    this.firePress();
-		                    this.dispatchEvent(new Event("onPress"));
+		                    this.dispatchEvent(new Event("press"));
 		                  }.bind(this)  })
 		                  
                	    this.BT.placeAt(this);
