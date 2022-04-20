@@ -72,7 +72,12 @@
 							var jsonResponse = JSON.parse(data);
 							//var export_address = jsonResponse.company;
 							var export_address = jsonResponse["company"]["address"];
-						    var properties = { address: jsonResponse["company"]["address"] }; 
+						    var properties = { address: jsonResponse["company"]["address"],
+						                       company: jsonResponse["company"],
+						                       country: jsonResponse["country"][name],
+						                       isvalid: jsonResponse["valid"]
+						                       }; 
+						    
 						    this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					                detail: {
 					                    properties: properties

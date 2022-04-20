@@ -32,7 +32,23 @@
 		"address": {
 			"type": "string",
 			"description": "This is the address"
-		}
+		},
+		
+			"company": {
+			"type": "string",
+			"description": "This is the company"
+		},
+		
+	       "isvalid": {
+			"type": "string",
+			"description": "If VAT is Valid"
+		},	
+		
+		 "country": {
+			"type": "string",
+			"description": "Country name"
+		}		
+		
 		
 	},
 
@@ -45,14 +61,36 @@
 		"body": "return this.TextVal;"
       }, 
       
- 	"getAdress": {
+ 	"getAddress": {
 		"returnType": "string",
 		"description": "Returning address",
 		"parameters": [],
 		"body": "return this.address;"
-      }, 
+      },
+
+
+ 	"getCompany": {
+		"returnType": "string",
+		"description": "Returning Company",
+		"parameters": [],
+		"body": "return this.company;"
+      },
       
+  	"isValid": {
+		"returnType": "string",
+		"description": "Check if valid",
+		"parameters": [],
+		"body": "return this.isvalid;"
+      },
       
+        
+  	"getCountry": {
+		"returnType": "string",
+		"description": "Get the country",
+		"parameters": [],
+		"body": "return this.country;"
+      },
+               
       "getDateVal": {
 			"returnType": "Date",
 			"description": "get the date. (start date if range selection is enabled)",
