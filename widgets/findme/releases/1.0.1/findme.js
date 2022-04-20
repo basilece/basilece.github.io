@@ -33,7 +33,7 @@
 		                    this.dispatchEvent(new Event("onSubmit"));
 		                  }.bind(this)  })
 		                  
-               	    this.IT.placeAt(this);
+               	    this.BT.placeAt(this);
             }
             
        		 firePress() {
