@@ -22,7 +22,17 @@
 				this.dispatchEvent(event);
 			});
 			this._props = {};
+			//			
+			var ctor = sap.m.Input();
+			this.IT = new ctor().addStyleClass("w3-input");
+			
+			//
 		}
+		
+		//Start new lines of code
+		
+		
+		//End of lines of code
 
 
 
