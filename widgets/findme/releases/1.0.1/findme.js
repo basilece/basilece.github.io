@@ -15,6 +15,7 @@
 	class Findme extends HTMLElement {
 		constructor() {
 			super();
+			this.init();
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			this.addEventListener("click", event => {
@@ -23,16 +24,28 @@
 			});
 			this._props = {};
 			//			
-	 
-			  var ctor = sap.m.DatePicker;
-			  this.IT = new ctor().addStyleClass("datePicker");
-		      this.IT.placeAt(this);
+
 			//
 		}
 
 		
 		//Start new lines of code
-		
+		 init() {
+            if (this.children.length === 2) return; //constructor called during drag+drop
+            if (!this.querySelector("link")) {
+                this.appendChild(tmpl.content.cloneNode(true));
+            }
+            var ctor = sap.m.DatePicker;
+            if (this._enablerange) { ctor = sap.m.DateRangeSelection; }
+            this.DP = new ctor({
+                change: function () {
+                    this.fireChanged();
+                    this.dispatchEvent(new Event("onChange"));
+                }.bind(this)
+            }).addStyleClass("datePicker");
+            this.DP.placeAt(this);
+        }
+
 		
 		//End of lines of code
 
