@@ -17,17 +17,17 @@
             if (!this.querySelector("link")) {
                 this.appendChild(template.content.cloneNode(true));
                }
-//		          var ctor = sap.m.Input;
-//		          this.IT = new ctor({
-//		                change: function () {
-//		                    this.fireSubmit();
-//		                    this.dispatchEvent(new Event("onSubmit"));
-//		                  }.bind(this)  })
-//		                  
-//               	    this.IT.placeAt(this);
+		          var ctor = sap.m.Input;
+		          this.IT = new ctor({
+		                change: function () {
+		                    this.fireSubmit();
+		                    this.dispatchEvent(new Event("onSubmit"));
+		                  }.bind(this)  })
+		                  
+               	    this.IT.placeAt(this);
 
                   var ctor = sap.m.Button;
-                		          this.IT = new ctor({
+                		          this.BT = new ctor({
 		                change: function () {
 		                    this.firePress();
 		                    this.dispatchEvent(new Event("onSubmit"));
