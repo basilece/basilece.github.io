@@ -39,6 +39,7 @@
 		"parameters": [],
 		"body": "return this.TextVal;"
       }, 
+        
       
       "getDateVal": {
 			"returnType": "Date",
