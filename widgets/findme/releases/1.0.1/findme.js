@@ -24,9 +24,9 @@
 			this._props = {};
 			//			
 	 
-			  this.IT = new sap.m.Input();
-			  this.IT.addStyleClass("w3-input");
-			
+			  this.IT = new sap.m.Datepicker();
+			  this.IT.addStyleClass("datePicker");
+		      this.IT.placeAt(this);
 			//
 		}
 
