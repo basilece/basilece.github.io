@@ -22,7 +22,7 @@
 		"TextVal": {
 			"type": "string",
 			"description": "This is the text",
-			"default" : "This is the initial text"
+			"default" : "Please enter VAT Number"
 		},
 		"dateVal": {
 			"type": "Date",
