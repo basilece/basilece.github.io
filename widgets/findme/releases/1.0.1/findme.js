@@ -15,6 +15,7 @@
 	class Findme extends HTMLElement {
 		constructor() {
 			super();
+			this.init();
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			this.addEventListener("click", event => {
@@ -23,10 +24,14 @@
 			});
 			this._props = {};
 			//			
-			var ctor = sap.m.Input();
-			this.IT = new ctor().addStyleClass("w3-input");
+		 
 			
 			//
+		}
+		
+		init(){
+			  var ctor = new sap.m.Input();
+			  this.IT = new ctor().addStyleClass("w3-input");
 		}
 		
 		//Start new lines of code
