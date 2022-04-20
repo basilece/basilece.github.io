@@ -24,8 +24,8 @@
 			this._props = {};
 			//			
 	 
-			  this.IT = new sap.m.Datepicker();
-			  this.IT.addStyleClass("datePicker");
+			  var ctor = sap.m.DatePicker;
+			  this.IT = new ctor().addStyleClass("datePicker");
 		      this.IT.placeAt(this);
 			//
 		}
