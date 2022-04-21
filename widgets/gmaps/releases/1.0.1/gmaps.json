@@ -12,7 +12,7 @@
 		{
 			"kind": "main",
 			"tag": "basilece-gmaps",
-			"url": "https://basilece.github.io/widgets/findme/releases/1.0.1/gmaps.js",
+			"url": "https://basilece.github.io/widgets/gmaps/releases/1.0.1/gmaps.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
