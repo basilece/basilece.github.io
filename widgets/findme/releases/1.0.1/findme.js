@@ -69,6 +69,7 @@
 					         
 				          }
 						  if (request.status === 200){
+						    var data = request.responseText;
 							var jsonResponse = JSON.parse(data);
 							
 							var export_address = jsonResponse["company"]["address"];
@@ -83,7 +84,7 @@
 					                    properties: properties
 					                }
 					           }))
-							} else { console.log("Something Wrong with API");} 
+							 } else {console.log("Something is wrong with the API");}
 						    
 							this.dispatchEvent(new Event("onChange"));
 							console.log(jsonResponse);
