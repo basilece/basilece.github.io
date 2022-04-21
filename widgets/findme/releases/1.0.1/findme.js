@@ -85,8 +85,8 @@
 					                }
 					           }))
 							 } else {
-								var data = request.responseText;
-								var jsonResponse = JSON.parse(data);
+								var errordata = request.responseText;
+								var jsonResponse = JSON.parse(errordata);
 								 console.log(["Something is wrong with the API :", jsonResponse["error"]["details"]["vat_number"]]);
 								var properties =  { address: "",
 													company: "",
