@@ -70,7 +70,7 @@
 				          }
 				            var data = request.responseText;
 							var jsonResponse = JSON.parse(data);
-							//var export_address = jsonResponse.company;
+							
 							var export_address = jsonResponse["company"]["address"];
 						    var properties = { address: jsonResponse["company"]["address"],
 						                       company: jsonResponse["company"]["name"],
@@ -82,8 +82,10 @@
 					                detail: {
 					                    properties: properties
 					                }
-					           }))   
-							console.log(jsonResponse["Data"]);
+					           })) 
+						    
+							this.dispatchEvent(new Event("onChange"));
+							console.log(jsonResponse);
                             
                             			           
              }

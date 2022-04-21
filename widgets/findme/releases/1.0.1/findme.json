@@ -92,10 +92,10 @@
       },
                
       "getDateVal": {
-			"returnType": "Date",
-			"description": "get the date. (start date if range selection is enabled)",
-			"parameters": [],
-			"body": "return this.dateVal;"
+		"returnType": "Date",
+		"description": "get the date. (start date if range selection is enabled)",
+		"parameters": [],
+		"body": "return this.dateVal;"	
 		},
 		"setDateVal": {
 			"description": "set the date. (start date if range selection is enabled)",
