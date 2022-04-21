@@ -84,7 +84,12 @@
 					                    properties: properties
 					                }
 					           }))
-							 } else {console.log("Something is wrong with the API");}
+							 } else {
+								var data = request.responseText;
+								var jsonResponse = JSON.parse(data);
+								 console.log(["Something is wrong with the API :", jsonResponse["error"]["details"]["vat_number"]]);
+								var properties = { isValid: "false"}
+								}
 						    
 							this.dispatchEvent(new Event("onChange"));
 							console.log(jsonResponse);
