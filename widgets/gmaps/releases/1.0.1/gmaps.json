@@ -22,7 +22,7 @@
 		"TextVal": {
 			"type": "string",
 			"description": "This is the address",
-			"default" : ""
+			"default" : "CHRISOHERI 5 MAROUSI  15126 ATHENS"
 		},
 		
 		"TextAdressLong": {

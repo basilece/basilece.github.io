@@ -17,7 +17,7 @@
             if (!this.querySelector("link")) {
                 this.appendChild(template.content.cloneNode(true));
                }
-			   var properties = { TextVal: "CHRISOHERI 5 MAROUSI  15126 ATHENS" };   
+			    
 		          
 		          var ctor = sap.m.Input;
 		          this.IT = new ctor({
