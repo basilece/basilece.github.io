@@ -48,7 +48,7 @@
 	                }
 	           }));
 	           
-	           //this.checkVAT(properties.TextVal);
+	           this.getGeocoding(properties.TextVal);
 	        }    
 	        
 	        
@@ -56,6 +56,31 @@
             set TextVal(value){
 	             this.IT.setValue(value);
             }
+
+
+			getGeocoding(addressText){
+				let request = new XMLHttpRequest();
+				       request.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address=" + addressText + "&key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ");
+				       request.send();
+				       request.onload = () => {
+					         console.log(request);
+					         if (request.status === 200){
+        
+					             }
+					         else{console.log("something went wrong with API")};
+					         
+				          }	
+						  if (request.status === 200){
+						    var data = request.responseText;
+							var jsonResponse = JSON.parse(data);
+							
+							
+							console.log(jsonResponse);
+                            
+
+
+			   			}
+					}
             
             
 	
