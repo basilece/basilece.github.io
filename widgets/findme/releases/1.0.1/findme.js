@@ -88,7 +88,11 @@
 								var data = request.responseText;
 								var jsonResponse = JSON.parse(data);
 								 console.log(["Something is wrong with the API :", jsonResponse["error"]["details"]["vat_number"]]);
-								var properties = { isValid: "false"}
+								var properties =  { address: "",
+													company: "",
+													country: "",
+													isvalid: "false"
+								}; 
 								}
 						    
 							this.dispatchEvent(new Event("onChange"));
