@@ -68,7 +68,7 @@
 					         else{console.log("something went wrong with API")};
 					         
 				          }
-				            var data = request.responseText;
+						  if (request.status === 200){
 							var jsonResponse = JSON.parse(data);
 							
 							var export_address = jsonResponse["company"]["address"];
@@ -82,7 +82,8 @@
 					                detail: {
 					                    properties: properties
 					                }
-					           })) 
+					           }))
+							} else { console.log("Something Wrong with API");} 
 						    
 							this.dispatchEvent(new Event("onChange"));
 							console.log(jsonResponse);
