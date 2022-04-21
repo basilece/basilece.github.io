@@ -2,7 +2,7 @@
 	let template = document.createElement("template");
     template.innerHTML = `<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.1/theme.css"/>`;
 	
-	class Findme extends HTMLElement {
+	class Gmaps extends HTMLElement {
 		constructor() {
 			super();
 			this.init();
@@ -64,5 +64,5 @@
 
 	}
 
-	customElements.define("basilece-findme", Findme);
+	customElements.define("basilece-gmaps", Gmaps);
 })();
