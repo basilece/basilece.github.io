@@ -389,7 +389,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					   zoom: 8,
 					   center: latlng
 					 }
-					 
+					 var mymap = document.getElementById('map');
 					 map = new google.maps.Map(document.getElementById('map'), mapOptions);
 					 
 				  
