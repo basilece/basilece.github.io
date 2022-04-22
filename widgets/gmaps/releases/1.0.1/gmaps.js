@@ -21,8 +21,10 @@
 		          
 		          var ctor = sap.m.Input;
 		          this.IT = new ctor({
+					    width : 100,
 		                change: function () {
-		                  }.bind(this)  })
+		                  }.bind(this) 
+						 })
 		                  
                	    this.IT.placeAt(this);
 				    
