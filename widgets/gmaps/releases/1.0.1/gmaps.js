@@ -6,8 +6,8 @@
 	  <title>Geocoding Service</title>
 	  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   
-	  <link rel="stylesheet" type="text/css" href="./style.css" />
-	  <script type="module" src="./index.js"></script>
+	  <link rel="stylesheet" type="text/css" href="./theme.css" />
+	  <script type="module" src="./gmaps.js"></script>
 	</head>
 	<body>
 	  <div id="map"></div>
