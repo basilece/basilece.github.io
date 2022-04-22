@@ -398,7 +398,7 @@
 				  }
 				  var mymap = document.getElementById('map'); 
 				  map = new google.maps.Map(document.getElementById('map'), mapOptions);
-				  this.append(map.content.cloneNode(true));
+				  this.append(mymap.content.cloneNode(true));
 				  
 			 }  
 
