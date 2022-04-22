@@ -25,7 +25,7 @@
 		                  }.bind(this)  })
 		                  
                	    this.IT.placeAt(this);
-			        myElement = document.querySelector("#IT");
+				    <div class="IT"></div>
 				
 
                   var ctor = sap.m.Button;
