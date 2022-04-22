@@ -336,8 +336,6 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 	class Gmaps extends HTMLElement {
 		constructor() {
 			super();
-			let shadowRoot = this.attachShadow({mode: "open"});
-			    shadowRoot.appendChild(template.content.cloneNode(true));
 			this.init();
 			this._props = {};
 			//			
@@ -379,12 +377,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
                	    this.BT.placeAt(this);
 					   
                	// Create the MAP 
-				 if(document.readyState === 'loading') {
-					document.addEventListener('DOMContentLoaded', afterLoaded);
-				} else {
-					//The DOMContentLoaded event has already fired. Just run the code.
-					this.afterLoaded();
-				}
+				 
 				   
 					 
 				  
@@ -392,7 +385,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
           	    
                	    
             }
-            afterLoaded() {
+               afterLoaded() {
 			       var geocoder;
 				   var map;
 				    var state = document.readyState;
@@ -407,6 +400,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 			}
             
        		 firePress() {
+			    this.afterLoaded();
 	            var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
 	                detail: {
