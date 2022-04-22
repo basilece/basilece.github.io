@@ -335,6 +335,8 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 	class Gmaps extends HTMLElement {
 		constructor() {
 			super();
+			let shadowRoot = this.attachShadow({mode: "open"});
+			    shadowRoot.appendChild(template.content.cloneNode(true));
 			this.init();
 			this._props = {};
 			//			
