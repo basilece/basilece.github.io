@@ -19,6 +19,8 @@
 	class Gmaps extends HTMLElement {
 		constructor() {
 			super();
+			let shadowRoot = this.attachShadow({mode: "open"});
+			shadowRoot.appendChild(template.content.cloneNode(true));
 			this.init();
 			this._props = {};
 			//			
