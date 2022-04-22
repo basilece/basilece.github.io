@@ -380,12 +380,13 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				   var map;
 				   
 				    geocoder = new google.maps.Geocoder();
-					// var latlng = new google.maps.LatLng(-34.397, 150.644);
-					// var mapOptions = {
-					//   zoom: 8,
-					 //  center: latlng
-					// }
-					// map = new google.maps.Map(document.getElementById('map'), mapOptions);
+					 var latlng = new google.maps.LatLng(-34.397, 150.644);
+					 var mapOptions = {
+					   zoom: 8,
+					   center: latlng
+					 }
+					 map = new google.maps.Map(document.getElementById('map'), mapOptions);
+					 map = new google.maps.Map()
 				  
                	    
                	    
