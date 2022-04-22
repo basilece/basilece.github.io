@@ -437,7 +437,7 @@
 							 
 						    var data = request.responseText;
 							var jsonResponse = JSON.parse(data);
-							if (jsonResponse["status" == 'OK']){
+							if (jsonResponse["status"] == 'OK'){
 							
 							var properties = { TextVal: jsonResponse.results[0].formatted_address,
 							                   TextAdressLat: jsonResponse.results[0].geometry.location.lng,
