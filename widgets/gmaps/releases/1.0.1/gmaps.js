@@ -376,7 +376,7 @@
 					   
                	// Create the MAP 
 				 
-				 document.addEventListener('DOMContentLoaded', generateMap());
+				
             }
 
 			
