@@ -379,29 +379,29 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					   
                	// Create the MAP 
 				 
-				   var geocoder;
-				   var map;
-				    var state = document.readyState;
-				    geocoder = new google.maps.Geocoder();
-					 var latlng = new google.maps.LatLng(-34.397, 150.644);
-					 var mapOptions = {
-					   zoom: 8,
-					   center: latlng
-					 }
-					 var mymap = document.getElementById('Gmaps');
-					 map = new google.maps.Map(document.getElementById('Gmaps'), mapOptions);
-
 
             }
 
 		
-               
+             generateMap(){
+				var geocoder;
+				var map;
+				 var state = document.readyState;
+				 geocoder = new google.maps.Geocoder();
+				  var latlng = new google.maps.LatLng(-34.397, 150.644);
+				  var mapOptions = {
+					zoom: 8,
+					center: latlng
+				  }
+				  var mymap = document.getElementById('Gmaps');
+				  map = new google.maps.Map(document.getElementById('Gmaps'), mapOptions);
+			 }  
 
 					 
 			
             
        		 firePress() {
-			   
+			    this.generateMap();
 	            var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
 	                detail: {
