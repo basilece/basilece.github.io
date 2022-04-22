@@ -1,16 +1,22 @@
 (function() {
 	let template = document.createElement("template");
     template.innerHTML = 
-	`<script
-	      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly">
-	</script>
-
-	<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.1/theme.css"/>
+	`<html>
+	<head>
+	  <title>Geocoding Service</title>
+	  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  
+	  <link rel="stylesheet" type="text/css" href="./style.css" />
+	  <script type="module" src="./index.js"></script>
+	</head>
 	<body>
-	   <div id="IT"> </div>
-	   <div id="BT"> </div>
-	   <div id="map" style="width: 320px; height: 480px;"></div>
-	</body>`;
+	  <div id="map"></div>
+	  <script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+		defer
+	  ></script>
+	</body>
+  </html>`;
 
 	
 	class Gmaps extends HTMLElement {
