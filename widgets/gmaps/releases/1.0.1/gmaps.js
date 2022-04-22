@@ -21,7 +21,7 @@
 		          
 		          var ctor = sap.m.Input;
 		          this.IT = new ctor({
-					    width : "300px" ,
+					    width : "500px" ,
 		                change: function () {
 		                  }.bind(this) 
 						 })
@@ -33,6 +33,7 @@
                   var ctor = sap.m.Button;
                 		          this.BT = new ctor({
 						width : "100px",
+						text  : "Search",
 		                press: function () {
 		                    this.firePress();
 		                    this.dispatchEvent(new Event("onPress"));
