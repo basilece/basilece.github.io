@@ -328,6 +328,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
     template.innerHTML =`
 	      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 	      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>
+		  <div id="map"></div> 
 	 `;
 
 	
