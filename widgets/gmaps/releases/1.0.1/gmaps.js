@@ -396,9 +396,9 @@
 					zoom: 8,
 					center: latlng
 				  }
-				  var mymap = document.getElementById('dmap'); 
-				  map = new google.maps.Map(document.getElementById('dmap'), mapOptions);
-				  this.append(dmap);
+				  var mymap = document.getElementById('map'); 
+				  map = new google.maps.Map(document.getElementById('map'), mapOptions);
+				  this.append(map);
 				  
 			 }  
 
