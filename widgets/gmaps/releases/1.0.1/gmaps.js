@@ -327,7 +327,8 @@
 
     template.innerHTML =`
 		  <div id="map">style="width: 320px; height: 480px;"></div>
-		  <div id="Gmaps>style="width: 320px; height: 480px;"></div>
+		  <div id="Gmaps" class="Gmaps">style="width: 320px; height: 480px;"></div>
+		  
 	 `;
 
 	
