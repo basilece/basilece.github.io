@@ -25,7 +25,7 @@
 		                  }.bind(this)  })
 		                  
                	    this.IT.placeAt(this);
-			        this.IT.width = "100px";
+			        myElement = document.querySelector("#IT");
 				
 
                   var ctor = sap.m.Button;
