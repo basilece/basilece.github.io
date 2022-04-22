@@ -1,14 +1,12 @@
 (function() {
 	let template = document.createElement("template");
     template.innerHTML = 
-	`<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.1/theme.css"/>
+	`<script
+	      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly"defer>
+	</script>
+	<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.1/theme.css"/>
 	<body onload="initialize()">
 	   <div id="map" style="width: 320px; height: 480px;"></div>
-	   
-	   <div>
-		<input id="address" type="textbox" value="Sydney, NSW">
-		<input type="button" value="Encode" onclick="codeAddress()">
-	   </div>
 	</body>`;
 
 	
