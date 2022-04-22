@@ -338,7 +338,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 			super();
 			this.init();
 			this._props = {};
-			this.afterLoaded();
+			
 			//			
 
 			//
@@ -379,13 +379,12 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					   
                	// Create the MAP 
 				 
-				   
-					 
-				  
-               	    
-          	    
-               	    
+		  	    
             }
+
+			onCustomWidgetAfterUpdate(changedProperties) {
+				this.afterLoaded();
+			}
                afterLoaded() {
 			       var geocoder;
 				   var map;
