@@ -1,9 +1,9 @@
 {
 	"id": "basilece.gmaps",
 	"version": "1.0.1",
-	"name": "Maps Pricker SAC Widget",
-	"description": "Google Maps Geolocation Picker",
-	"newInstancePrefix": "Gmaps",
+	"name": "Google API Geocoding",
+	"description": "Google API Geocoding",
+	"newInstancePrefix": "Geocode",
 	"icon": "https://basilece.github.io/widgets/gmaps/releases/1.0.1/icon.png",
 	"vendor": "basilece",
 	"eula": "",
@@ -22,7 +22,7 @@
 		"TextVal": {
 			"type": "string",
 			"description": "This is the address",
-			"default" : "CHRISOCHERI 5 MAROUSI  15126 ATHENS"
+			"default" : "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA"
 		},
 		
 		"TextAdressLong": {

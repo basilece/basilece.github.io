@@ -25,6 +25,9 @@
 		                  }.bind(this)  })
 		                  
                	    this.IT.placeAt(this);
+			        this.IT.width = "100px";
+				var myITElement = document.querySelector("#IT");
+				myITElement.style.backgroundColor = "#D93600";
 
                   var ctor = sap.m.Button;
                 		          this.BT = new ctor({
