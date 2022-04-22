@@ -381,9 +381,7 @@
 				
             }
 
-			
-
-			
+		
 
 		
              generateMap(){
@@ -396,7 +394,7 @@
 					zoom: 8,
 					center: latlng
 				  }
-				  var mymap = document.getElementById("map");
+				  var mymap = document.getElementById("map"); 
 				  map = new google.maps.Map(document.getElementById("maps"), mapOptions);
 				  
 			 }  
