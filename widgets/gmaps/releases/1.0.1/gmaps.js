@@ -10,8 +10,6 @@
 	class Gmaps extends HTMLElement {
 		constructor() {
 			super();
-			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(template.content.cloneNode(true));
 			this.init();
 			this._props = {};
 			//			
@@ -21,9 +19,9 @@
 		
 		 init() {
             if (this.children.length === 2) return; //constructor called during drag+drop
-         
-				//let shadowRoot = this.attachShadow({mode: "open"});
-			    //shadowRoot.appendChild(template.content.cloneNode(true));
+            if (!this.querySelector("link")) {
+                this.appendChild(template.content.cloneNode(true));
+               }
              
 			    
 		        //Creat e the Input (for Address)  
