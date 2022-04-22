@@ -327,6 +327,7 @@
 
     template.innerHTML =`
 		  <div id="map">style="width: 320px; height: 480px;"></div>
+		  <div id="Gmaps class ="Gmaps">style="width: 320px; height: 480px;"></div>
 	 `;
 
 	
@@ -394,8 +395,8 @@
 					zoom: 8,
 					center: latlng
 				  }
-				  var mymap = document.getElementById('map');
-				  map = new google.maps.Map(document.getElementById('map'), mapOptions);
+				  var mymap = document.getElementById('Gmaps');
+				  map = new google.maps.Map(document.getElementById('Gmaps'), mapOptions);
 				  
 			 }  
 
