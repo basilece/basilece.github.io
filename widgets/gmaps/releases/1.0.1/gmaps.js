@@ -394,7 +394,7 @@
 					center: latlng
 				  }
 				  var mymap = document.getElementById('divmap'); 
-				  mymap.innerHTML =`height : 100px`;
+				  mymap.height = 400;
 				  map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 				  this.append(divmap);
 				  
