@@ -434,8 +434,10 @@
 					         
 				          }	
 						  if (request.status === 200){
+							 
 						    var data = request.responseText;
 							var jsonResponse = JSON.parse(data);
+							if (jsonResponse["status" == 'OK']){
 							
 							var properties = { TextVal: jsonResponse.results[0].formatted_address,
 							                   TextAdressLat: jsonResponse.results[0].geometry.location.lng,
@@ -451,6 +453,7 @@
 							this.dispatchEvent(new Event("onChange"));
 
 							console.log(jsonResponse);
+										}
                             
 
 
