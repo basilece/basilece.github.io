@@ -85,9 +85,9 @@
 						    var data = request.responseText;
 							var jsonResponse = JSON.parse(data);
 							
-							var properties = { TextVal: jsonResponse["results"]["formatted_address"],
-							                   TextAdressLong: jsonResponse["results"]["geometry"]["location"]["lng"],
-										       TextAdressLat: jsonResponse["results"]["geometry"]["location"]["lat"]  
+							var properties = { TextVal: jsonResponse.results[0].formatted_address,
+							                   TextAdressLong: jsonResponse.results[0].geometry.location.lng,
+										       TextAdressLong: jsonResponse.results[0].geometry.location.lat
 											};  
 							this.dispatchEvent(new Event("onChange"));
 
