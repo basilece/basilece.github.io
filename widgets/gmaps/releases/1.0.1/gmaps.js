@@ -1,9 +1,10 @@
 (function() {
 	let template = document.createElement("template");
 
-    template.innerHTML =
-	`<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>`;
+    template.innerHTML =`
+	      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>
+	 `;
 
 	
 	class Gmaps extends HTMLElement {
@@ -19,7 +20,7 @@
 		 init() {
             if (this.children.length === 2) return; //constructor called during drag+drop
          
-				//let shadowRoot = this.attachShadow({mode: "open"});
+				let shadowRoot = this.attachShadow({mode: "open"});
 			    shadowRoot.appendChild(template.content.cloneNode(true));
              
 			    
