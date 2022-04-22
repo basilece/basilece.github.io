@@ -379,8 +379,21 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
                	    this.BT.placeAt(this);
 					   
                	// Create the MAP 
+				 if(document.readyState === 'loading') {
+					document.addEventListener('DOMContentLoaded', afterLoaded);
+				} else {
+					//The DOMContentLoaded event has already fired. Just run the code.
+					afterLoaded();
+				}
 				   
-				   var geocoder;
+					 
+				  
+               	    
+          	    
+               	    
+            }
+            afterLoaded() {
+			       var geocoder;
 				   var map;
 				    var state = document.readyState;
 				    geocoder = new google.maps.Geocoder();
@@ -391,12 +404,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					 }
 					 var mymap = document.getElementById('map');
 					 map = new google.maps.Map(document.getElementById('map'), mapOptions);
-					 
-				  
-               	    
-               	    
-               	    
-            }
+			}
             
        		 firePress() {
 	            var properties = { TextVal: this.IT.getValue() };            
