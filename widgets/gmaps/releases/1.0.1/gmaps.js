@@ -63,10 +63,10 @@
 					   
                	// Create the MAP 
 				   
-				   //var geocoder;
-				   //var map;
-				   //
-				   // geocoder = new google.maps.Geocoder();
+				   var geocoder;
+				   var map;
+				   
+				    geocoder = new google.maps.Geocoder();
 					// var latlng = new google.maps.LatLng(-34.397, 150.644);
 					// var mapOptions = {
 					//   zoom: 8,
