@@ -34,6 +34,7 @@
                 		          this.BT = new ctor({
 						width : "100px",
 						text  : "Search",
+						type : sap.m.ButtonType.Emphasized,
 		                press: function () {
 		                    this.firePress();
 		                    this.dispatchEvent(new Event("onPress"));
