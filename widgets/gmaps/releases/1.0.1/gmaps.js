@@ -396,7 +396,7 @@
 				  }
 				  var mymap = document.getElementById('map');
 				  map = new google.maps.Map(document.getElementById('map'), mapOptions);
-				  map.getmap();
+				  
 			 }  
 
 					 
