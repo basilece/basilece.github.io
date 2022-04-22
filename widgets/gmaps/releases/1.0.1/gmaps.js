@@ -19,7 +19,7 @@
 		 init() {
             if (this.children.length === 2) return; //constructor called during drag+drop
          
-				let shadowRoot = this.attachShadow({mode: "open"});
+				//let shadowRoot = this.attachShadow({mode: "open"});
 			    shadowRoot.appendChild(template.content.cloneNode(true));
              
 			    
