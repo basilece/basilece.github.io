@@ -89,11 +89,7 @@
 							                   //TextAdressLong: jsonResponse["results"]["geometry"]["location"]["lng"],
 										       //TextAdressLat: jsonResponse["results"]["geometry"]["location"]["lat"]  
 											};  
-							this.dispatchEvent(new CustomEvent("propertiesChanged", {
-									detail: {
-											properties: properties
-											}
-							}))
+							this.dispatchEvent(new Event("onChange"));
 
 							console.log(jsonResponse);
                             
