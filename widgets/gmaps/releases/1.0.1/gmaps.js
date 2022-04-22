@@ -4,23 +4,12 @@
     template.innerHTML =`
 	      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 	      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>
-		  <style>
-		:host {
-			border-radius: 1px;
-			border-width: 4px;
-			border-color: black;
-			border-style: solid;
-			display: block;
-		}
-		</style>
 	 `;
 
 	
 	class Gmaps extends HTMLElement {
 		constructor() {
 			super();
-			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(template.content.cloneNode(true));
 			this.init();
 			this._props = {};
 			//			
@@ -66,7 +55,7 @@
 				   var geocoder;
 				   var map;
 				   
-				    geocoder = new google.maps.Geocoder();
+				    //geocoder = new google.maps.Geocoder();
 					// var latlng = new google.maps.LatLng(-34.397, 150.644);
 					// var mapOptions = {
 					//   zoom: 8,
