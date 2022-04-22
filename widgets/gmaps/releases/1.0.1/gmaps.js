@@ -386,7 +386,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 		
 
 		
-             generateMap(){
+            async generateMap(){
 				
 				var geocoder;
 				var map;
