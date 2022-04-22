@@ -383,7 +383,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					document.addEventListener('DOMContentLoaded', afterLoaded);
 				} else {
 					//The DOMContentLoaded event has already fired. Just run the code.
-					afterLoaded();
+					this.afterLoaded();
 				}
 				   
 					 
