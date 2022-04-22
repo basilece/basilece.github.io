@@ -18,9 +18,10 @@
 		
 		 init() {
             if (this.children.length === 2) return; //constructor called during drag+drop
-            if (!this.querySelector("link")) {
-                this.appendChild(template.content.cloneNode(true));
-               }
+         
+				let shadowRoot = this.attachShadow({mode: "open"});
+			    shadowRoot.appendChild(template.content.cloneNode(true));
+             
 			    
 		        //Creat e the Input (for Address)  
 		          var ctor = sap.m.Input;
@@ -50,16 +51,16 @@
 					   
                	// Create the MAP 
 				   
-				   var geocoder;
-				   var map;
-				   
-					 geocoder = new google.maps.Geocoder();
-					 var latlng = new google.maps.LatLng(-34.397, 150.644);
-					 var mapOptions = {
-					   zoom: 8,
-					   center: latlng
-					 }
-					 map = new google.maps.Map(document.getElementById('map'), mapOptions);
+				   //var geocoder;
+				   //var map;
+				   //
+				   // geocoder = new google.maps.Geocoder();
+					// var latlng = new google.maps.LatLng(-34.397, 150.644);
+					// var mapOptions = {
+					//   zoom: 8,
+					 //  center: latlng
+					// }
+					// map = new google.maps.Map(document.getElementById('map'), mapOptions);
 				  
                	    
                	    
