@@ -4,7 +4,7 @@
 	`<script
 	      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly"defer>
 	</script>
-	
+
 	<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.1/theme.css"/>
 	<body>
 	   <div id="IT"> </div>
@@ -29,7 +29,7 @@
                 this.appendChild(template.content.cloneNode(true));
                }
 			    
-		        //Create the Input (for Address)  
+		        //Creat e the Input (for Address)  
 		          var ctor = sap.m.Input;
 		          this.IT = new ctor({
 					    width : "500px" ,
