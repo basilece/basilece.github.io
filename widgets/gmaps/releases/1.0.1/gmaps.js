@@ -325,7 +325,7 @@
 		//
 	let template = document.createElement("template");
     template.innerHTML =`
-		  <div id="divmap">style="width: 320px; height: 480px;"></div>	  
+		  <div id="divmap"></div>	  
 	 `;
 
 	
