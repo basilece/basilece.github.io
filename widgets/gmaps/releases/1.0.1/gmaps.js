@@ -338,6 +338,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 			super();
 			this.init();
 			this._props = {};
+			this.afterLoaded();
 			//			
 
 			//
@@ -363,7 +364,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				//Create the User Button for Search
 
                   var ctor = sap.m.Button;
-                		          this.BT = new ctor({
+                	this.BT = new ctor({
 						width : "100px",
 						text  : "Search",
 						type : sap.m.ButtonType.Emphasized,
@@ -374,7 +375,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 						 
 						  )
 		             
-               	     //this.BT.placeAt(this);
+               	     this.BT.placeAt(this);
 					   
                	// Create the MAP 
 				 
@@ -401,7 +402,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 			}
             
        		 firePress() {
-			    this.afterLoaded();
+			   
 	            var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
 	                detail: {
