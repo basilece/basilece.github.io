@@ -4,8 +4,11 @@
 	`<script
 	      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly"defer>
 	</script>
+	
 	<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.1/theme.css"/>
-	<body onload="initialize()">
+	<body>
+	   <div id="IT"> </div>
+	   <div id="BT"> </div>
 	   <div id="map" style="width: 320px; height: 480px;"></div>
 	</body>`;
 
