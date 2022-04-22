@@ -324,9 +324,8 @@
 	_.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.px=function(){zea(this)};_.n.Te=function(){return!!this.h};_.n.getStatus=function(){try{return 2<_.Bj(this)?this.h.status:-1}catch(a){return-1}};_.n.hi=_.aa(24);var pea=arguments[0],Iea=new _.xj;window.google.maps.Load&&window.google.maps.Load(Hea);}).call(this,{});
 		//
 	let template = document.createElement("template");
-    const dmap = document.createElement('dmap');
     template.innerHTML =`
-		  <div id="map">style="width: 320px; height: 480px;"></div>
+		  <div id="divmap">style="width: 320px; height: 480px;"></div>
 		  <div id="Gmaps" class="Gmaps">style="width: 320px; height: 480px;"></div>
 		  
 	 `;
@@ -347,7 +346,7 @@
             if (this.children.length === 2) return; //constructor called during drag+drop
             if (!this.querySelector("link")) {
                 this.appendChild(template.content.cloneNode(true));
-				this.appendChild(dmap);
+				
                }
              
 			    
@@ -396,9 +395,9 @@
 					zoom: 8,
 					center: latlng
 				  }
-				  var mymap = document.getElementById('map'); 
-				  map = new google.maps.Map(document.getElementById('map'), mapOptions);
-				  this.append(mymap.content.cloneNode(true));
+				  var mymap = document.getElementById('divmap'); 
+				  map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
+				  this.append(divmap);
 				  
 			 }  
 
