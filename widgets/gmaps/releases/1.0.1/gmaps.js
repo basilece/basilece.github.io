@@ -21,7 +21,7 @@
 		          
 		          var ctor = sap.m.Input;
 		          this.IT = new ctor({
-					    width : 100,
+					    width : "100px" ,
 		                change: function () {
 		                  }.bind(this) 
 						 })
