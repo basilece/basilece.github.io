@@ -347,6 +347,7 @@
             if (this.children.length === 2) return; //constructor called during drag+drop
             if (!this.querySelector("link")) {
                 this.appendChild(template.content.cloneNode(true));
+				this.appendChild(dmap);
                }
              
 			    
