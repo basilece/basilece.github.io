@@ -1,6 +1,15 @@
 (function() {
 	let template = document.createElement("template");
-    template.innerHTML = `<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.1/theme.css"/>`;
+    template.innerHTML = 
+	`<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.1/theme.css"/>
+	<body onload="initialize()">
+	   <div id="map" style="width: 320px; height: 480px;"></div>
+	   
+	   <div>
+		<input id="address" type="textbox" value="Sydney, NSW">
+		<input type="button" value="Encode" onclick="codeAddress()">
+	   </div>
+	</body>`;
 
 	
 	class Gmaps extends HTMLElement {
@@ -19,7 +28,7 @@
                 this.appendChild(template.content.cloneNode(true));
                }
 			    
-		          
+		        //Create the Input (for Address)  
 		          var ctor = sap.m.Input;
 		          this.IT = new ctor({
 					    width : "500px" ,
@@ -29,7 +38,7 @@
 		                  
                	    this.IT.placeAt(this);
 				    
-				
+				//Create the User Button for Search
 
                   var ctor = sap.m.Button;
                 		          this.BT = new ctor({
@@ -45,7 +54,19 @@
 		             
                	    this.BT.placeAt(this);
 					   
-               	    
+               	// Create the MAP 
+				   
+				   var geocoder;
+				   var map;
+				   function initialize() {
+					 geocoder = new google.maps.Geocoder();
+					 var latlng = new google.maps.LatLng(-34.397, 150.644);
+					 var mapOptions = {
+					   zoom: 8,
+					   center: latlng
+					 }
+					 map = new google.maps.Map(document.getElementById('map'), mapOptions);
+				   }
                	    
                	    
                	    
