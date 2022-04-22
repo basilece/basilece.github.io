@@ -385,6 +385,7 @@
 
 		
              generateMap(){
+				const dmap = createElement('dmap');
 				var geocoder;
 				var map;
 				 var state = document.readyState;
@@ -394,9 +395,9 @@
 					zoom: 8,
 					center: latlng
 				  }
-				  var mymap = document.getElementById('map'); 
-				  map = new google.maps.Map(document.getElementById('map'), mapOptions);
-				  this.appendChild(map);
+				  var mymap = document.getElementById('dmap'); 
+				  map = new google.maps.Map(document.getElementById('dmap'), mapOptions);
+				  this.appendChild(dmap);
 				  
 			 }  
 
