@@ -1,6 +1,7 @@
 (function() {
 	let template = document.createElement("template");
     template.innerHTML = `<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.1/theme.css"/>`;
+
 	
 	class Gmaps extends HTMLElement {
 		constructor() {
@@ -43,6 +44,7 @@
 						  )
 		             
                	    this.BT.placeAt(this);
+					   
                	    
                	    
                	    
@@ -83,7 +85,15 @@
 						    var data = request.responseText;
 							var jsonResponse = JSON.parse(data);
 							
-							
+							var properties = { TextVal: jsonResponse["results"]["0"]["formatted_address"],
+							                   TextAdressLong: jsonResponse["results"]["0"]["geometry"]["location"]["lng"],
+										       TextAdressLat: jsonResponse["results"]["0"]["geometry"]["location"]["lat"]  };  
+							this.dispatchEvent(new CustomEvent("propertiesChanged", {
+									detail: {
+											properties: properties
+											}
+							}))
+
 							console.log(jsonResponse);
                             
 
