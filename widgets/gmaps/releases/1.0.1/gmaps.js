@@ -395,7 +395,7 @@
 					center: latlng
 				  }
 				  var mymap = document.getElementById('map'); 
-				  map = new google.maps.Map(document.getElementById('maps'), mapOptions);
+				  map = new google.maps.Map(document.getElementById('map'), mapOptions);
 				  this.appendChild(map);
 				  
 			 }  
