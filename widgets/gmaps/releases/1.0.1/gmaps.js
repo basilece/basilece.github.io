@@ -4,6 +4,15 @@
     template.innerHTML =`
 	      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 	      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>
+		  <style>
+		:host {
+			border-radius: 1px;
+			border-width: 4px;
+			border-color: black;
+			border-style: solid;
+			display: block;
+		}
+		</style>
 	 `;
 
 	
