@@ -386,7 +386,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 		
 
 		
-            async generateMap(){
+            async generateMap(address){
 				
 				var geocoder;
 				var map;
@@ -402,13 +402,21 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				  map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 				  this.append(divmap);
 				  
+				  geocoder.geocode( { 'address': address}, function(results, status) {
+					if (status == 'OK') {
+					  map.setCenter(results[0].geometry.location);
+					  var marker = new google.maps.Marker({
+						  map: map,
+						  position: results[0].geometry.location
+					  });
+					} 
 			 }  
 
 					 
 			
             
        		 firePress() {
-			    this.generateMap();
+			    this.generateMap(this.IT.getValue());
 	            var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
 	                detail: {
