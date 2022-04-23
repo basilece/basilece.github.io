@@ -377,9 +377,11 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 						  )
 		             
                	     this.BT.placeAt(this);
+
+
 					   
                	// Create the MAP 
-				 
+				generateMap(this.IT.getValue());
 				
             }
 
@@ -420,7 +422,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					}
 				  });
 
-				  var text =  results[0].formatted_address;
+				
 				  this.dispatchEvent(new Event("onChange"));
 			 }  
 
@@ -428,7 +430,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 			
             
        		 firePress() {
-			    this.generateMap(this.IT.getValue());
+			    //this.generateMap(this.IT.getValue());
 	            var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
 	                detail: {
