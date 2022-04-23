@@ -413,18 +413,14 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 						                   TextAdressLat: results[0].geometry.location.lng,
 						                   TextAdressLong: results[0].geometry.location.lat
 					 };
-					 this.dispatchEvent(new CustomEvent("propertiesChanged", {
-						detail: {
-							properties: properties
-						}
-				   })); 
-					 
-
+				
 					 
 					} else {
 					  alert('Geocode was not successful for the following reason: ' + status);
 					}
 				  });
+
+				  var text =  results[0].formatted_address;
 				  this.dispatchEvent(new Event("onChange"));
 			 }  
 
