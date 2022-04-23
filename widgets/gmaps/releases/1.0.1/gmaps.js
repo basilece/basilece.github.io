@@ -407,11 +407,24 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					  var marker = new google.maps.Marker({
 						  map: map,
 						  position: results[0].geometry.location
-					  });
+						  
+					  })
+					  var properties = { TextVal: jsonResponse.results[0].formatted_address,
+						TextAdressLat: jsonResponse.results[0].geometry.location.lng,
+						TextAdressLong: jsonResponse.results[0].geometry.location.lat
+					 }; 
+
+					 this.dispatchEvent(new CustomEvent("propertiesChanged", {
+						 detail: {
+							 properties: properties
+						 }
+					}))
+					  ;
 					} else {
 					  alert('Geocode was not successful for the following reason: ' + status);
 					}
 				  });
+				  this.dispatchEvent(new Event("onChange"));
 			 }  
 
 					 
