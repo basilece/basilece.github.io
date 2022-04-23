@@ -381,7 +381,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 
 					   
                	// Create the MAP 
-				generateMap(this.IT.getValue());
+				this.generateMap(this.IT.getvalue());
 				
             }
 
