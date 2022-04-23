@@ -439,7 +439,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 	                }
 	           }));
 	           
-	           this.getGeocoding(properties.TextVal);
+	           //this.getGeocoding(properties.TextVal);
 	        }    
 	        
 	        
