@@ -409,9 +409,9 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 						  position: results[0].geometry.location
 						  
 					  })
-					  var properties = { TextVal: jsonResponse.results[0].formatted_address,
-						TextAdressLat: jsonResponse.results[0].geometry.location.lng,
-						TextAdressLong: jsonResponse.results[0].geometry.location.lat
+					  var properties = {   TextVal: results[0].formatted_address,
+						                   TextAdressLat: results[0].geometry.location.lng,
+						                   TextAdressLong: results[0].geometry.location.lat
 					 }; 
 
 					 this.dispatchEvent(new CustomEvent("propertiesChanged", {
