@@ -394,7 +394,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				 geocoder = new google.maps.Geocoder();
 				  var latlng = new google.maps.LatLng(-34.397, 150.644);
 				  var mapOptions = {
-					zoom: 20,
+					zoom: 17,
 					center: latlng
 				  }
 				  var mymap = document.getElementById('divmap'); 
