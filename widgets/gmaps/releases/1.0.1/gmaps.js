@@ -414,12 +414,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 						                   TextAdressLong: results[0].geometry.location.lat
 					 }; 
 
-					 this.dispatchEvent(new CustomEvent("propertiesChanged", {
-						 detail: {
-							 properties: properties
-						 }
-					}))
-					  ;
+					 
 					} else {
 					  alert('Geocode was not successful for the following reason: ' + status);
 					}
