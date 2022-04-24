@@ -384,40 +384,10 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					   
                	// Initialize the MAP 
 								
-				   var geocoder;
-				   var map;
-					var state = document.readyState;
-					geocoder = new google.maps.Geocoder();
-					 var latlng = new google.maps.LatLng(-34.397, 150.644);
-					 var mapOptions = {
-					   zoom: 17,
-					   center: latlng
-					 }
+
 					 
 					 console.log(["This is the log : " ,this.children]);
-					 map = new google.maps.Map(document.getElementById('this'), mapOptions);
-					 //this.append(this);
-					 geocoder.geocode( { 'address': address}, function(results, status) {
-					   if (status == 'OK') {
-						 map.setCenter(results[0].geometry.location);
-						 var marker = new google.maps.Marker({
-							 map: map,
-							 position: results[0].geometry.location
-							 
-						 })
-						 var properties = {   TextVal: results[0].formatted_address,
-											  TextAdressLat: results[0].geometry.location.lng,
-											  TextAdressLong: results[0].geometry.location.lat
-						};
-				   
-						
-					   } else {
-						 alert('Geocode was not successful for the following reason: ' + status);
-					   }
-					 });
-   
-				   
-					 this.dispatchEvent(new Event("onChange"));
+
 				
             }
 
