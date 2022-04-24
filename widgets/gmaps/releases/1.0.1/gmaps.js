@@ -347,12 +347,12 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 		
 		 init() {
             if (this.children.length > 0) return; //constructor called during drag+drop
-            if (!this.querySelector("link")) {
+            //if (!this.querySelector("link")) {
                 this.appendChild(template.content.cloneNode(true));
-                var initdivmap = document.getElementById('divmap'); 
+             
 				
 				
-               }
+            //   }
              
 			    
 		        //Creat e the Input (for Address)  
@@ -384,14 +384,14 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 
 					   
                	// Initialize the MAP 
-				this.generateMap("1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA", initdivmap);
+				this.generateMap("1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA");
 				
             }
 
 		
 
 		
-            async generateMap(address,divmap){
+            async generateMap(address){
 				
 				var geocoder;
 				var map;
@@ -402,8 +402,8 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					zoom: 17,
 					center: latlng
 				  }
-				  //var mymap = document.getElementById('divmap'); 
-				  //mymap.height = 400;
+				  var mymap = document.getElementById('divmap'); 
+				  mymap.height = 400;
 				  console.log(divmap);
 				  map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 				  this.append(divmap);
