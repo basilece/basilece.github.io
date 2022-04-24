@@ -457,11 +457,11 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
             
        		 firePress() {
 				console.log(["This is the log after execute: " ,this.children]);
-				if (this.children.length < 4) {
+				//if (this.children.length < 4) {
 			        this.generateMap(this.IT.getValue());
-				} else {
-					this.updateMarker(this.IT.getValue());
-				}
+				//} else {
+				//	this.updateMarker(this.IT.getValue());
+				//}
 
 
 	            var properties = { TextVal: this.IT.getValue() };            
