@@ -335,6 +335,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 
 	var map;
 	var geocoder;
+	var marker;
 	class Gmaps extends HTMLElement {
 		constructor() {
 			super();
@@ -407,7 +408,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				  geocoder.geocode( { 'address': address}, function(results, status) {
 					if (status == 'OK') {
 					  map.setCenter(results[0].geometry.location);
-					  var marker = new google.maps.Marker({
+					   marker =  google.maps.Marker({
 						  map: map,
 						  position: results[0].geometry.location
 						  
@@ -432,7 +433,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				geocoder.geocode( { 'address': address}, function(results, status) {
 					if (status == 'OK') {
 					  map.setCenter(results[0].geometry.location);
-					  var marker = new google.maps.Marker({
+					   marker =  google.maps.Marker({
 						  map: map,
 						  position: results[0].geometry.location
 						  
