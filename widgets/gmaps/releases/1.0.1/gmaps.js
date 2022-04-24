@@ -383,7 +383,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 
 					   
                	// Initialize the MAP 
-				this.generateMap("1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA");
+				this.generateMap("1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA", initdivmap);
 				
             }
 
@@ -403,7 +403,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				  }
 				  var mymap = document.getElementById('divmap'); 
 				  mymap.height = 400;
-				  map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
+				  map = new google.maps.Map(document.getElementById('initdivmap'), mapOptions);
 				  this.append(divmap);
 				  geocoder.geocode( { 'address': address}, function(results, status) {
 					if (status == 'OK') {
