@@ -346,10 +346,10 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 		}
 		
 		 init() {
-            if (this.children.length === 2) return; //constructor called during drag+drop
+            if (this.children.length > 0) return; //constructor called during drag+drop
             if (!this.querySelector("link")) {
                 this.appendChild(template.content.cloneNode(true));
-                
+                var initdivmap = document.getElementById('divmap'); 
 				
                }
              
