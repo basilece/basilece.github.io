@@ -403,7 +403,6 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					center: latlng
 				  }
 				  var mymap = document.getElementById('divmap'); 
-				  mymap.height = 400;
 				  console.log(divmap);
 				  map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 				  this.append(divmap);
