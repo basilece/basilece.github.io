@@ -42,7 +42,7 @@
 
 	"getGeolocationLong": {
 		"returnType": "string",
-		"description": "Returning the Text",
+		"description": "Returning Geolocation Longtitude",
 		"parameters": [],
 		"body": "return this.TextAdressLong;"
       } ,
@@ -50,10 +50,29 @@
       
  	"getGeolocationLat": {
 		"returnType": "string",
-		"description": "Returning the Text",
+		"description": "Returning the Geolocation Latitude",
 		"parameters": [],
 		"body": "return this.TextAdressLat;"
-      }    
+      },
+	  
+	  "setAddressVal": {
+		"description": "set Address Text Value",
+		"parameters": [
+			{
+				"name": "dv",
+				"type": "string",
+				"description": "The new minimum date"
+			}
+		],
+		"body": "this.TextVal = dv;"
+	},
+
+	"getAddressVal": {
+		"returnType": "string",
+		"description": "Returning Full Address",
+		"parameters": [],
+		"body": "return this.TextVal"
+      } 
         
         
         
