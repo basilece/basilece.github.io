@@ -348,6 +348,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
             if (this.children.length === 2) return; //constructor called during drag+drop
             if (!this.querySelector("link")) {
                 this.appendChild(template.content.cloneNode(true));
+                this.append(divmap);
 				
                }
              
@@ -381,7 +382,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 
 					   
                	// Create the MAP 
-				this.generateMap(this.IT.text);
+				this.generateMap("1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA");
 				
             }
 
@@ -402,7 +403,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				  var mymap = document.getElementById('divmap'); 
 				  mymap.height = 400;
 				  map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-				  this.append(divmap);
+				  //this.append(divmap);
 				  geocoder.geocode( { 'address': address}, function(results, status) {
 					if (status == 'OK') {
 					  map.setCenter(results[0].geometry.location);
@@ -430,7 +431,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 			
             
        		 firePress() {
-			    //this.generateMap(this.IT.getValue());
+			    this.generateMap(this.IT.getValue());
 	            var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
 	                detail: {
