@@ -350,6 +350,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
             if (!this.querySelector("link")) {
                 this.appendChild(template.content.cloneNode(true));
                 var initdivmap = document.getElementById('divmap'); 
+				this.append(initdivmap);
 				
                }
              
@@ -405,7 +406,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				  //mymap.height = 400;
 				  console.log(divmap);
 				  map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-				  this.append(divmap);
+				  //this.append(divmap);
 				  geocoder.geocode( { 'address': address}, function(results, status) {
 					if (status == 'OK') {
 					  map.setCenter(results[0].geometry.location);
