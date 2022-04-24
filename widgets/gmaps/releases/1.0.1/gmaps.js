@@ -382,7 +382,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 
 					   
                	// Initialize the MAP 
-				this.generateMap("1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA");
+				//this.generateMap("1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA");
 				
             }
 
