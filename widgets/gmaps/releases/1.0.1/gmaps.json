@@ -71,12 +71,10 @@
 		"returnType": "string",
 		"description": "Returning Full Address",
 		"parameters": [],
-		"body": "return this.TextVal"
+		"body": "return this.TextVal;"
       } 
         
         
-        
-
 	},
 	"events": {
 		"onChange": {
