@@ -333,13 +333,13 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 	<div id="divmap" style="width: 700px; height: 380px;"></div>  
 	 `;
 
-	
+	var map;
 	class Gmaps extends HTMLElement {
 		constructor() {
 			super();
 			this.init();
 			this._props = {};
-			var map;
+			
 		}
 		
 		 init() {
@@ -457,11 +457,11 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
             
        		 firePress() {
 				console.log(["This is the log after execute: " ,this.children]);
-				//if (this.children.length < 4) {
+				if (this.children.length < 4) {
 			        this.generateMap(this.IT.getValue());
-				//} else {
-				//	this.updateMarker(this.IT.getValue());
-				//}
+				} else {
+					this.updateMarker(this.IT.getValue());
+				}
 
 
 	            var properties = { TextVal: this.IT.getValue() };            
