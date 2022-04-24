@@ -459,7 +459,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				if (this.children.length < 4) {
 			        this.generateMap(this.IT.getValue());
 				} else {
-					updateMarker(this.IT.getValue());
+					this.updateMarker(this.IT.getValue());
 				}
 
 
