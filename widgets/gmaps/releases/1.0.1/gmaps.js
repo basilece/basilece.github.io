@@ -428,16 +428,41 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				  this.dispatchEvent(new Event("onChange"));
 			 }  
 
+			updateMarker(address){
+				geocoder.geocode( { 'address': address}, function(results, status) {
+					if (status == 'OK') {
+					  map.setCenter(results[0].geometry.location);
+					  var marker = new google.maps.Marker({
+						  map: map,
+						  position: results[0].geometry.location
+						  
+					  })
+					  var properties = {   TextVal: results[0].formatted_address,
+						                   TextAdressLat: results[0].geometry.location.lng,
+						                   TextAdressLong: results[0].geometry.location.lat
+					 };
+				
 					 
+					} else {
+					  alert('Geocode was not successful for the following reason: ' + status);
+					}
+				  });
+
+				
+				  this.dispatchEvent(new Event("onChange"));
+
+			}	 
 			
             
        		 firePress() {
 				console.log(["This is the log after execute: " ,this.children]);
-				if (this.children.length >= 4) {
+				if (this.children.length < 4) {
 			        this.generateMap(this.IT.getValue());
+				} else {
+					updateMarker(this.IT.getValue());
 				}
 
-				
+
 	            var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
 	                detail: {
