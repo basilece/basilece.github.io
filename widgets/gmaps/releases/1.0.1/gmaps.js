@@ -330,7 +330,12 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 	let template = document.createElement("template");
     template.innerHTML =`
 	<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.1/theme.css"/>
-	<div id="divmap" style="width: 700px; height: 380px;"></div>
+	<html>
+	  <body>
+	     <div id="divmap" style="width: 700px; height: 380px;"></div>
+		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"defer></script>
+	  </body>
+	</html>
 	 `;
 
 
