@@ -346,13 +346,13 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 		}
 		
 		 init() {
-            if (this.children.length > 0) return; //constructor called during drag+drop
-            //if (!this.querySelector("link")) {
+            if (this.children.length === 2) return; //constructor called during drag+drop
+            if (!this.querySelector("link")) {
                 this.appendChild(template.content.cloneNode(true));
              
 				
 				
-            //   }
+               }
              
 			    
 		        //Creat e the Input (for Address)  
@@ -384,7 +384,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 
 					   
                	// Initialize the MAP 
-				this.generateMap("1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA");
+				//this.generateMap("1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA");
 				
             }
 
