@@ -430,8 +430,8 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 			
             
        		 firePress() {
-				console.log(["This is the log after execute: " ,this.children]);
-			    this.generateMap(this.IT.getValue());
+				var address = this.IT.getValue();
+			    this.generateMap(address);
 
 	            var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
