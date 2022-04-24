@@ -330,12 +330,17 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 	let template = document.createElement("template");
     template.innerHTML =`
 	<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.1/theme.css"/>
-	<div id="divmap" style="width: 700px; height: 380px;"></div>  
+	<div id="divmap" style="width: 700px; height: 380px;"></div>
+	<style>
+		:host {
+                width  : 800px;
+				height : 600px;
+			display: block;
+		}
+		</style> 
 	 `;
 
-	var map;
-	var geocoder;
-	var marker;
+
 	class Gmaps extends HTMLElement {
 		constructor() {
 			super();
@@ -393,7 +398,8 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 
 		
              generateMap(address){
-				
+				var map;
+				var geocode;
 
 				 geocoder = new google.maps.Geocoder();
 				  var latlng = new google.maps.LatLng(-34.397, 150.644);
@@ -427,42 +433,12 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				
 				  this.dispatchEvent(new Event("onChange"));
 			 }  
-
-			updateMarker(address){
-				
-				geocoder.geocode( { 'address': address}, function(results, status) {
-					if (status == 'OK') {
-					  map.setCenter(results[0].geometry.location);
-					   marker =  google.maps.Marker({
-						  map: map,
-						  position: results[0].geometry.location
-						  
-					  })
-					  var properties = {   TextVal: results[0].formatted_address,
-						                   TextAdressLat: results[0].geometry.location,
-						                   TextAdressLong: results[0].geometry.location
-					 };
-				
-					 
-					} else {
-					  alert('Geocode was not successful for the following reason: ' + status);
-					}
-				  });
-
-				
-				  this.dispatchEvent(new Event("onChange"));
-
-			}	 
+ 
 			
             
        		 firePress() {
 				console.log(["This is the log after execute: " ,this.children]);
-				if (this.children.length < 4) {
-			        this.generateMap(this.IT.getValue());
-				} else {
-					this.updateMarker(this.IT.getValue());
-				}
-
+			    this.generateMap(this.IT.getValue());
 
 	            var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
