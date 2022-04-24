@@ -433,7 +433,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				var address = this.IT.getValue();
 			    this.generateMap(address);
 
-	            var properties = { TextVal: this.IT.getValue() };            
+	            //var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
 	                detail: {
 	                    properties: properties
