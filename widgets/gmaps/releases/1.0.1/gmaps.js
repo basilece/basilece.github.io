@@ -433,7 +433,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 			
             
        		 firePress() {
-			    //this.generateMap(this.IT.getValue());
+			    this.generateMap(this.IT.getValue());
 	            var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
 	                detail: {
