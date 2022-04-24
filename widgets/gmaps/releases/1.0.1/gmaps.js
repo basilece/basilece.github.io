@@ -414,8 +414,8 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 						  
 					  })
 					  var properties = {   TextVal: results[0].formatted_address,
-						                   TextAdressLat: results[0].geometry.location.lng,
-						                   TextAdressLong: results[0].geometry.location.lat
+						                   TextAdressLat: results[0].geometry.location,
+						                   TextAdressLong: results[0].geometry.location
 					 };
 				
 					 
@@ -439,8 +439,8 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 						  
 					  })
 					  var properties = {   TextVal: results[0].formatted_address,
-						                   TextAdressLat: results[0].geometry.location.lng,
-						                   TextAdressLong: results[0].geometry.location.lat
+						                   TextAdressLat: results[0].geometry.location,
+						                   TextAdressLong: results[0].geometry.location
 					 };
 				
 					 
