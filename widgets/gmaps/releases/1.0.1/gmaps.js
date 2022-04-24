@@ -394,7 +394,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					   center: latlng
 					 }
 					 
-					 console.log(this.children);
+					 console.log(["This is the log : " ,this.children]);
 					 map = new google.maps.Map(document.getElementById('this'), mapOptions);
 					 //this.append(this);
 					 geocoder.geocode( { 'address': address}, function(results, status) {
