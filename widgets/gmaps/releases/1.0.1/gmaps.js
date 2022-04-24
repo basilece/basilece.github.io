@@ -403,6 +403,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 				  }
 				  //var mymap = document.getElementById('divmap'); 
 				  //mymap.height = 400;
+				  console.log(divmap);
 				  map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 				  this.append(divmap);
 				  geocoder.geocode( { 'address': address}, function(results, status) {
