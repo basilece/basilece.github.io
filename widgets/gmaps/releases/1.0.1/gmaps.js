@@ -391,7 +391,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 
 		
             async generateMap(address){
-				
+				if (this.children.length > 2) return; 
 				var geocoder;
 				var map;
 				 var state = document.readyState;
