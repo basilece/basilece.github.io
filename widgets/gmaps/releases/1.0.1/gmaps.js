@@ -343,7 +343,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 		}
 		
 		 init() {
-            if (this.children.length > 3) return; //constructor called during drag+drop
+            if (this.children.length >= 3) return; //constructor called during drag+drop
             if (!this.querySelector("link")) {
                 this.appendChild(template.content.cloneNode(true));
              
@@ -391,7 +391,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 
 		
             async generateMap(address){
-				if (this.children.length > 2) return; 
+				if (this.children.length >= 2) return; 
 				var geocoder;
 				var map;
 				 var state = document.readyState;
