@@ -330,7 +330,6 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 	let template = document.createElement("template");
     template.innerHTML =`
 	<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.1/theme.css"/>
-	<div id="divmap" style="width: 700px; height: 380px;"></div>  
 	 `;
 
 	
@@ -394,7 +393,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					   zoom: 17,
 					   center: latlng
 					 }
-					 var mymap = document.getElementById('divmap'); 
+					 var divmap = document.createElement("divmap");
 					 console.log(divmap);
 					 map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 					 this.append(divmap);
