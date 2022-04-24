@@ -329,7 +329,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 //
 	let template = document.createElement("template");
     template.innerHTML =`
-	<div id="divmap" style="width: 800px; height: 480px;"></div>  
+	<div id="divmap" style="width: 400px; height: 200px;"></div>  
 	 `;
 
 	
