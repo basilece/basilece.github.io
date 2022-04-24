@@ -393,7 +393,9 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 					   zoom: 17,
 					   center: latlng
 					 }
-					 var divmap = document.createElement("divmap");
+					 let divmap = document.createElement("divmap");
+					 divmap.innerHTML =`<div id="divmap" style="width: 700px; height: 380px;"></div>  `;
+
 					 console.log(divmap);
 					 map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 					 this.append(divmap);
