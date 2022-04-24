@@ -391,7 +391,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 
 		
             async generateMap(address){
-				if (this.children.length >= 2) return; 
+				
 				var geocoder;
 				var map;
 				 var state = document.readyState;
@@ -433,7 +433,11 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
             
        		 firePress() {
 				console.log(["This is the log after execute: " ,this.children]);
-			    this.generateMap(this.IT.getValue());
+				if (this.children.length >= 4) {
+			        this.generateMap(this.IT.getValue());
+				}
+
+				
 	            var properties = { TextVal: this.IT.getValue() };            
 	            this.dispatchEvent(new CustomEvent("propertiesChanged", {
 	                detail: {
