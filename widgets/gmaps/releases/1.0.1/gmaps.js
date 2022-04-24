@@ -341,7 +341,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 			this._props = {};
 			
 		}
-		
+
 		 init() {
             if (this.children.length >= 3) return; //constructor called during drag+drop
             if (!this.querySelector("link")) {
