@@ -390,7 +390,7 @@ _.n.Hr=function(){this.Ae()||(this.W||this.H||this.m?zea(this):this.px())};_.n.p
 		
 
 		
-            async generateMap(address){
+             generateMap(address){
 				
 				var geocoder;
 				var map;
