@@ -1,0 +1,84 @@
+{
+	"id": "basilece.gmaps",
+	"version": "1.0.2",
+	"name": "Google API Geocoding",
+	"description": "Google API Geocoding",
+	"newInstancePrefix": "Geocode",
+	"icon": "https://basilece.github.io/widgets/gmaps/releases/1.0.2/icon.png",
+	"vendor": "basilece",
+	"eula": "",
+	"license": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "basilece-gmaps",
+			"url": "https://basilece.github.io/widgets/gmaps/releases/1.0.2/gmaps.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+
+	],
+	"properties": {
+		"TextVal": {
+			"type": "string",
+			"description": "This is the address",
+			"default" : "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA"
+		},
+		
+		"TextAdressLong": {
+			"type": "string",
+			"description": "This is the address longitude",
+			"default" : ""
+		},	
+	    "TextAdressLat": {
+			"type": "string",
+			"description": "This is the address latitude",
+			"default" : ""
+		}	
+	
+	},
+
+	"methods": {
+
+	"getGeolocationLong": {
+		"returnType": "string",
+		"description": "Returning Geolocation Longtitude",
+		"parameters": [],
+		"body": "return this.TextAdressLong;"
+      } ,
+      
+      
+ 	"getGeolocationLat": {
+		"returnType": "string",
+		"description": "Returning the Geolocation Latitude",
+		"parameters": [],
+		"body": "return this.TextAdressLat;"
+      },
+	  
+	  "setAddressVal": {
+		"description": "set Address Text Value",
+		"parameters": [
+			{
+				"name": "dv",
+				"type": "string",
+				"description": "The new minimum date"
+			}
+		],
+		"body": "this.TextVal = dv;"
+	},
+
+	"getAddressVal": {
+		"returnType": "string",
+		"description": "Returning Full Address",
+		"parameters": [],
+		"body": "return this.TextVal;"
+      } 
+        
+        
+	},
+	"events": {
+		"onChange": {
+			"description": "Called when the value is changed"
+		}
+	}
+}
