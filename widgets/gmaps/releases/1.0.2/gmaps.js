@@ -105,6 +105,7 @@
 					firePress() {
 					var address = this.IT.getValue();
 					var loaded = this.querySelector('script') ;
+					console.log(["Log Script : ", loaded]);
 					this.generateMap(address);
 	
 					//var properties = { TextVal: this.IT.getValue() };            
