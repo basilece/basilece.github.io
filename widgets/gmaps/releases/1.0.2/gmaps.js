@@ -102,11 +102,7 @@
 					var address = this.IT.getValue();
 					var loaded = this.querySelector('script') ;
 					console.log(["Log Script : ", loaded]);
-					if (loaded) {
-						loaded.onload = callback ;
-						loaded.onreadystatechange = callback;
-						return
-					  }
+
 					this.generateMap(address);
 	
 					//var properties = { TextVal: this.IT.getValue() };            
