@@ -2,12 +2,9 @@
 
 		let template = document.createElement("template");
 		template.innerHTML =`
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly"
-		defer></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly" defer></script>
 		<link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.2/theme.css"/>
-		<div id="divmap" style="width: 700px; height: 380px;"></div>
-		
-	  `;
+		<div id="divmap" style="width: 700px; height: 380px;"></div>`;
 	
 	
 		class Gmaps extends HTMLElement {
