@@ -94,6 +94,12 @@
 											   TextAdressLat: coords[0],
 											   TextAdressLong: coords[1]
 						 };
+
+						 this.dispatchEvent(new CustomEvent("propertiesChanged", {
+							detail: {
+								properties: properties
+							}
+					   }));
 					
 						 
 						} else {
@@ -113,11 +119,7 @@
 	                console.log(["This is the lat : ", this.TextAdressLat]) ;
 					console.log(["This is the long : ", this.TextAdressLong]) ;
 					//var properties = { TextVal: this.IT.getValue() };            
-					this.dispatchEvent(new CustomEvent("propertiesChanged", {
-						detail: {
-							properties: properties
-						}
-				   }));
+					
 				   
 				   //this.getGeocoding(properties.TextVal);
 				}    
