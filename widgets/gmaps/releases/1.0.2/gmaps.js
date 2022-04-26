@@ -104,7 +104,7 @@
 					firePress() {
 					var address = this.IT.getValue();
 					 this.generateMap(address,function(data){
-                         //alert(longlat);
+                    
 						 console.log(data);
 						  return  properties = {  TextAdressLat:  data.Latitude,
 						                          TextAdressLong: data.Longitude
