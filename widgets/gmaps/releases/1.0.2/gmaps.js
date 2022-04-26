@@ -63,7 +63,7 @@
 				 generateMap(address){
 					var map;
 					var geocoder;
-	
+					var coords = [];
 					 geocoder = new google.maps.Geocoder();
 					  var latlng = new google.maps.LatLng(-34.397, 150.644);
 					  var mapOptions = {
@@ -76,7 +76,7 @@
 					  geocoder.geocode( { 'address': address}, function(results, status) {
 						if (status == 'OK') {
 						  map.setCenter(results[0].geometry.location);						  
-						  var coords = [];
+						  
 						  coords[0] = results[0].geometry.location.lat();
                           coords[1] = results[0].geometry.location.lng();
 						  var marker =  new google.maps.Marker({
