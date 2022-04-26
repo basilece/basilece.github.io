@@ -16,7 +16,7 @@
 				super();
 				this.init();
 				this._props = {};
-				var coords = [];
+				
 			}
 	
 			 init() {
@@ -75,8 +75,8 @@
 					  this.append(divmap);
 					  geocoder.geocode( { 'address': address}, function(results, status) {
 						if (status == 'OK') {
-						  map.setCenter(results[0].geometry.location);
-						  
+						  map.setCenter(results[0].geometry.location);						  
+						  var coords = [];
 						  coords[0] = results[0].geometry.location.lat();
                           coords[1] = results[0].geometry.location.lng();
 						  var marker =  new google.maps.Marker({
@@ -85,7 +85,7 @@
 							  
 						  })
 
-
+                          return coords;
 						 
 						} else {
 						  alert('Geocode was not successful for the following reason: ' + status);
@@ -101,11 +101,11 @@
 					firePress() {
 					var address = this.IT.getValue();
 					this.generateMap(address);
-	                console.log(["This is the lat : ", this.TextAdressLat]) ;
-					console.log(["This is the long : ", this.TextAdressLong]) ;
+	                console.log(["This is the lat : ", this.generateMap.coords[0]]) ;
+					console.log(["This is the long : ", this.generateMap.coords[1]]) ;
 					var properties = {   TextVal: results[0].formatted_address,
-						TextAdressLat:  coords[0],
-						TextAdressLong: coords[1]
+						TextAdressLat:  this.generateMap.coords[0],
+						TextAdressLong: this.generateMap.coords[1]
                         };
 					this.dispatchEvent(new CustomEvent("propertiesChanged", {
 						detail: {
