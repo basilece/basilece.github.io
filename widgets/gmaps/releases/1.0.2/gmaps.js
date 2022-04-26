@@ -64,10 +64,9 @@
 				}
 	
 
-				 generateMap(callback){
+				 generateMap(address, callback){
 					var map;
 					var geocoder;
-					var address = this.IT.getValue();
 					 geocoder = new google.maps.Geocoder();
 					  var latlng = new google.maps.LatLng(-34.397, 150.644);
 					  var mapOptions = {
@@ -87,7 +86,9 @@
 							  
 						  })
                           
-						  callback(results[0].geometry.location);
+						  var lat = results[0].geometry.location.lat();
+                          var lng = results[0].geometry.location.lng();
+                        callback({ Status: "OK", Latitude: lat, Longitude: lng });
 						 
 						} else {
 						  alert('Geocode was not successful for the following reason: ' + status);
@@ -104,9 +105,9 @@
 				
 					firePress() {
 					var address = this.IT.getValue();
-					 this.generateMap(function(longlat){
+					 this.generateMap(address,function(data){
                          //alert(longlat);
-						 var lonlat = longlat;
+						 console.log(data);
 						    properties = {  TextAdressLat:  longlat,
 						                     TextAdressLong: longlat
 		                       };
