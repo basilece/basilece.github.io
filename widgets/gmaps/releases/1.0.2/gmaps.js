@@ -109,8 +109,8 @@
 					 this.generateMap(address,function(data){
                          //alert(longlat);
 						 console.log(data);
-						    properties = {  TextAdressLat:  longlat,
-						                     TextAdressLong: longlat
+						    properties = {  TextAdressLat:  data.Latitude,
+						                     TextAdressLong: data,Longitude
 		                       };
 
 					 });
