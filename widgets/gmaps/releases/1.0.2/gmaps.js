@@ -10,6 +10,8 @@
 		scr.type = 'text/javascript';
 		wrap.appendChild(scr);
         document.body.appendChild(wrap);
+		template.width = 600;
+		template.height = 300;
 	
 		class Gmaps extends HTMLElement {
 			constructor() {
