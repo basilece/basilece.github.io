@@ -23,14 +23,12 @@
 				if (this.children.length >= 3) return; //constructor called during drag+drop
 				if (!this.querySelector("link")) {
 					this.appendChild(template.content.cloneNode(true));
-					
-				 
-					
+
 					
 				   }
 				 
 					
-					//Creat e the Input (for Address)  
+					//Create the Input (for Address)  
 					  var ctor = sap.m.Input;
 					  this.IT = new ctor({
 							width : "500px" ,
@@ -105,9 +103,8 @@
 					 });
 	                //console.log(["This is the lat : ", this.generateMap.coords[0]]) ;
 					//console.log(["This is the long : ", this.generateMap.coords[1]]) ;
-					var properties = {   TextVal: results[0].formatted_address,
-						TextAdressLat:  longlat,
-						TextAdressLong: longlat
+					var properties = {  TextAdressLat:  longlat,
+					                 	TextAdressLong: longlat
                         };
 					this.dispatchEvent(new CustomEvent("propertiesChanged", {
 						detail: {
