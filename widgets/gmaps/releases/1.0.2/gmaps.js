@@ -109,7 +109,8 @@
 					 this.generateMap(address,function(data){
                     
 						 console.log(data);
-						  return  properties = {  TextAdressLat:  data.Latitude,
+						  return  properties = {  TextVal : data.formatted_address,
+							                      TextAdressLat:  data.Latitude,
 						                          TextAdressLong: data.Longitude
 		                       };
 
