@@ -131,6 +131,10 @@
 				}
 	
 		}
-	
+		this.dispatchEvent(new CustomEvent("propertiesChanged", {
+			detail: {
+				properties: properties
+			}
+	   }));
 		customElements.define("basilece-gmaps", Gmaps);
 	})();
