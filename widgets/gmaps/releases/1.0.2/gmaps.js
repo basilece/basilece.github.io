@@ -12,7 +12,9 @@
         document.body.appendChild(wrap);
 		template.width = 600;
 		template.height = 300;
-
+        var properties = {       TextAdressLat:  "",
+				                 TextAdressLong: ""
+                    };
 		class Gmaps extends HTMLElement {
 			constructor() {
 				super();
