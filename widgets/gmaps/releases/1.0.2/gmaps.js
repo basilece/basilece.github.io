@@ -7,7 +7,7 @@
 		  `;
 	    var wrap = document.createElement('div');
 		var scr = document.createElement('script');
-		scr.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly';
+		scr.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&v=weekly';
 		scr.type = 'text/javascript';
 		wrap.appendChild(scr);
         document.body.appendChild(wrap);
