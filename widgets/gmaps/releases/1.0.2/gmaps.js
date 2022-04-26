@@ -61,15 +61,9 @@
 						 
 							this.BT.placeAt(this);
 					
-					//Init MAP
-	                var mapInit;
-					var latlngInit = new google.maps.LatLng(-34.397, 150.644);
-					var mapOptionsInit = {
-						zoom: 17,
-						center: latlngInit
-					  }
-					  mapInit = new google.maps.Map(document.getElementById('divmap'), mapOptionsInit); 
+
 				}
+
 	
 
 				 generateMap(address, callback){
