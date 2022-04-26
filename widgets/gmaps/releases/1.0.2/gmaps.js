@@ -12,10 +12,7 @@
         document.body.appendChild(wrap);
 		template.width = 600;
 		template.height = 300;
-	    var properties = {  TextVal : "",
-				                 TextAdressLat:  "",
-				                 TextAdressLong: ""
-                    };
+
 		class Gmaps extends HTMLElement {
 			constructor() {
 				super();
@@ -109,8 +106,8 @@
 					 this.generateMap(address,function(data){
                          //alert(longlat);
 						 console.log(data);
-						    properties = {  TextAdressLat:  data.Latitude,
-						                     TextAdressLong: data.Longitude
+						  return  properties = {  TextAdressLat:  data.Latitude,
+						                          TextAdressLong: data.Longitude
 		                       };
 
 					 });
