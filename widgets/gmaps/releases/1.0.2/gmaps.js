@@ -106,7 +106,7 @@
 						 var properties = {  TextAdressLat:  longlat,
 						                     TextAdressLong: longlat
 		                       };
-						this.dispatchEvent(new CustomEvent("propertiesChanged", {
+						Gmaps.dispatchEvent(new CustomEvent("propertiesChanged", {
 								detail: {
 									properties: properties
 								}
