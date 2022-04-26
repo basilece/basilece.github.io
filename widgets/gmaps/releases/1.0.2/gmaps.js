@@ -103,11 +103,11 @@
 					 this.generateMap(function(longlat){
                          alert(longlat);
 					 });
-	                console.log(["This is the lat : ", this.generateMap.coords[0]]) ;
-					console.log(["This is the long : ", this.generateMap.coords[1]]) ;
+	                //console.log(["This is the lat : ", this.generateMap.coords[0]]) ;
+					//console.log(["This is the long : ", this.generateMap.coords[1]]) ;
 					var properties = {   TextVal: results[0].formatted_address,
-						TextAdressLat:  this.generateMap.coords[0],
-						TextAdressLong: this.generateMap.coords[1]
+						TextAdressLat:  longlat,
+						TextAdressLong: longlat
                         };
 					this.dispatchEvent(new CustomEvent("propertiesChanged", {
 						detail: {
