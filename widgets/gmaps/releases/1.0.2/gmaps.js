@@ -91,8 +91,8 @@
 							  
 						  })
 						  var properties = {   TextVal: results[0].formatted_address,
-											   TextAdressLat: results[0].geometry.location,
-											   TextAdressLong: results[0].geometry.location
+											   TextAdressLat: coords[0],
+											   TextAdressLong: coords[1]
 						 };
 					
 						 
