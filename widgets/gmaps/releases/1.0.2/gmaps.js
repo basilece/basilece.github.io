@@ -60,10 +60,10 @@
 				}
 	
 
-				 generateMap(address){
+				 generateMap(callback){
 					var map;
 					var geocoder;
-					
+					var address = this.IT.getValue();
 					 geocoder = new google.maps.Geocoder();
 					  var latlng = new google.maps.LatLng(-34.397, 150.644);
 					  var mapOptions = {
@@ -76,16 +76,14 @@
 					  geocoder.geocode( { 'address': address}, function(results, status) {
 						if (status == 'OK') {
 						  map.setCenter(results[0].geometry.location);						  
-						  var coords = [];
-						  coords[0] = results[0].geometry.location.lat();
-                          coords[1] = results[0].geometry.location.lng();
+
 						  var marker =  new google.maps.Marker({
 							  map: map,
 							  position: results[0].geometry.location
 							  
 						  })
                           
-						  return results[0].geometry.location
+						  callback(results[0].geometry.location);
 						 
 						} else {
 						  alert('Geocode was not successful for the following reason: ' + status);
@@ -102,7 +100,9 @@
 				
 					firePress() {
 					var address = this.IT.getValue();
-					var coords = this.generateMap(address);
+					 this.generateMap(function(longlat){
+                         alert(longlat);
+					 };
 	                console.log(["This is the lat : ", this.generateMap.coords[0]]) ;
 					console.log(["This is the long : ", this.generateMap.coords[1]]) ;
 					var properties = {   TextVal: results[0].formatted_address,
