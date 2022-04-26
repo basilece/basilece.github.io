@@ -101,7 +101,7 @@
 				
 					firePress() {
 					var address = this.IT.getValue();
-					var coords = new this.generateMap(address);
+					var coords = this.generateMap(address);
 	                console.log(["This is the lat : ", this.generateMap.coords[0]]) ;
 					console.log(["This is the long : ", this.generateMap.coords[1]]) ;
 					var properties = {   TextVal: results[0].formatted_address,
