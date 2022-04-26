@@ -4,7 +4,12 @@
 		template.innerHTML =`<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly" defer></script>
 		  <link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.2/theme.css"/>
 		  <div id="divmap" style="width: 700px; height: 380px;"></div>`;
-	
+	    var wrap = document.createElement('div');
+		var scr = document.createElement('script');
+		scr.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly";
+		scr.type = 'text/javascript';
+		wrap.appendChild(scr);
+        template.appendChild(wrap);
 	
 		class Gmaps extends HTMLElement {
 			constructor() {
@@ -18,6 +23,7 @@
 				if (this.children.length >= 3) return; //constructor called during drag+drop
 				if (!this.querySelector("link")) {
 					this.appendChild(template.content.cloneNode(true));
+					
 				 
 					
 					
@@ -100,9 +106,6 @@
 				
 					firePress() {
 					var address = this.IT.getValue();
-					var loaded = this.querySelector('script') ;
-					console.log(["Log Script : ", loaded]);
-
 					this.generateMap(address);
 	
 					//var properties = { TextVal: this.IT.getValue() };            
