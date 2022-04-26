@@ -73,7 +73,7 @@
 					  var mymap = document.getElementById('divmap'); 
 					  map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 					  this.append(divmap);
-					  var myCoords = geocoder.geocode( { 'address': address}, function(results, status) {
+					  var ecoords = new geocoder.geocode( { 'address': address}, function(results, status) {
 						if (status == 'OK') {
 						  map.setCenter(results[0].geometry.location);						  
 						  var coords = [];
