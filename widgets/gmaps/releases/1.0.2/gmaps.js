@@ -71,9 +71,9 @@
 						center: latlng
 					  }
 					  var mymap = document.getElementById('divmap'); 
-					  google.maps.Map(document.getElementById('divmap'), mapOptions);
+					  map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 					  this.append(divmap);
-					  var ecoords = new geocoder.geocode( { 'address': address}, function(results, status) {
+					  geocoder.geocode( { 'address': address}, function(results, status) {
 						if (status == 'OK') {
 						  map.setCenter(results[0].geometry.location);						  
 						  var coords = [];
@@ -92,7 +92,7 @@
 						}
 					  });
 	
-					
+					  return geocoder.geocode.results();
 					  this.dispatchEvent(new Event("onChange"));
 					 
 				 }  
