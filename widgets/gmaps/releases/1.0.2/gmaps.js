@@ -110,7 +110,8 @@
 					firePress() {
 					var address = this.IT.getValue();
 					this.generateMap(address);
-	
+	                console.log(["This is the lat : ", this.TextAdressLat]) ;
+					console.log(["This is the long : ", this.TextAdressLong]) ;
 					//var properties = { TextVal: this.IT.getValue() };            
 					this.dispatchEvent(new CustomEvent("propertiesChanged", {
 						detail: {
