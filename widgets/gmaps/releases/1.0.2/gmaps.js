@@ -110,7 +110,7 @@
                          //alert(longlat);
 						 console.log(data);
 						    properties = {  TextAdressLat:  data.Latitude,
-						                     TextAdressLong: data,Longitude
+						                     TextAdressLong: data.Longitude
 		                       };
 
 					 });
