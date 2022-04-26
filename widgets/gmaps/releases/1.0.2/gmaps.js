@@ -136,5 +136,6 @@
 				properties: properties
 			}
 	   }));
+	    this.dispatchEvent(new Event("onChange"));
 		customElements.define("basilece-gmaps", Gmaps);
 	})();
