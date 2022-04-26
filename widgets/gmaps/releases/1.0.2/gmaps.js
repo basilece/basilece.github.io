@@ -106,20 +106,16 @@
 						 var properties = {  TextAdressLat:  longlat,
 						                     TextAdressLong: longlat
 		                       };
+						this.dispatchEvent(new CustomEvent("propertiesChanged", {
+								detail: {
+									properties: properties
+								}
+						   }));
 					 });
 
-	                //console.log(["This is the lat : ", this.generateMap.coords[0]]) ;
-					//console.log(["This is the long : ", this.generateMap.coords[1]]) ;
 
-					this.dispatchEvent(new CustomEvent("propertiesChanged", {
-						detail: {
-							properties: properties
-						}
-				   }));
-					//var properties = { TextVal: this.IT.getValue() };            
-					
-				   
-				   //this.getGeocoding(properties.TextVal);
+
+
 				}    
 				
 				
