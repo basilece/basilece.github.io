@@ -71,7 +71,7 @@
 						center: latlng
 					  }
 					  var mymap = document.getElementById('divmap'); 
-					  map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
+					  google.maps.Map(document.getElementById('divmap'), mapOptions);
 					  this.append(divmap);
 					  var ecoords = new geocoder.geocode( { 'address': address}, function(results, status) {
 						if (status == 'OK') {
@@ -85,7 +85,7 @@
 							  
 						  })
 
-                          return coords;
+                         
 						 
 						} else {
 						  alert('Geocode was not successful for the following reason: ' + status);
@@ -94,7 +94,7 @@
 	
 					
 					  this.dispatchEvent(new Event("onChange"));
-					  return myCoords;
+					 
 				 }  
 	 
 				
