@@ -1,9 +1,10 @@
 (function() {
 
 		let template = document.createElement("template");
-		template.innerHTML =`<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly" defer></script>
+		template.innerHTML =`
 		  <link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.2/theme.css"/>
-		  <div id="divmap" style="width: 600px; height: 300px;"></div>`;
+		  <div id="divmap" style="width: 600px; height: 300px;"></div>
+		  `;
 	    var wrap = document.createElement('div');
 		var scr = document.createElement('script');
 		scr.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly';
@@ -59,7 +60,8 @@
 							  )
 						 
 							this.BT.placeAt(this);
-	
+					
+					//Generate MAP
 	
 				}
 	
@@ -97,9 +99,7 @@
 					  });
 
 					  
-					  
-					 
-					 
+		 
 				 }  
 	 
 				
@@ -120,7 +120,9 @@
 						detail: {
 							properties: properties
 						}
-				   }));
+					}));
+
+
 				   this.dispatchEvent(new Event("onChange"));
 
 
