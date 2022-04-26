@@ -93,7 +93,7 @@
 					  });
 
 					  this.dispatchEvent(new Event("onChange"));
-					  return geocoder.geocode.results[0];
+					  return results[0].geometry.location
 					 
 					 
 				 }  
