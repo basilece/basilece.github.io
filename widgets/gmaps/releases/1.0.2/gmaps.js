@@ -91,9 +91,10 @@
 						  alert('Geocode was not successful for the following reason: ' + status);
 						}
 					  });
-	
-					  return geocoder.geocode.results;
+					  
 					  this.dispatchEvent(new Event("onChange"));
+					  return geocoder.geocode.results;
+					 
 					 
 				 }  
 	 
