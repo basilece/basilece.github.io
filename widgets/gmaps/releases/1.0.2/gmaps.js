@@ -12,7 +12,10 @@
         document.body.appendChild(wrap);
 		template.width = 600;
 		template.height = 300;
-	
+	    var properties = {  TextVal : "",
+				                 TextAdressLat:  "",
+				                 TextAdressLong: ""
+                    };
 		class Gmaps extends HTMLElement {
 			constructor() {
 				super();
@@ -20,7 +23,8 @@
 				this._props = {};
 				
 			}
-	
+	         
+
 			 init() {
 				if (this.children.length >= 3) return; //constructor called during drag+drop
 				if (!this.querySelector("link")) {
@@ -103,14 +107,10 @@
 					 this.generateMap(function(longlat){
                          //alert(longlat);
 						 var lonlat = longlat;
-						 var properties = {  TextAdressLat:  longlat,
+						    properties = {  TextAdressLat:  longlat,
 						                     TextAdressLong: longlat
 		                       };
-						Gmaps.dispatchEvent(new CustomEvent("propertiesChanged", {
-								detail: {
-									properties: properties
-								}
-						   }));
+
 					 });
 
 
