@@ -6,7 +6,7 @@
 		  <div id="divmap" style="width: 700px; height: 380px;"></div>`;
 	    var wrap = document.createElement('div');
 		var scr = document.createElement('script');
-		scr.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly";
+		scr.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly';
 		scr.type = 'text/javascript';
 		wrap.appendChild(scr);
         template.appendChild(wrap);
