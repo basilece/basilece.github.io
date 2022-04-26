@@ -57,15 +57,9 @@
 							this.BT.placeAt(this);
 	
 	
-						   
-					   // Initialize the MAP 
-	  
-					
 				}
 	
-			
-	
-			
+
 				 generateMap(address){
 					var map;
 					var geocoder;
@@ -92,7 +86,6 @@
 						  })
 
 
-					
 						 
 						} else {
 						  alert('Geocode was not successful for the following reason: ' + status);
@@ -130,51 +123,6 @@
 				set TextVal(value){
 					 this.IT.setValue(value);
 				}
-	
-	
-				getGeocoding(addressText){
-					let request = new XMLHttpRequest();
-						   request.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address=" + addressText + "&key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ");
-						   request.send();
-						   request.onload = () => {
-								 console.log(request);
-								 if (request.status === 200){
-			
-									 }
-								 else{console.log("something went wrong with API")};
-								 
-							  }	
-							  if (request.status === 200){
-								 
-								var data = request.responseText;
-								var jsonResponse = JSON.parse(data);
-								if (jsonResponse["status"] == 'OK'){
-								
-								var properties = { TextVal: jsonResponse.results[0].formatted_address,
-												   TextAdressLat: jsonResponse.results[0].geometry.location.lng,
-												   TextAdressLong: jsonResponse.results[0].geometry.location.lat
-												}; 
-	
-												this.dispatchEvent(new CustomEvent("propertiesChanged", {
-													detail: {
-														properties: properties
-													}
-											   }))
-	
-								this.dispatchEvent(new Event("onChange"));
-	
-								console.log(jsonResponse);
-											}
-								
-	
-	
-							   }
-						}
-				
-				
-		
-	
-	
 	
 		}
 	
