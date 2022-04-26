@@ -95,7 +95,7 @@
 						}
 					  });
 
-					  this.dispatchEvent(new Event("onChange"));
+					  
 					  
 					 
 					 
@@ -119,7 +119,7 @@
 							properties: properties
 						}
 				   }));
-
+				   this.dispatchEvent(new Event("onChange"));
 
 
 				}    
