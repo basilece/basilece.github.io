@@ -9,7 +9,7 @@
 		scr.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&callback=initMap&v=weekly';
 		scr.type = 'text/javascript';
 		wrap.appendChild(scr);
-        template.appendChild(wrap);
+        document.body.appendChild(wrap);
 	
 		class Gmaps extends HTMLElement {
 			constructor() {
