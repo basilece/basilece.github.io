@@ -21,8 +21,8 @@
 			constructor() {
 				super();
 				this.init();
-				//this.InitMap();
-				this.addEventListener("DOMContentLoaded", InitMapF);
+				this.InitMap();
+				
 				this._props = {};
 				
 			}
