@@ -66,7 +66,7 @@
 			if (!this.querySelector("link")) {
 
 				this.appendChild(template.content.cloneNode(true));
-
+				this.appendChild(divmap.content.cloneNode(true));
 			}
 
 
