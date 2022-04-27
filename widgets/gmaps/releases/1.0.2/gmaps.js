@@ -58,7 +58,7 @@
 			if (!this.querySelector("link")) {
 
 				this.appendChild(template.content.cloneNode(true));
-	
+				console.log(["Log innerHTML of this", this.innerHTML]);
 			}
 
 
