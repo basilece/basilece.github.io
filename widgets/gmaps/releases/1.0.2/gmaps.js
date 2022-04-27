@@ -21,6 +21,17 @@
 			constructor() {
 				super();
 				this.init();
+
+				if( document.readyState !== 'loading' ) {
+					console.log( 'document is already ready, just execute code here' );
+					this.InitMap();
+				} else {
+					document.addEventListener('DOMContentLoaded', function () {
+						console.log( 'document was not ready, place code here' );
+						this.InitMap();
+					});
+				}
+
 				document.addEventListener("DOMContentLoaded", function () {
 					// do things after the DOM loads partially
 					console.log("DOM is loaded");
@@ -75,7 +86,7 @@
 
 
 
-				InitMap(){
+				   InitMap(){
 						//Generate Init MAP
 						var InitMap;
 						var latlng = new google.maps.LatLng(-34.397, 150.644);
