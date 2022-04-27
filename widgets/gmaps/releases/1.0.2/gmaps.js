@@ -83,10 +83,7 @@
 				}
                
 				InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-				this.onload = function () {
-					alert("We are here");
-                    this.append(divmap);
-				}
+                this.append(divmap);
 				
 
 
