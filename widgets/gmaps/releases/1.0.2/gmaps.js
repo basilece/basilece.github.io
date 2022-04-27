@@ -10,6 +10,7 @@
 		scr.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&v=weekly';
 		scr.type = 'text/javascript';
 		scr.defer = 'true';
+		scr.async = 'true';
 		wrap.appendChild(scr);
         document.body.appendChild(wrap);
 		template.width = 600;
@@ -25,7 +26,6 @@
 			constructor() {
 				super();
 				this.init();
-                wait(5000);
 				this.InitMap();
 				this._props = {};
 				
