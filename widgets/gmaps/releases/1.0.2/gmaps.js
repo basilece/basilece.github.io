@@ -6,12 +6,12 @@
 		  <div id="divmap" style="width: 600px; height: 300px;"></div>
 		  `;
 	    var wrap = document.createElement('div');
-		var scr = document.createElement('script');
-		scr.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&v=weekly';
-		scr.type = 'text/javascript';
-		scr.defer = 'true';
-		scr.async = 'true';
-		wrap.appendChild(scr);
+		var gscript = document.createElement('script');
+		gscript.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&v=weekly';
+		gscript.type = 'text/javascript';
+		gscript.defer = 'true';
+		gscript.async = 'true';
+		wrap.appendChild(gscript);
         document.head.appendChild(wrap);
 		template.width = 600;
 		template.height = 300;
@@ -26,6 +26,9 @@
 			constructor() {
 				super();
 				this.init();
+				gscript.onload = function () {
+					this.InitMap();
+				}
 				this.InitMap();
 				this._props = {};
 				
