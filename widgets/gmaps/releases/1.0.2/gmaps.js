@@ -4,6 +4,7 @@
 	template.innerHTML = `
 		  <link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.2/theme.css"/>
         `;
+
     var divmap = document.createElement('div');
     divmap.id = 'divmap';
 	divmap.style.width = 600;
@@ -34,7 +35,8 @@
 
 	class Gmaps extends HTMLElement {
 		constructor() {
-			super();
+			super();			
+			this.init();
 			gscript.onload = function () {
 				//alert("Google script loaded");
 				var InitMap;
@@ -52,7 +54,6 @@
 
 
 			}
-			this.init();
 
 
 			this._props = {};
