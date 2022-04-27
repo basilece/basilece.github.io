@@ -3,9 +3,9 @@
 	let template = document.createElement('template');
 	template.innerHTML = `
 		  <link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.2/theme.css"/>
-		  <div id="divmap" style="width: 600px; height: 300px;"></div>
-        `;
-
+         `;
+	let divmap = document.createElement('div');
+    template.content.appendChild(divmap);
     //let divmap = document.createElement('div');
     //template.content.appendChild(divmap);
 
