@@ -21,6 +21,7 @@
 			constructor() {
 				super();
 				this.init();
+				this.InitMap();
 				this._props = {};
 				
 			}
@@ -63,18 +64,21 @@
 						 
 							this.BT.placeAt(this);
 
-						//Generate Init MAP
-						var InitMap;
-						var latlng = new google.maps.LatLng(-34.397, 150.644);
-						var mapOptions = {
-						  zoom: 17,
-						  center: latlng
-						}
-
-						InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-						this.append(divmap);
 					
 
+				}
+
+				InitMap(){
+						//Generate Init MAP
+											var InitMap;
+											var latlng = new google.maps.LatLng(-34.397, 150.644);
+											var mapOptions = {
+											  zoom: 17,
+											  center: latlng
+											}
+					
+											InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
+											this.append(divmap);
 				}
 
 	
