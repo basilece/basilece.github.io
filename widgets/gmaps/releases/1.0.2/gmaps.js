@@ -12,7 +12,7 @@
 		scr.defer = 'true';
 		scr.async = 'true';
 		wrap.appendChild(scr);
-        document.body.appendChild(wrap);
+        document.head.appendChild(wrap);
 		template.width = 600;
 		template.height = 300;
         var properties = {  TextVal: "",
