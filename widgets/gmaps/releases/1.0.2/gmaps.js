@@ -160,8 +160,9 @@
 				}
 	
 		}
-
+		
 		customElements.define("basilece-gmaps", Gmaps);
+		Gmaps.InitMap();
 	})();
 
-	Gmaps.InitMap();
+	
