@@ -6,6 +6,10 @@
 		  <div id="divmap" style="width: 600px; height: 300px;"></div>
         `;
 
+    let divmap = document.createElement("div");
+    template.content.appendChild(divmap);
+
+
 
 	var wrap = document.createElement('div');
 	var gscript = document.createElement('script');
@@ -41,8 +45,8 @@
 			if (!this.querySelector("link")) {
 
 				this.appendChild(template.content.cloneNode(true));
-				//this.append(divmap);
-				console.log(["Log innerHTML of this", this.innerHTML]);
+				//this.content.append(divmap);
+				//console.log(["Log innerHTML of this", this.innerHTML]);
 			}
 
 
