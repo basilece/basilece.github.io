@@ -52,9 +52,13 @@
 			 init() {
 				if (this.children.length >= 3) return; //constructor called during drag+drop
 				if (!this.querySelector("link")) {
+					template.onload = function () {
+						this.append(divmap);
+					}
 					this.appendChild(template.content.cloneNode(true));
-					this.append(divmap);
-					var text = this.innerHTML;
+
+					
+					
 					//console.log(["this is the document body", document.body.innerHTML]);
 
 					
