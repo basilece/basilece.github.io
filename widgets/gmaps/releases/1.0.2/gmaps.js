@@ -3,15 +3,9 @@
 	let template = document.createElement("template");
 	template.innerHTML = `
 		  <link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.2/theme.css"/>
+		  <div id="divmap" style="width: 600px; height: 300px;"></div>
         `;
 
-    var divmap = document.createElement('div');
-    divmap.id = 'divmap';
-	divmap.style.width = 600;
-	divmap.style.height = 300;
-
-	console.log(divmap);
-    console.log(["this is the template innerHTML: ", template.innerHTML]);
 
 	var wrap = document.createElement('div');
 	var gscript = document.createElement('script');
