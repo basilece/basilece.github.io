@@ -25,7 +25,6 @@
 		class Gmaps extends HTMLElement {
 			constructor() {
 				super();
-				this.init();
 				gscript.onload = function () {
 					//alert("Google script loaded");
 					var InitMap;
@@ -43,6 +42,8 @@
 					
 					
 				}
+				this.init();
+
 				
 				this._props = {};
 				
