@@ -39,10 +39,12 @@
 					zoom: 17,
 					center: latlng
 				}
-
+               
 				InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-				//this.append(divmap);
-
+				this.onload = function () {
+                    this.append(divmap);
+				}
+				
 
 
 			}
