@@ -42,6 +42,7 @@
 
 				InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 				console.log(["this is the log : ", divmap]);
+				console.log(["this is the thjis : ", this]);
 				this.append(divmap);
 				
 
