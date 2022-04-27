@@ -9,7 +9,7 @@
 	divmap.width = 600;
 	divmap.height = 300;
 	template.appendChild(divmap);
-
+    console.log(["this is the template innerHTML: ", template.innerHTML]);
 	var wrap = document.createElement('div');
 	var gscript = document.createElement('script');
 	gscript.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&v=weekly';
