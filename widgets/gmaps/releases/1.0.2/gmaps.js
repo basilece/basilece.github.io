@@ -22,7 +22,11 @@
 			constructor() {
 				super();
 				this.init();
-				this.InitMap();
+				window.addEventListener('load', function() {
+					alert("Inimap begin");
+					this.InitMap();
+				})
+				
 				
 				this._props = {};
 				
@@ -75,7 +79,7 @@
 
 				   InitMap(){
 						//Generate Init MAP
-						alert("Inimap begin");
+						
 						var InitMap;
 						var latlng = new google.maps.LatLng(-34.397, 150.644);
 						var mapOptions = {
