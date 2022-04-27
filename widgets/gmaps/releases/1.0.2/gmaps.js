@@ -36,7 +36,11 @@
 							}
 				
 					InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-					this.append(divmap);
+					template.onload = function (){
+						this.append(divmap);
+					}
+					
+					
 				}
 				
 				this._props = {};
