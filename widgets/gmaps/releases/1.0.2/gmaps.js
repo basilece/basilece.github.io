@@ -44,9 +44,8 @@
 			if (this.children.length >= 3) return; //constructor called during drag+drop
 			if (!this.querySelector("link")) {
 
-				this.appendChild(template.content.cloneNode(true));
-				//this.content.append(divmap);
-				//console.log(["Log innerHTML of this", this.innerHTML]);
+				//this.appendChild(template.content.cloneNode(true));
+				this.appendChild(template);
 			}
 
 
