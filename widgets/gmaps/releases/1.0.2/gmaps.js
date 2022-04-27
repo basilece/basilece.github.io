@@ -41,10 +41,8 @@
 				}
 
 				InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-
-				this.onload = function () {
-					this.append(divmap);
-				}
+				this.append(divmap);
+				
 
 
 			}
