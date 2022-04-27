@@ -87,7 +87,7 @@
 				}
                
 				InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-                this.content.append(divmap);
+                this.content.appendChild(divmap);
 				
 
 
