@@ -18,14 +18,16 @@
 			                TextAdressLat:  "",
 							TextAdressLong: ""
                     };
+
+		const delay = ms => new Promise(res => setTimeout(res, ms));
+
 		class Gmaps extends HTMLElement {
 			constructor() {
 				super();
 				this.init();
-				window.addEventListener('load', function() {
-					alert("Inimap begin");
-					this.InitMap();
-				})
+                
+				await delay(5000);
+				this.InitMap();
 				
 				
 				this._props = {};
@@ -165,6 +167,7 @@
 
 		function InitMapF(){
 				//Generate Init MAP
+
 				var InitMap;
 				var latlng = new google.maps.LatLng(-34.397, 150.644);
 				var mapOptions = {
