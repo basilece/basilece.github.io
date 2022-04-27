@@ -21,7 +21,11 @@
 			constructor() {
 				super();
 				this.init();
-				this.InitMap();
+				this.addEventListener("DOMContentLoaded", function () {
+					// do things after the DOM loads partially
+					console.log("DOM is loaded");
+					this.InitMap();
+				  });
 				this._props = {};
 				
 			}
@@ -68,17 +72,20 @@
 
 				}
 
+
+
+
 				InitMap(){
 						//Generate Init MAP
-											var InitMap;
-											var latlng = new google.maps.LatLng(-34.397, 150.644);
-											var mapOptions = {
-											  zoom: 17,
-											  center: latlng
-											}
+						var InitMap;
+						var latlng = new google.maps.LatLng(-34.397, 150.644);
+						var mapOptions = {
+							 zoom: 17,
+							 center: latlng
+								}
 					
-											InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-											this.append(divmap);
+						InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
+						this.append(divmap);
 				}
 
 	
