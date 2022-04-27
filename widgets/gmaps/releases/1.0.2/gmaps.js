@@ -31,7 +31,7 @@
 				if (!this.querySelector("link")) {
 					this.appendChild(template.content.cloneNode(true));
 					var text = this.innerHTML;
-					console.log(["this is the document body", document.body.innerHTML]);
+					//console.log(["this is the document body", document.body.innerHTML]);
 
 					
 				   }
@@ -62,6 +62,17 @@
 							  )
 						 
 							this.BT.placeAt(this);
+
+						//Generate Init MAP
+						var InitMap;
+						var latlng = new google.maps.LatLng(-34.397, 150.644);
+						var mapOptions = {
+						  zoom: 17,
+						  center: latlng
+						}
+
+						InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
+						this.append(divmap);
 					
 
 				}
