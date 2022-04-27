@@ -22,7 +22,7 @@
 			constructor() {
 				super();
 				this.init();
-				this.InitMap();
+				//this.InitMap();
 				
 				this._props = {};
 				
