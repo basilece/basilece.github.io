@@ -21,7 +21,7 @@
 			constructor() {
 				super();
 				this.init();
-				document.addEventListener("DOMContentLoaded", function () {
+				window.addEventListener("load", function () {
 					// do things after the DOM loads partially
 					console.log("DOM is loaded");
 					this.InitMap();
