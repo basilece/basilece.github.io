@@ -21,7 +21,8 @@
 			constructor() {
 				super();
 				this.init();
-				this.InitMap();
+				//this.InitMap();
+				document.addEventListener("DOMContentLoaded", InitMapF);
 				this._props = {};
 				
 			}
@@ -154,6 +155,19 @@
 					 this.IT.setValue(value);
 				}
 	
+		}
+
+		function InitMapF(){
+				//Generate Init MAP
+				var InitMap;
+				var latlng = new google.maps.LatLng(-34.397, 150.644);
+				var mapOptions = {
+						 zoom: 17,
+						center: latlng
+						}
+								
+				InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
+				Gmaps.append(divmap);
 		}
 		
 		customElements.define("basilece-gmaps", Gmaps);
