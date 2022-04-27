@@ -6,8 +6,8 @@
         `;
     var divmap = document.createElement('div');
     divmap.id = 'divmap';
-	divmap.width = 600;
-	divmap.height = 300;
+	divmap.style.width = 600;
+	divmap.style.height = 300;
 	template.appendChild(divmap);
 	console.log(divmap);
     console.log(["this is the template innerHTML: ", template.innerHTML]);
@@ -19,8 +19,8 @@
 	gscript.async = 'true';
 	wrap.appendChild(gscript);
 	document.head.appendChild(wrap);
-	template.width = 600;
-	template.height = 300;
+	template.style.width = 600;
+	template.style.height = 320;
 
 
 	var properties = {
