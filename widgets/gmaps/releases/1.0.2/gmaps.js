@@ -21,12 +21,7 @@
 			constructor() {
 				super();
 				this.init();
-
-				document.addEventListener("DOMContentLoaded", function () {
-					// do things after the DOM loads partially
-					console.log("DOM is loaded");
-					this.InitMap();
-				  });
+				this.InitMap();
 				this._props = {};
 				
 			}
@@ -162,7 +157,7 @@
 		}
 		
 		customElements.define("basilece-gmaps", Gmaps);
-		Gmaps.InitMap();
+		
 	})();
 
 	
