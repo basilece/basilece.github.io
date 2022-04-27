@@ -3,8 +3,13 @@
 	let template = document.createElement("template");
 	template.innerHTML = `
 		  <link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.2/theme.css"/>
-		  <div id="divmap" style="width: 600px; height: 300px;"></div>
-		  `;
+        `;
+    var divmap = document.createElement('div');
+    divmap.id = 'divmap';
+	divmap.width = 600;
+	divmap.height = 300;
+	template.appendChild(divmap);
+
 	var wrap = document.createElement('div');
 	var gscript = document.createElement('script');
 	gscript.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&v=weekly';
@@ -15,6 +20,8 @@
 	document.head.appendChild(wrap);
 	template.width = 600;
 	template.height = 300;
+
+
 	var properties = {
 		TextVal: "",
 		TextAdressLat: "",
@@ -38,7 +45,7 @@
 				InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 
 				this.onload = function () {
-					this.append(divmap);
+					//this.append(divmap);
 				}
 
 
@@ -54,15 +61,8 @@
 		init() {
 			if (this.children.length >= 3) return; //constructor called during drag+drop
 			if (!this.querySelector("link")) {
-				template.onload = function () {
-					this.append(divmap);
-				}
+
 				this.appendChild(template.content.cloneNode(true));
-
-
-
-				//console.log(["this is the document body", document.body.innerHTML]);
-
 
 			}
 
@@ -112,26 +112,26 @@
 			}
 			var mymap = document.getElementById('divmap');
 			map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-			this.append(divmap);
-			// geocoder.geocode({ 'address': address }, function (results, status) {
-			// 	if (status == 'OK') {
-			// 		map.setCenter(results[0].geometry.location);
+			//this.append(divmap);
+			geocoder.geocode({ 'address': address }, function (results, status) {
+				if (status == 'OK') {
+					map.setCenter(results[0].geometry.location);
 
-			// 		var marker = new google.maps.Marker({
-			// 			map: map,
-			// 			position: results[0].geometry.location
+					var marker = new google.maps.Marker({
+						map: map,
+						position: results[0].geometry.location
 
-			// 		})
+					})
 
-			// 		var formatted_address = results[0].formatted_address;
-			// 		var lat = results[0].geometry.location.lat();
-			// 		var lng = results[0].geometry.location.lng();
-			// 		callback({ Status: "OK", Latitude: lat, Longitude: lng, formatted_address: formatted_address });
+					var formatted_address = results[0].formatted_address;
+					var lat = results[0].geometry.location.lat();
+					var lng = results[0].geometry.location.lng();
+					callback({ Status: "OK", Latitude: lat, Longitude: lng, formatted_address: formatted_address });
 
-			// 	} else {
-			// 		alert('Geocode was not successful for the following reason: ' + status);
-			// 	}
-			// });
+				} else {
+					alert('Geocode was not successful for the following reason: ' + status);
+				}
+			});
 
 
 
