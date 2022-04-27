@@ -28,7 +28,8 @@
 				this.init();
 				gscript.onload = function () {
 					//alert("Google script loaded");
-					this.generateMap(this.IT.getValue());
+					var initAddress  = "Google Building 40, 1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA";
+					this.generateMap(initAddress);
 				}
 				
 				this._props = {};
