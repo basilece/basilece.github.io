@@ -22,16 +22,6 @@
 				super();
 				this.init();
 
-				if( document.readyState !== 'loading' ) {
-					console.log( 'document is already ready, just execute code here' );
-					this.InitMap();
-				} else {
-					document.addEventListener('DOMContentLoaded', function () {
-						console.log( 'document was not ready, place code here' );
-						this.InitMap();
-					});
-				}
-
 				document.addEventListener("DOMContentLoaded", function () {
 					// do things after the DOM loads partially
 					console.log("DOM is loaded");
@@ -173,3 +163,5 @@
 
 		customElements.define("basilece-gmaps", Gmaps);
 	})();
+
+	Gmaps.InitMap();
