@@ -28,8 +28,14 @@
 				this.init();
 				gscript.onload = function () {
 					//alert("Google script loaded");
-					var initAddress  = "Google Building 40, 1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA";
-					this.generateMap(initAddress);
+					var latlng = new google.maps.LatLng(-34.397, 150.644);
+					var mapOptions = {
+						 zoom: 17,
+						 center: latlng
+							}
+				
+					InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
+					this.append(divmap);
 				}
 				
 				this._props = {};
@@ -78,22 +84,6 @@
 
 				}
 
-
-
-
-				   InitMap(){
-						//Generate Init MAP
-						
-						var InitMap;
-						var latlng = new google.maps.LatLng(-34.397, 150.644);
-						var mapOptions = {
-							 zoom: 17,
-							 center: latlng
-								}
-					
-						InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-						this.append(divmap);
-				}
 
 	
 
