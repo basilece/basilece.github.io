@@ -6,7 +6,7 @@
 		  <div id="divmap" style="width: 600px; height: 300px;"></div>
         `;
 
-    let divmap = document.createElement("div");
+    let divmap = document.createElement('div');
     template.content.appendChild(divmap);
 
 
