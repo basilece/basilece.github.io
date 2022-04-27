@@ -31,6 +31,7 @@
 				if (!this.querySelector("link")) {
 					this.appendChild(template.content.cloneNode(true));
 					var text = this.innerHTML;
+					console.log(["this is the document body", document.body.innerHTML]);
 
 					
 				   }
