@@ -27,9 +27,10 @@
 				super();
 				this.init();
 				gscript.onload = function () {
-					this.InitMap();
+					alert("Google script loaded");
+					InitMapF();
 				}
-				this.InitMap();
+				
 				this._props = {};
 				
 			}
