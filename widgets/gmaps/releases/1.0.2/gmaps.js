@@ -36,6 +36,7 @@
 							}
 				
 					InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
+					
 					this.onload = function (){
 						this.append(divmap);
 					}
@@ -52,6 +53,7 @@
 				if (this.children.length >= 3) return; //constructor called during drag+drop
 				if (!this.querySelector("link")) {
 					this.appendChild(template.content.cloneNode(true));
+					this.append(divmap);
 					var text = this.innerHTML;
 					//console.log(["this is the document body", document.body.innerHTML]);
 
