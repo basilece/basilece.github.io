@@ -22,7 +22,7 @@
 				super();
 				this.init();
 				//this.InitMap();
-				document.addEventListener("DOMContentLoaded", InitMapF);
+				this.addEventListener("DOMContentLoaded", InitMapF);
 				this._props = {};
 				
 			}
