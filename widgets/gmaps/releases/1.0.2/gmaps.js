@@ -113,25 +113,25 @@
 			var mymap = document.getElementById('divmap');
 			map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 			this.append(divmap);
-			geocoder.geocode({ 'address': address }, function (results, status) {
-				if (status == 'OK') {
-					map.setCenter(results[0].geometry.location);
+			// geocoder.geocode({ 'address': address }, function (results, status) {
+			// 	if (status == 'OK') {
+			// 		map.setCenter(results[0].geometry.location);
 
-					var marker = new google.maps.Marker({
-						map: map,
-						position: results[0].geometry.location
+			// 		var marker = new google.maps.Marker({
+			// 			map: map,
+			// 			position: results[0].geometry.location
 
-					})
+			// 		})
 
-					var formatted_address = results[0].formatted_address;
-					var lat = results[0].geometry.location.lat();
-					var lng = results[0].geometry.location.lng();
-					callback({ Status: "OK", Latitude: lat, Longitude: lng, formatted_address: formatted_address });
+			// 		var formatted_address = results[0].formatted_address;
+			// 		var lat = results[0].geometry.location.lat();
+			// 		var lng = results[0].geometry.location.lng();
+			// 		callback({ Status: "OK", Latitude: lat, Longitude: lng, formatted_address: formatted_address });
 
-				} else {
-					alert('Geocode was not successful for the following reason: ' + status);
-				}
-			});
+			// 	} else {
+			// 		alert('Geocode was not successful for the following reason: ' + status);
+			// 	}
+			// });
 
 
 
