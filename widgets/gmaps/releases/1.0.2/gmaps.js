@@ -1,6 +1,6 @@
 (function () {
 
-	let template = document.createElement('div');
+	let template = document.createElement('template');
 	template.innerHTML = `
 		  <link rel="stylesheet" type="text/css" href="https://basilece.github.io/widgets/gmaps/releases/1.0.2/theme.css"/>
 		  <div id="divmap" style="width: 600px; height: 300px;"></div>
@@ -44,8 +44,8 @@
 			if (this.children.length >= 3) return; //constructor called during drag+drop
 			if (!this.querySelector("link")) {
 
-				//this.appendChild(template.content.cloneNode(true));
-				this.appendChild(template);
+				this.appendChild(template.content.cloneNode(true));
+				
 			}
 
 
