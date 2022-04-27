@@ -32,7 +32,7 @@
 			super();			
 			this.init();
 			gscript.onload = function () {
-				//alert("Google script loaded");
+				
 				var InitMap;
 				var latlng = new google.maps.LatLng(-34.397, 150.644);
 				var mapOptions = {
@@ -58,6 +58,7 @@
 			if (!this.querySelector("link")) {
 
 				this.appendChild(template.content.cloneNode(true));
+				this.appendChild(divmap);
 				console.log(["Log innerHTML of this", this.innerHTML]);
 			}
 
