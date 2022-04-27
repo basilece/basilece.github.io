@@ -9,7 +9,7 @@
     divmap.id = 'divmap';
 	divmap.style.width = 600;
 	divmap.style.height = 300;
-	template.appendChild(divmap);
+
 	console.log(divmap);
     console.log(["this is the template innerHTML: ", template.innerHTML]);
 
@@ -49,7 +49,7 @@
 				InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 
 				this.onload = function () {
-					//this.append(divmap);
+					this.append(divmap);
 				}
 
 
