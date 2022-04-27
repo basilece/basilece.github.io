@@ -28,6 +28,7 @@
 				this.init();
 				gscript.onload = function () {
 					//alert("Google script loaded");
+					var InitMap;
 					var latlng = new google.maps.LatLng(-34.397, 150.644);
 					var mapOptions = {
 						 zoom: 17,
