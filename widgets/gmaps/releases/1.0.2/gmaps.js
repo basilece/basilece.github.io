@@ -30,27 +30,7 @@
 	class Gmaps extends HTMLElement {
 		constructor() {
 			super();			
-			this.init();
-			gscript.onload = function () {
-				
-				var InitMap;
-				var latlng = new google.maps.LatLng(-34.397, 150.644);
-				var mapOptions = {
-					zoom: 17,
-					center: latlng
-				}
-               
-				InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-				this.onload = function () {
-					alert("We are here");
-                    this.append(divmap);
-				}
-				
-
-
-			}
-
-         
+			this.init();        
 			this._props = {};
 
 		}
@@ -93,7 +73,24 @@
 
 			this.BT.placeAt(this);
 
+			gscript.onload = function () {
+				
+				var InitMap;
+				var latlng = new google.maps.LatLng(-34.397, 150.644);
+				var mapOptions = {
+					zoom: 17,
+					center: latlng
+				}
+               
+				InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
+				this.onload = function () {
+					alert("We are here");
+                    this.append(divmap);
+				}
+				
 
+
+			}
 
 		}
 
