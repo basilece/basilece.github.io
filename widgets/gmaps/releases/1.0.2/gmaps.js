@@ -164,14 +164,16 @@
 					TextAdressLat: data.Latitude,
 					TextAdressLong: data.Longitude
 				};
+				
+				this.dispatchEvent(new CustomEvent("propertiesChanged", {
+					detail: {
+						properties: properties
+					}
+				}));
 
 			});
 
-			this.dispatchEvent(new CustomEvent("propertiesChanged", {
-				detail: {
-					properties: properties
-				}
-			}));
+
 
 
 			this.dispatchEvent(new Event("onChange"));
