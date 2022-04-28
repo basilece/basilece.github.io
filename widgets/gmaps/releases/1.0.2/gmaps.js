@@ -99,7 +99,12 @@
 			
 			if (this.ExecuteValue === true) {
 				//alert("Properties was chnaged and triggered");
-				this.ExecuteValue = false;
+				var properties = { ExecuteValue : false};
+				this.dispatchEvent(new CustomEvent("propertiesChanged", {
+					detail: {
+						properties: properties
+					}
+				}));
 				this.firePress();
 				
 			}
