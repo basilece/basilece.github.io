@@ -99,6 +99,12 @@
 
         
 		onCustomWidgetAfterUpdate(changedProperties) {
+
+			this.dispatchEvent(new CustomEvent("propertiesChanged", {
+				detail: {
+					properties: gproperties
+				}
+			}));
 			
 			if (this.ExecuteValue === true) {
 				//alert("Properties was chnaged and triggered");
@@ -111,14 +117,10 @@
 				this.firePress();
 				
 			}
-			else {
+		
 				
-				this.dispatchEvent(new CustomEvent("propertiesChanged", {
-					detail: {
-						properties: gproperties
-					}
-				}));
-			}
+
+			
 
 		}
 
