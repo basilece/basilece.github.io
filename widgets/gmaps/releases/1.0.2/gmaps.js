@@ -72,7 +72,7 @@
 
 			)
 
-			this.BT.placeAt(this);
+			//this.BT.placeAt(this);
 
 			gscript.onload = function () {
 				
@@ -84,7 +84,7 @@
 				}
                
 				InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-                this.append(divmap);
+                //this.append(divmap);
 				
 
 
