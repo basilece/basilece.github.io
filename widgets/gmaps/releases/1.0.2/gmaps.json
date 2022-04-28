@@ -48,6 +48,7 @@
       } ,
 
 	"Execute": {
+		"returnType": "string",
 		"description": "Executing Geocoding Search",
 		"parameters": [],
 		"body": "this.dispatchEvent(new Event(\"onPress\"));"
