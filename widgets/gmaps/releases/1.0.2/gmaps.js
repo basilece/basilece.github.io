@@ -96,6 +96,7 @@
 
         
 		onCustomWidgetAfterUpdate(changedProperties) {
+			alert("Properties was chnaged and triggered");
 			if ("ExecuteValue" === true) {
 				this.dispatchEvent(new Event("onPress"));
 				this.ExecuteValue = false;
