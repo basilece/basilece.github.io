@@ -109,6 +109,7 @@
 				
 			}
 			else {
+				
 				this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: properties
