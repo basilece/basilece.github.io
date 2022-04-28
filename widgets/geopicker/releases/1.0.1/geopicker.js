@@ -21,18 +21,6 @@
 			_shadowRoot = this.attachShadow({ mode: "open"});
             _shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
-				
-			var InitMap;
-			var latlng = new google.maps.LatLng(-34.397, 150.644);
-			var mapOptions = {
-					zoom: 17,
-					center: latlng
-			}
-               
-			InitMap = new google.maps.Map(document.getElementById('this'), mapOptions);
-            this.append(divmap);
-				
-
 
 
 		}  // End of Geopicker constructor
@@ -41,7 +29,22 @@
 	} //end of Geopicker Class
 
 
+	//Initialize map 
+	_script.onload = function () {
+				
+		var InitMap;
+		var latlng = new google.maps.LatLng(-34.397, 150.644);
+		var mapOptions = {
+			zoom: 17,
+			center: latlng
+		}
+               
+		InitMap = new google.maps.Map(document.getElementById('this'), mapOptions);
+        this.append(divmap);
+				
 
+
+			} // end of map init
 
 
 
