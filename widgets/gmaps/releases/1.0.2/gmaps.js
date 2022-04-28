@@ -21,11 +21,7 @@
 	template.style.height = 320;
 
 
-	var properties = {
-		TextVal: "",
-		TextAdressLat: "",
-		TextAdressLong: ""
-	};
+
 
 	const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -163,7 +159,7 @@
 			this.generateMap(address, function (data) {
 
 				console.log(data);
-				return properties = {
+				var properties = {
 					TextVal: data.formatted_address,
 					TextAdressLat: data.Latitude,
 					TextAdressLong: data.Longitude
