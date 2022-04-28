@@ -25,6 +25,13 @@
 
 	const delay = ms => new Promise(res => setTimeout(res, ms));
 
+	gproperties = {
+			TextVal: "",
+			TextAdressLat: "",
+			TextAdressLong: ""
+
+	}
+
 	class Gmaps extends HTMLElement {
 		constructor() {
 			super();			
@@ -86,7 +93,7 @@
 
 			}
 
-			
+		
 
 		}
 
@@ -108,7 +115,7 @@
 				
 				this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
-						properties: properties
+						properties: gproperties
 					}
 				}));
 			}
@@ -159,21 +166,20 @@
 			this.generateMap(address, function (data) {
 
 				console.log(data);
-				var properties = {
+				return gproperties = {
 					TextVal: data.formatted_address,
 					TextAdressLat: data.Latitude,
 					TextAdressLong: data.Longitude
 				};
-				
-				this.dispatchEvent(new CustomEvent("propertiesChanged", {
-					detail: {
-						properties: properties
-					}
-				}));
+
 
 			});
 
-
+			this.dispatchEvent(new CustomEvent("propertiesChanged", {
+				detail: {
+					properties: gproperties
+				}
+			}));
 
 
 			this.dispatchEvent(new Event("onChange"));
