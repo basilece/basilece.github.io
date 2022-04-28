@@ -98,9 +98,10 @@
 		onCustomWidgetAfterUpdate(changedProperties) {
 			
 			if (this.ExecuteValue === true) {
-				alert("Properties was chnaged and triggered");
-				this.dispatchEvent(new Event("onPress"));
+				//alert("Properties was chnaged and triggered");
 				this.ExecuteValue = false;
+				this.firePress();
+				
 			}
 
 		}
