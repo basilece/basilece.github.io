@@ -55,7 +55,7 @@
 				}.bind(this)
 			})
 
-			this.IT.placeAt(this);
+			//this.IT.placeAt(this);
 
 			//Create the User Button for Search
 
@@ -84,7 +84,7 @@
 				}
                
 				InitMap = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-                //this.append(divmap);
+                this.append(divmap);
 				
 
 
