@@ -38,9 +38,11 @@
 			zoom: 17,
 			center: latlng
 		}
-               
-		InitMap = new google.maps.Map(document.getElementById('mapcanvas'), mapOptions);
-        this.append(divmap);
+        var _divmap = document.createElement('div');
+        _divmap.style.width = 600;
+		_divmap.style.height = 300;
+		InitMap = new google.maps.Map(document.getElementById('_divmap'), mapOptions);
+        Geopicker.appendchild(_divmap);
 				
 
 
