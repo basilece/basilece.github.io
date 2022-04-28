@@ -41,8 +41,9 @@
         var _divmap = document.createElement('div');
         _divmap.style.width = 600;
 		_divmap.style.height = 300;
+		Geopicker.appendchild(_divmap);
 		InitMap = new google.maps.Map(document.getElementById('_divmap'), mapOptions);
-        Geopicker.appendchild(_divmap);
+        
 				
 
 
