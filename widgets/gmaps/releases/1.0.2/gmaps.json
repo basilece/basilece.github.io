@@ -46,6 +46,12 @@
 		"parameters": [],
 		"body": "return this.TextAdressLong;"
       } ,
+
+	"Execute": {
+		"description": "Executing Geocoding Search",
+		"parameters": [],
+		"body": "this.dispatchEvent(new Event(\"onPress\"));"
+	},
       
       
  	"getGeolocationLat": {
