@@ -94,7 +94,14 @@
 
 		}
 
+        
+		onCustomWidgetAfterUpdate(changedProperties) {
+			if ("ExecuteValue" === true) {
+				this.dispatchEvent(new Event("onPress"));
+				this.ExecuteValue = false;
+			}
 
+		}
 
 
 		generateMap(address, callback) {

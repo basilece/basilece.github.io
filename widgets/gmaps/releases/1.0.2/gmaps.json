@@ -34,7 +34,15 @@
 			"type": "string",
 			"description": "This is the address latitude",
 			"default" : ""
-		}	
+		},
+
+		"ExecuteValue": {
+			"type": "boolean",
+			"description": "This is a boolean for execution",
+			"default" : false
+		}
+		
+		
 	
 	},
 
@@ -48,10 +56,13 @@
       } ,
 
 	"Execute": {
-		"returnType": "string",
 		"description": "Executing Geocoding Search",
-		"parameters": [],
-		"body": "this.dispatchEvent(new Event(\"onPress\"));"
+		"parameters": [{
+			"name": "vExecute",
+			"type": "boolean",
+			"description": "Set as true to execute"
+		}],
+		"body": "this.ExecuteValue = vExecute;"
 	},
       
       
