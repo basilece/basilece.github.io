@@ -5,7 +5,7 @@
     tmpl.innerHTML = `
        <style>
       </style>
-    `;
+	  <div id="divmap" style="width: 600px; height: 300px;"></div>`;
 
 	var _script = document.createElement('script');
 	_script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&v=weekly';
@@ -39,7 +39,7 @@
 			center: latlng
 		}
                
-		InitMap = new google.maps.Map(document.getElementById('this'), mapOptions);
+		InitMap = new google.maps.Map(document.getElementById('Geopicker'), mapOptions);
         this.append(divmap);
 				
 
