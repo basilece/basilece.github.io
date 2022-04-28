@@ -1,0 +1,105 @@
+{
+	"id": "basilece.geopicker",
+	"version": "1.0.1",
+	"name": "Google Maps GeoPicker",
+	"description": "Google Maps GeoPicker",
+	"newInstancePrefix": "Geopicker",
+	"icon": "https://basilece.github.io/widgets/geopicker/releases/1.0.1/icon.png",
+	"vendor": "basilece",
+	"eula": "",
+	"license": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "basilece-geopicker",
+			"url": "https://basilece.github.io/widgets/geopicker/releases/1.0.1/geopicker.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+
+	],
+	"properties": {
+		"TextVal": {
+			"type": "string",
+			"description": "This is the address",
+			"default" : "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA"
+		},
+		
+		"TextAdressLong": {
+			"type": "string",
+			"description": "This is the address longitude",
+			"default" : ""
+		},	
+	    "TextAdressLat": {
+			"type": "string",
+			"description": "This is the address latitude",
+			"default" : ""
+		},
+
+		"ExecuteValue": {
+			"type": "boolean",
+			"description": "This is a boolean for execution",
+			"default" : false
+		}
+		
+		
+	
+	},
+
+	"methods": {
+
+	"getGeolocationLong": {
+		"returnType": "string",
+		"description": "Returning Geolocation Longtitude",
+		"parameters": [],
+		"body": "return this.TextAdressLong;"
+      } ,
+
+	"Execute": {
+		"description": "Executing Geocoding Search",
+		"parameters": [{
+			"name": "vExecute",
+			"type": "boolean",
+			"description": "Set as true to execute"
+		}],
+		"body": "this.ExecuteValue = vExecute;"
+	},
+      
+      
+ 	"getGeolocationLat": {
+		"returnType": "string",
+		"description": "Returning the Geolocation Latitude",
+		"parameters": [],
+		"body": "return this.TextAdressLat;"
+      },
+	  
+	  "setAddressVal": {
+		"description": "set Address Text Value",
+		"parameters": [
+			{
+				"name": "newAddress",
+				"type": "string",
+				"description": "Type the new Address"
+			}
+		],
+		"body": "this.TextVal = newAddress;"
+	},
+
+	"getAddressVal": {
+		"returnType": "string",
+		"description": "Returning Full Address",
+		"parameters": [],
+		"body": "return this.TextVal;"
+      } 
+        
+        
+	},
+	"events": {
+		"onChange": {
+			"description": "Called when the value is changed"
+		},
+		"onStart": {
+			"description": "Execute Initialization of the map on start"
+		}
+	}
+}
