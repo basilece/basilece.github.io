@@ -31,7 +31,7 @@
                     } catch (e) {
                         alert(e);
                     } finally {
-						GenerateMap(that, changedProperties);
+						loadthis(that, changedProperties);
                     }
                 }
                 LoadLibs();
@@ -42,7 +42,29 @@
 	} //end of Geopicker Class
 
 
-    function loadScript(src, shadowRoot) {
+
+	customElements.define("basilece-geopicker", Geopicker);
+
+
+	//Unilities
+    function loadthis(that, changedProperties){
+		var that_ = that;
+		var Map;
+		var latlng = new google.maps.LatLng(-34.397, 150.644);
+		var mapOptions = {
+			zoom: 17,
+			center: latlng
+		}
+
+		let div0 = document.createElement('div');
+		div0.id = 'divmap';
+		Map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
+		that_.appendChild(div0);
+		
+	}
+
+
+	function loadScript(src, shadowRoot) {
         return new Promise(function(resolve, reject) {
             let script = document.createElement('script');
             script.src = src;
@@ -54,27 +76,6 @@
             shadowRoot.appendChild(script)
         });
     }
-
-
-    function GenerateMap(that, changedProperties){
-		var Map;
-		var latlng = new google.maps.LatLng(-34.397, 150.644);
-		var mapOptions = {
-			zoom: 17,
-			center: latlng
-		}
-
-		let div0 = document.createElement('div');
-		div0.id = 'divmap';
-		_shadowRoot.appendChild(div0);
-	   
-		Map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-		
-	}
-
-
-
-	customElements.define("basilece-geopicker", Geopicker);
 
 })();
 
