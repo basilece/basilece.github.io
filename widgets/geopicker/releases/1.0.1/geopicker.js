@@ -13,6 +13,23 @@
 	_script.defer = 'true';
 	document.head.appendChild(_script);
 
+	//Initialize map 
+	_script.onload = function () {
+				
+		var InitMap;
+		var latlng = new google.maps.LatLng(-34.397, 150.644);
+		var mapOptions = {
+			zoom: 17,
+			center: latlng
+		}
+		InitMap = new google.maps.Map(document.getElementById('mapcanvas'), mapOptions);
+
+			
+					
+	
+	
+				} // end of map init
+
 
 	class Geopicker extends HTMLElement {
 		constructor() {
@@ -29,25 +46,7 @@
 	} //end of Geopicker Class
 
 
-	//Initialize map 
-	_script.onload = function () {
-				
-		var InitMap;
-		var latlng = new google.maps.LatLng(-34.397, 150.644);
-		var mapOptions = {
-			zoom: 17,
-			center: latlng
-		}
-        var _divmap = document.createElement('div');
-        _divmap.style.width = 600;
-		_divmap.style.height = 300;
-		Geopicker.appendchild(_divmap);
-		InitMap = new google.maps.Map(document.getElementById('_divmap'), mapOptions);
-        
-				
 
-
-			} // end of map init
 
 
 
