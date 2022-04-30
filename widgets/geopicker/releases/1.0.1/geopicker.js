@@ -56,7 +56,7 @@
                     } catch (e) {
                         alert(e);
                     } finally {
-						loadthis( this, changedProperties, _shadowRoot);
+						loadthis( that, changedProperties, _shadowRoot);
                     }
                 }
                 LoadLibs();
