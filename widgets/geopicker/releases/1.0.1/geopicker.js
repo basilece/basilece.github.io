@@ -68,18 +68,18 @@
             }
 
 
-			// if (that._export_settings.ExecuteValue  === true) {
+			if (that._export_settings.ExecuteValue  === true) {
 
-			// 	that.dispatchEvent(new CustomEvent("propertiesChanged", {
-			// 		detail: {
-			// 			properties: {
-			// 				ExecuteValue : false
-			// 			}
-			// 		}
-			// 	}));
-			// 	that.mapMarker();
+				that.dispatchEvent(new CustomEvent("propertiesChanged", {
+					detail: {
+						properties: {
+							ExecuteValue : false
+						}
+					}
+				}));
+				that.mapMarker();
 				
-			// }
+			}
         }
 
 		//GETTERS AND SETTERS
