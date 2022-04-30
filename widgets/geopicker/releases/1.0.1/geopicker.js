@@ -211,6 +211,7 @@
 							}
 						}
 					}));
+					this.dispatchEvent(new Event("onChange"));
 					
 				} 
 				else 
