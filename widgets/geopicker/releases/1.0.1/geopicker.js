@@ -83,11 +83,11 @@
 			center: latlng
 		}
 
-		let mapcanvas = document.createElement('div');
-		mapcanvas.style.width = 600;
-		mapcanvas.style.height = 300;
-		mapcanvas.id = "divmap";
-		that.appendChild(mapcanvas);
+		let mapcanvas = document.getElementById("mapcanvas");
+		//mapcanvas.style.width = 600;
+		//mapcanvas.style.height = 300;
+		//mapcanvas.id = "divmap";
+		//that.appendChild(mapcanvas);
 		map = new google.maps.Map(mapcanvas, mapOptions);
 
 
