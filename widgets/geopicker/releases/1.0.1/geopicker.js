@@ -74,7 +74,11 @@
 	//Utilities
     function loadthis(that, changedProperties, shadowRoot ){
 		//var that_ = that;
-		
+
+		var geocoder;
+			geocoder = new google.maps.Geocoder();
+		var address = "Chrisocheri 5, Marousi , 15126 , Athens";
+
 		var Map;
 		var latlng = new google.maps.LatLng(-34.397, 150.644);
 		var mapOptions = {
@@ -89,7 +93,20 @@
 		shadowRoot.appendChild(mapcanvas);
 		Map = new google.maps.Map(mapcanvas, mapOptions);
 		
-		
+		geocoder.geocode({ 'address': address }, function (results, status) {
+				if (status == 'OK') {
+					map.setCenter(results[0].geometry.location);
+
+					var marker = new google.maps.Marker({
+						map: Map,
+						position: results[0].geometry.location
+
+					})
+
+				} else {
+					alert('Geocode was not successful for the following reason: ' + status);
+				}
+			});
 		
 	}
 
