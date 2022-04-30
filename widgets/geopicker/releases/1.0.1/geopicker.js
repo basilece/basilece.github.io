@@ -140,10 +140,6 @@
 
 					})
 
-					var formatted_address = results[0].formatted_address;
-					var lat = results[0].geometry.location.lat();
-					var lng = results[0].geometry.location.lng();
-					callback({ Status: "OK", Latitude: lat, Longitude: lng, formatted_address: formatted_address });
 
 				} else {
 					alert('Geocode was not successful for the following reason: ' + status);
