@@ -150,15 +150,47 @@
 						animation: google.maps.Animation.DROP
 					})
 					markers.push(marker);
+					google.maps.event.addListener(marker, 'dragend', function() 
+					{
+						geocodePosition(marker.getPosition(), that);
+					});
 
 
 				} else {
 					alert('Geocode was not successful for the following reason: ' + status);
 				}
 			});
+
 	}
 
-
+	function geocodePosition(pos,that) 
+	{
+	   geocoder = new google.maps.Geocoder();
+	   geocoder.geocode
+		({
+			latLng: pos
+		}, 
+			function(results, status) 
+			{
+				if (status == google.maps.GeocoderStatus.OK) 
+				{
+					that._export_settings.TextVal = results[0].formatted_address;
+					that.dispatchEvent(new CustomEvent("propertiesChanged", {
+						detail: {
+							properties: {
+								TextVal : that._export_settings.TextVal
+							}
+						}
+					}));
+					
+				} 
+				else 
+				{
+					alert('Geocode was not successful for the following reason: ' + status);
+				}
+			}
+		);
+	}
 
 
 })();
