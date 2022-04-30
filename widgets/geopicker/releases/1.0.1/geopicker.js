@@ -71,7 +71,7 @@
 	customElements.define("basilece-geopicker", Geopicker);
 
 
-	//Unilities
+	//Utilities
     function loadthis(that, changedProperties){
 		var that_ = that;
 		var Map;
