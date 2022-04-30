@@ -83,7 +83,7 @@
 			center: latlng
 		}
 
-		let mapcanvas = document.getElementById("mapcanvas");
+		let mapcanvas = that.shadowRoot.getElementById("mapcanvas");
 		//mapcanvas.style.width = 600;
 		//mapcanvas.style.height = 300;
 		//mapcanvas.id = "divmap";
