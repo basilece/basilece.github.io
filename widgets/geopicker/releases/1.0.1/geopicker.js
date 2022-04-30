@@ -83,6 +83,8 @@
 		}
 
 		let mapcanvas = document.createElement('div');
+		mapcanvas.style.width = 600;
+		mapcanvas.style.height = 300;
 		mapcanvas.id = "divmap";
 		shadowRoot.appendChild(mapcanvas);
 		Map = new google.maps.Map(mapcanvas, mapOptions);
