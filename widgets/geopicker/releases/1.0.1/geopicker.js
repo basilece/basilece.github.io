@@ -74,6 +74,7 @@
 	//Utilities
     function loadthis(that, changedProperties,_shadowRoot ){
 		//var that_ = that;
+		var shadowRoot_ =  _shadowRoot;
 		var Map;
 		var latlng = new google.maps.LatLng(-34.397, 150.644);
 		var mapOptions = {
@@ -83,7 +84,7 @@
 
 		let div0 = document.createElement('div');
 		div0.id = "divmap";
-		_shadowRoot.appendChild(div0);
+		shadowRoot_.appendChild(div0);
 		var newMap = document.getElementById("divmap");
 		Map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 		
