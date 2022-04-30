@@ -56,7 +56,7 @@
                     } catch (e) {
                         alert(e);
                     } finally {
-						loadthis(that, changedProperties, _shadowRoot);
+						loadthis( this, changedProperties, _shadowRoot);
                     }
                 }
                 LoadLibs();
@@ -72,7 +72,7 @@
 
 
 	//Utilities
-    function loadthis(that, changedProperties, shadowRoot ){
+    function loadthis( that, changedProperties, shadowRoot ){
 
 
 		var latlng = new google.maps.LatLng(-34.397, 150.644);
@@ -85,7 +85,7 @@
 		mapcanvas.style.width = 600;
 		mapcanvas.style.height = 300;
 		mapcanvas.id = "divmap";
-		shadowRoot.appendChild(mapcanvas);
+		that.appendChild(mapcanvas);
 		map = new google.maps.Map(mapcanvas, mapOptions);
 		
 
