@@ -72,7 +72,7 @@
 
 
 	//Utilities
-    function loadthis(that, changedProperties,_shadowRoot ){
+    function loadthis(that, changedProperties, shadowRoot ){
 		//var that_ = that;
 		
 		var Map;
@@ -82,11 +82,11 @@
 			center: latlng
 		}
 
-		let div0 = document.createElement('div');
-		div0.id = "divmap";
-		_shadowRoot.content.appendChild(div0);
-		var newMap = document.getElementById("divmap");
-		Map = new google.maps.Map(newMap, mapOptions);
+		let mapcanvas = document.createElement('div');
+		mapcanvas.id = "divmap";
+		shadowRoot.appendChild(mapcanvas);
+
+		Map = new google.maps.Map(mapcanvas, mapOptions);
 		
 		
 		
