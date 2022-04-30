@@ -79,7 +79,7 @@
 			geocoder = new google.maps.Geocoder();
 		var address = that.TextVal;
 
-		var Map;
+
 		var latlng = new google.maps.LatLng(-34.397, 150.644);
 		var mapOptions = {
 			zoom: 17,
@@ -91,14 +91,14 @@
 		mapcanvas.style.height = 300;
 		mapcanvas.id = "divmap";
 		shadowRoot.appendChild(mapcanvas);
-		Map = new google.maps.Map(mapcanvas, mapOptions);
+		map = new google.maps.Map(mapcanvas, mapOptions);
 		
 		geocoder.geocode({ 'address': address }, function (results, status) {
-				if (status == 'OK') {
+				if (status == 'OK') {	
 					map.setCenter(results[0].geometry.location);
 
 					var marker = new google.maps.Marker({
-						map: Map,
+						map: map,
 						position: results[0].geometry.location
 
 					})
