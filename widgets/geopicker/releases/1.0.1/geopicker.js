@@ -57,11 +57,11 @@
                         alert(e);
                     } finally {
 						loadthis( that, changedProperties);
-						console.log(that);
+						console.log(["that: ",that]);
                     }
                 }
                 LoadLibs();
-				console.log(this);
+				console.log(["this: ",this]);
             }
         }
 
