@@ -86,7 +86,7 @@
 		div0.id = "divmap";
 		shadowRoot_.appendChild(div0);
 		var newMap = document.getElementById("divmap");
-		Map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
+		Map = new google.maps.Map(newMap, mapOptions);
 		
 		
 		
