@@ -211,7 +211,7 @@
 							}
 						}
 					}));
-					this.dispatchEvent(new Event("onChange"));
+					that.dispatchEvent(new Event("onChange"));
 					
 				} 
 				else 
