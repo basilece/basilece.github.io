@@ -45,10 +45,10 @@
 
         onCustomWidgetAfterUpdate(changedProperties) {
             console.log(changedProperties);
-            var that = this;
+            //var that = this;
 
-            if (that._firstLoadLib === 0) {
-                that._firstLoadLib = 1;
+            if ( this._firstLoadLib === 0) {
+				 this._firstLoadLib = 1;
                 let googlemjs = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&v=weekly";
                 async function LoadLibs() {
                     try {
@@ -56,7 +56,7 @@
                     } catch (e) {
                         alert(e);
                     } finally {
-						loadthis( that, changedProperties);
+						loadthis(  this, changedProperties);
                     }
                 }
                 LoadLibs();
