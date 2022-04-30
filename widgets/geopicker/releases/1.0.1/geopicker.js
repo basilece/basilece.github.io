@@ -59,7 +59,7 @@
                     } catch (e) {
                         alert(e);
                     } finally {
-						loadthis( that, changedProperties, map);
+						loadthis( that, changedProperties);
 						console.log(["that: ",that]);
                     }
                 }
@@ -112,7 +112,7 @@
 
 
 	//Utilities
-    function loadthis( that, changedProperties, map){
+    function loadthis( that, changedProperties){
   
 
 		var latlng = new google.maps.LatLng(-34.397, 150.644);
