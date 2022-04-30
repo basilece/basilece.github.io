@@ -135,21 +135,26 @@
 	
 	}
 
-	var marker ;
+	let markers = [];
 	function mapMarker(that){
+		deleteMarkers();
 		var geocoder;
-		
 			geocoder =  new google.maps.Geocoder();
 			geocoder.geocode({ 'address': that._export_settings.TextVal }, function (results, status) {
 				if (status == 'OK') {
 					map.setCenter(results[0].geometry.location);
-					    marker = new google.maps.Marker({
-						map: map,
-						position: results[0].geometry.location,
-						draggable:true,
-						animation: google.maps.Animation.DROP
+
+					
+
+					var  marker = new google.maps.Marker({
+						 map: map,
+						 position: results[0].geometry.location,
+						 draggable:true,
+						 animation: google.maps.Animation.DROP
 					})
+
 					markers.push(marker);
+					
 					google.maps.event.addListener(marker, 'dragend', function() 
 					{
 						geocodePosition(marker.getPosition(), that);
@@ -161,6 +166,30 @@
 				}
 			});
 
+	}
+
+    
+	// Sets the map on all markers in the array.
+	function setMapOnAll(map) {
+		for (let i = 0; i < markers.length; i++) {
+		markers[i].setMap(map);
+		}
+	}
+	
+	// Removes the markers from the map, but keeps them in the array.
+	function hideMarkers() {
+		setMapOnAll(null);
+	}
+	
+	// Shows any markers currently in the array.
+	function showMarkers() {
+		setMapOnAll(map);
+	}
+	
+	// Deletes all markers in the array by removing references to them.
+	function deleteMarkers() {
+		hideMarkers();
+		markers = [];
 	}
 
 	function geocodePosition(pos,that) 
