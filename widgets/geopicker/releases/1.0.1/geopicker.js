@@ -56,7 +56,7 @@
                     } catch (e) {
                         alert(e);
                     } finally {
-						loadthis(that, changedProperties);
+						loadthis(that, changedProperties, _shadowRoot);
                     }
                 }
                 LoadLibs();
@@ -72,7 +72,7 @@
 
 
 	//Utilities
-    function loadthis(that, changedProperties){
+    function loadthis(that, changedProperties,_shadowRoot ){
 		//var that_ = that;
 		var Map;
 		var latlng = new google.maps.LatLng(-34.397, 150.644);
@@ -83,10 +83,10 @@
 
 		let div0 = document.createElement('div');
 		div0.id = "divmap";
-		that.appendChild(div0);
+		_shadowRoot.appendChild(div0);
 		var newMap = document.getElementById("divmap");
 		Map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-		return that;
+		
 		
 		
 	}
