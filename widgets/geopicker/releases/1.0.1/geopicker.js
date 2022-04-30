@@ -85,7 +85,6 @@
 		let mapcanvas = document.createElement('div');
 		mapcanvas.id = "divmap";
 		shadowRoot.appendChild(mapcanvas);
-
 		Map = new google.maps.Map(mapcanvas, mapOptions);
 		
 		
