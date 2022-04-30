@@ -7,12 +7,37 @@
       </style>
 	  <div id="mapcanvas" style="width: 600px; height: 300px;"></div>`;
 
+
+    function loadScript(src, shadowRoot) {
+        return new Promise(function(resolve, reject) {
+            let script = document.createElement('script');
+            script.src = src;
+            script.onload = () => {
+                console.log("Load: " + src);
+                resolve(script);
+            }
+            script.onerror = () => reject(new Error(`Script load error for ${src}`));
+            shadowRoot.appendChild(script)
+        });
+    }
+
 	class Geopicker extends HTMLElement {
 		constructor() {
 			super();
 			
 			_shadowRoot = this.attachShadow({ mode: "open"});
             _shadowRoot.appendChild(tmpl.content.cloneNode(true));
+
+            this._export_settings = {};
+            this._export_settings.TextVal = "";
+            this._export_settings.TextAdressLong = "";
+            this._export_settings.TextAdressLat = "";
+            this._export_settings.ExecuteValue = "";
+
+            this.addEventListener("click", event => {
+                console.log('click');
+
+            });
 
 			this._firstLoadLib = 0;
 			this._firstConnection = 0;
@@ -22,8 +47,8 @@
             console.log(changedProperties);
             var that = this;
 
-            if (this._firstLoadLib === 0) {
-                this._firstLoadLib = 1;
+            if (that._firstLoadLib === 0) {
+                that._firstLoadLib = 1;
                 let googlemjs = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&v=weekly";
                 async function LoadLibs() {
                     try {
@@ -64,18 +89,7 @@
 	}
 
 
-	function loadScript(src, shadowRoot) {
-        return new Promise(function(resolve, reject) {
-            let script = document.createElement('script');
-            script.src = src;
-            script.onload = () => {
-                console.log("Load: " + src);
-                resolve(script);
-            }
-            script.onerror = () => reject(new Error(`Script load error for ${src}`));
-            shadowRoot.appendChild(script)
-        });
-    }
+
 
 })();
 
