@@ -57,7 +57,7 @@
                         alert(e);
                     } finally {
 						loadthis( that, changedProperties);
-						return that;
+						this = that;
                     }
                 }
                 LoadLibs();
