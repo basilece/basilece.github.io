@@ -146,7 +146,8 @@
 					var marker = new google.maps.Marker({
 						map: map,
 						position: results[0].geometry.location,
-						draggable:true
+						draggable:true,
+						animation: google.maps.Animation.DROP
 					})
 					markers.push(marker);
 
@@ -156,6 +157,8 @@
 				}
 			});
 	}
+
+
 
 
 })();
