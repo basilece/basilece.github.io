@@ -138,7 +138,7 @@
 	function mapMarker(that){
 		var geocoder;
 			geocoder = new google.maps.Geocoder();
-			geocoder.geocode({ 'address': that.TextVal }, function (results, status) {
+			geocoder.geocode({ 'address': that._export_settings.TextVal }, function (results, status) {
 				if (status == 'OK') {
 					map.setCenter(results[0].geometry.location);
 
