@@ -83,9 +83,10 @@
 
 		let div0 = document.createElement('div');
 		div0.id = "divmap";
+		that_.appendChild(div0);
 		var newMap = document.getElementById("divmap");
 		Map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
-		that_.appendChild(div0);
+		
 		
 	}
 
