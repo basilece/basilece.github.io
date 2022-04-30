@@ -77,7 +77,7 @@
 
 		var geocoder;
 			geocoder = new google.maps.Geocoder();
-		var address = "Chrisocheri 5, Marousi , 15126 , Athens";
+		var address = that.TextVal;
 
 		var Map;
 		var latlng = new google.maps.LatLng(-34.397, 150.644);
