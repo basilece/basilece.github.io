@@ -70,7 +70,7 @@
 
 			if (that._export_settings.ExecuteValue  === true) {
                 that._export_settings.ExecuteValue = false; 
-				
+
 				that.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
@@ -103,7 +103,14 @@
 			this._export_settings.ExecuteValue = value;
 		}
 
+        static get observedAttributes() {
+            return [
+                "TextVal",
+                "TextAdressLat",
+                "TextAdressLong"
 
+            ];
+        }
 
 	} //end of Geopicker Class
 
