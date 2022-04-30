@@ -45,10 +45,10 @@
 
         onCustomWidgetAfterUpdate(changedProperties) {
             console.log(changedProperties);
-            //var that = this;
+            var that = this;
 
-            if ( this._firstLoadLib === 0) {
-				 this._firstLoadLib = 1;
+            if ( that._firstLoadLib === 0) {
+				 that._firstLoadLib = 1;
                 let googlemjs = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&v=weekly";
                 async function LoadLibs() {
                     try {
@@ -56,7 +56,8 @@
                     } catch (e) {
                         alert(e);
                     } finally {
-						loadthis(  this, changedProperties);
+						loadthis( that, changedProperties);
+						return that;
                     }
                 }
                 LoadLibs();
@@ -73,7 +74,7 @@
 
 	//Utilities
     function loadthis( that, changedProperties){
-
+        var _that = that;
 
 		var latlng = new google.maps.LatLng(-34.397, 150.644);
 		var mapOptions = {
@@ -85,8 +86,10 @@
 		mapcanvas.style.width = 600;
 		mapcanvas.style.height = 300;
 		mapcanvas.id = "divmap";
-		that.appendChild(mapcanvas);
+		_that.appendChild(mapcanvas);
 		map = new google.maps.Map(mapcanvas, mapOptions);
+
+		return _that;
 		
 
 		
