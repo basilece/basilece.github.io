@@ -82,7 +82,7 @@
 		}
 
 		let div0 = document.createElement('div');
-		div0.id = 'divmap';
+		div0.id = "divmap";
 		var newMap = document.getElementById('divmap');
 		Map = new google.maps.Map(document.getElementById('divmap'), mapOptions);
 		that_.appendChild(div0);
