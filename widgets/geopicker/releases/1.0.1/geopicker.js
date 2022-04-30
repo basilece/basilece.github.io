@@ -28,11 +28,13 @@
 			_shadowRoot = this.attachShadow({ mode: "open"});
             _shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
+			var map;
+
             this._export_settings = {};
             this._export_settings.TextVal = "";
             this._export_settings.TextAdressLong = "";
             this._export_settings.TextAdressLat = "";
-            this._export_settings.ExecuteValue = "";
+            this._export_settings.ExecuteValue = false;
 
             this.addEventListener("click", event => {
                 console.log('click');
@@ -41,6 +43,7 @@
 
 			this._firstLoadLib = 0;
 			this._firstConnection = 0;
+			
 		}  // End of Geopicker constructor
 
         onCustomWidgetAfterUpdate(changedProperties) {
@@ -56,14 +59,49 @@
                     } catch (e) {
                         alert(e);
                     } finally {
-						loadthis( that, changedProperties);
+						loadthis( that, changedProperties, map);
 						console.log(["that: ",that]);
                     }
                 }
                 LoadLibs();
 				console.log(["this: ",this]);
             }
+
+
+			// if (that._export_settings.ExecuteValue  === true) {
+
+			// 	that.dispatchEvent(new CustomEvent("propertiesChanged", {
+			// 		detail: {
+			// 			properties: {
+			// 				ExecuteValue : false
+			// 			}
+			// 		}
+			// 	}));
+			// 	that.mapMarker();
+				
+			// }
         }
+
+		//GETTERS AND SETTERS
+		get TextVal() {
+            return this._export_settings.TextVal;
+        }
+		set TextVal(value) {
+            this._export_settings.TextVal = value;
+        }
+
+		get TextAdressLat() {
+            return this._export_settings.TextAdressLat;
+        }
+
+		get TextAdressLong() {
+            return this._export_settings.TextAdressLong;
+        }
+
+		set ExecuteValue(value){
+			this._export_settings.ExecuteValue = value;
+		}
+
 
 
 	} //end of Geopicker Class
@@ -74,7 +112,7 @@
 
 
 	//Utilities
-    function loadthis( that, changedProperties){
+    function loadthis( that, changedProperties, map){
   
 
 		var latlng = new google.maps.LatLng(-34.397, 150.644);
@@ -84,16 +122,33 @@
 		}
 
 		let mapcanvas = that.shadowRoot.getElementById("mapcanvas");
-		//mapcanvas.style.width = 600;
-		//mapcanvas.style.height = 300;
-		//mapcanvas.id = "divmap";
-		//that.appendChild(mapcanvas);
 		map = new google.maps.Map(mapcanvas, mapOptions);
 
+	
+	}
 
-		
+	function mapMarker(that){
+		var geocoder;
+			geocoder = new google.maps.Geocoder();
+			geocoder.geocode({ 'address': that.TextVal }, function (results, status) {
+				if (status == 'OK') {
+					map.setCenter(results[0].geometry.location);
 
-		
+					var marker = new google.maps.Marker({
+						map: map,
+						position: results[0].geometry.location
+
+					})
+
+					var formatted_address = results[0].formatted_address;
+					var lat = results[0].geometry.location.lat();
+					var lng = results[0].geometry.location.lng();
+					callback({ Status: "OK", Latitude: lat, Longitude: lng, formatted_address: formatted_address });
+
+				} else {
+					alert('Geocode was not successful for the following reason: ' + status);
+				}
+			});
 	}
 
 
