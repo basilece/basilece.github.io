@@ -57,7 +57,7 @@
                         alert(e);
                     } finally {
 						loadthis( that, changedProperties);
-						this = that;
+						console.log(this);
                     }
                 }
                 LoadLibs();
@@ -89,7 +89,7 @@
 		_that.appendChild(mapcanvas);
 		map = new google.maps.Map(mapcanvas, mapOptions);
 
-		return _that;
+
 		
 
 		
