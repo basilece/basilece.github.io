@@ -56,7 +56,7 @@
                     } catch (e) {
                         alert(e);
                     } finally {
-						loadthis( that, changedProperties, _shadowRoot);
+						loadthis( that, changedProperties);
                     }
                 }
                 LoadLibs();
@@ -72,7 +72,7 @@
 
 
 	//Utilities
-    function loadthis( that, changedProperties, shadowRoot ){
+    function loadthis( that, changedProperties){
 
 
 		var latlng = new google.maps.LatLng(-34.397, 150.644);
