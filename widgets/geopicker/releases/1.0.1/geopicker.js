@@ -135,7 +135,7 @@
 	
 	}
 
-	var markers = [];
+	var marker ;
 	function mapMarker(that){
 		var geocoder;
 		
@@ -143,7 +143,7 @@
 			geocoder.geocode({ 'address': that._export_settings.TextVal }, function (results, status) {
 				if (status == 'OK') {
 					map.setCenter(results[0].geometry.location);
-					var marker = new google.maps.Marker({
+					    marker = new google.maps.Marker({
 						map: map,
 						position: results[0].geometry.location,
 						draggable:true,
