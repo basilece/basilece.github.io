@@ -74,7 +74,7 @@
 
 	//Utilities
     function loadthis( that, changedProperties){
-        var _that = that;
+  
 
 		var latlng = new google.maps.LatLng(-34.397, 150.644);
 		var mapOptions = {
@@ -86,7 +86,7 @@
 		mapcanvas.style.width = 600;
 		mapcanvas.style.height = 300;
 		mapcanvas.id = "divmap";
-		_that.appendChild(mapcanvas);
+		that.appendChild(mapcanvas);
 		map = new google.maps.Map(mapcanvas, mapOptions);
 
 
