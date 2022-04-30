@@ -69,11 +69,12 @@
 
 
 			if (that._export_settings.ExecuteValue  === true) {
-
+                that._export_settings.ExecuteValue = false; 
+				
 				that.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							ExecuteValue : false
+							ExecuteValue : that._export_settings.ExecuteValue
 						}
 					}
 				}));
