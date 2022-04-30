@@ -134,7 +134,7 @@
 
 	
 	}
-	
+
 	var markers = [];
 	function mapMarker(that){
 		var geocoder;
@@ -143,7 +143,6 @@
 			geocoder.geocode({ 'address': that._export_settings.TextVal }, function (results, status) {
 				if (status == 'OK') {
 					map.setCenter(results[0].geometry.location);
-					deleteMarkers();
 					var marker = new google.maps.Marker({
 						map: map,
 						position: results[0].geometry.location
@@ -158,23 +157,6 @@
 			});
 	}
 
-	// Removes the markers from the map, but keeps them in the array.
-	function clearMarkers() {
-		setMapOnAll(null);
-	}
-
-	// Deletes all markers in the array by removing references to them.
-	function deleteMarkers() {
-		clearMarkers();
-		markers = [];
-	  }
-
-	// Sets the map on all markers in the array.
-	function setMapOnAll(map) {
-		for (var i = 0; i < markers.length; i++) {
-		  markers[i].setMap(map);
-		}
-	  }
 
 })();
 
