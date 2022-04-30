@@ -77,7 +77,7 @@
 						}
 					}
 				}));
-				that.mapMarker();
+				mapMarker(that);
 				
 			}
         }
