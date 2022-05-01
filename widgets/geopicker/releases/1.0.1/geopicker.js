@@ -153,6 +153,7 @@
 						 animation: google.maps.Animation.DROP
 					})
 
+					console.log(["result[0]: ", results[0]]);
 					that._export_settings.TextVal = results[0].formatted_address;
 					that._export_settings.TextAdressLong = results[0].geometry.location.lng();
 					that._export_settings.TextAdressLat = results[0].geometry.location.lat();
