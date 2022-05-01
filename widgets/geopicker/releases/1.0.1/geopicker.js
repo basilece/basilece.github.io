@@ -187,19 +187,19 @@
 					for (var i = 0; i < results[0].address_components.length; i++) {
 						for (var j = 0; j < results[0].address_components[i].types.length; j++) {
 						  if (results[0].address_components[i].types[j] == "street_number") {
-							that._export_settings.StreetNo = results[0].address_components[i];
+							that._export_settings.StreetNo = results[0].address_components[i].long_Name;
 						  }
 						  if (results[0].address_components[i].types[j] == "route") {
-							that._export_settings.Street = results[0].address_components[i];
+							that._export_settings.Street = results[0].address_components[i].long_Name;
 						  }
 						  if (results[0].address_components[i].types[j] == "postal_code") {
-							that._export_settings.PostalCode = results[0].address_components[i];
+							that._export_settings.PostalCode = results[0].address_components[i].long_Name;
 						  }
 						  if (results[0].address_components[i].types[j] == "locality") {
-							that._export_settings.City = results[0].address_components[i];
+							that._export_settings.City = results[0].address_components[i].long_Name;
 						  }
 						  if (results[0].address_components[i].types[j] == "country") {
-							that._export_settings.Country = results[0].address_components[i];
+							that._export_settings.Country = results[0].address_components[i].long_Name;
 						  }
 						}
 					  }
