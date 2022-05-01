@@ -210,11 +210,11 @@
 								TextVal 		: that._export_settings.TextVal,
 								TextAdressLong 	: that._export_settings.TextAdressLong,
 								TextAdressLat 	: that._export_settings.TextAdressLat,
-								Street 			: this._export_settings.Street,
-								StreetNo		: this._export_settings.StreetNo,
-								PostalCode		: this._export_settings.PostalCode,
-								Country 		: this._export_settings.Country,	
-								City 			: this._export_settings.City 
+								Street 			: that._export_settings.Street,
+								StreetNo		: that._export_settings.StreetNo,
+								PostalCode		: that._export_settings.PostalCode,
+								Country 		: that._export_settings.Country,	
+								City 			: that._export_settings.City 
 							}
 						}
 					}));
