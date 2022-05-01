@@ -153,6 +153,20 @@
 						 animation: google.maps.Animation.DROP
 					})
 
+					that._export_settings.TextVal = results[0].formatted_address;
+					that._export_settings.TextAdressLong = results[0].geometry.location.lng();
+					that._export_settings.TextAdressLat = results[0].geometry.location.lat();
+					that.dispatchEvent(new CustomEvent("propertiesChanged", {
+						detail: {
+							properties: {
+								TextVal : that._export_settings.TextVal,
+								TextAdressLong : that._export_settings.TextAdressLong,
+								TextAdressLat : that._export_settings.TextAdressLat 
+							}
+						}
+					}));
+					that.dispatchEvent(new Event("onChange"));
+
 					markers.push(marker);
 					
 					google.maps.event.addListener(marker, 'dragend', function() 
