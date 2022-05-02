@@ -10,7 +10,8 @@ app.use(cors());
 
 
 //test route
-app.get("/",(req,res) => res.json({ success : "Hello World"}));
+//app.get("/",(req,res) => res.json({ success : "Hello World"}));
+app.get("index.html");
 
 app.use("/widgets", widgets);
 
