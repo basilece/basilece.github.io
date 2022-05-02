@@ -1,7 +1,26 @@
 (function () {
     let _shadowRoot;
     let tmpl = document.createElement("template");
-    tmpl.innerHTML = ``;
+    tmpl.innerHTML = `<form id="form">
+    <fieldset>
+        <legend>Map Properties</legend>
+            <table>
+                <tr>
+                    <td>Map Width</td>
+                    <td>
+                       <input id="map_width" type="text" size="40" maxlength="40">
+                    </td>
+                </tr> 
+                <tr>
+                <td>Map Height</td>
+                <td>
+                   <input id="map_height" type="text" size="40" maxlength="40">
+                </td>
+            </tr> 
+            </table>
+        <input type="submit" style="display:none;">
+    </fieldset>
+</form>`;
 
     class GeopickerAps extends HTMLElement {
         constructor() {

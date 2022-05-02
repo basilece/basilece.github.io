@@ -77,8 +77,19 @@
 			"type": "string",
 			"description": "City",
 			"default" : ""
-		}
+		},
 
+		"mapWidth": {
+			"type": "integer",
+			"description": "Map Width",
+			"default" : 600
+		},
+
+		"mapHeight": {
+			"type": "integer",
+			"description": "Map Height",
+			"default" : 400
+		}	
 
 		
 		
