@@ -250,11 +250,6 @@
 		that._export_settings.TextAdressLong = results.geometry.location.lng();
 		that._export_settings.TextAdressLat = results.geometry.location.lat();
         
-
-		results.address_components.array.forEach(element => {
-			console.log(`This is each element : ${element}`);
-		});
-
 		for (var i = 0; i < results.address_components.length; i++) {
 			for (var j = 0; j < results.address_components[i].types.length; j++) {
 			  if (results.address_components[i].types[j] == "street_number") {
