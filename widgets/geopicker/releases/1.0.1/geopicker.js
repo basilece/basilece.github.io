@@ -40,6 +40,8 @@
 			this._export_settings.PostalCode = "";
 			this._export_settings.Country = "";
 			this._export_settings.City = "";
+			this._export_settings.mapWidth = 600;
+			this._export_settings.mapHeight = 400;
 
             this.addEventListener("click", event => {
                 console.log('click');
@@ -87,6 +89,11 @@
 				mapMarker(that);
 				
 			}
+
+			//Map Size
+			let mapCanvas = that.shadowRoot.getElementById("mapcanvas");
+			mapCanvas.width = that._export_settings.mapWidth;
+			mapCanvas.height = that._export_settings.mapHeight;
         }
 
 		//GETTERS AND SETTERS
@@ -128,6 +135,21 @@
 		get City() {
             return this._export_settings.City;
         }
+
+		get mapWidth() {
+            return this._export_settings.mapWidth;
+        }
+		set mapWidth(value) {
+            this._export_settings.mapWidth = value;
+        }
+
+		get mapHeight() {
+            return this._export_settings.mapHeight;
+        }
+		set mapHeight(value) {
+            this._export_settings.mapHeight = value;
+        }
+
 
 
         static get observedAttributes() {
