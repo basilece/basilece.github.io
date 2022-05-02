@@ -46,17 +46,17 @@
 		}
 
         set mapWidth(newWidth) {
-			this._shadowRoot.getElementById("map_width").value = newWidth;
+			_shadowRoot.getElementById("map_width").value = newWidth;
 		}
 		get mapWidth() {
-			return this._shadowRoot.getElementById("map_width").value;
+			return _shadowRoot.getElementById("map_width").value;
 		}
 
         set mapHeight(newHeight) {
-			this._shadowRoot.getElementById("map_height").value = newHeight;
+			_shadowRoot.getElementById("map_height").value = newHeight;
 		}
 		get  mapHeight() {
-			return this._shadowRoot.getElementById("map_height").value;
+			return _shadowRoot.getElementById("map_height").value;
 		}
 
     }
