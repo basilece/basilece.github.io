@@ -251,7 +251,7 @@
 		that._export_settings.TextAdressLat = results.geometry.location.lat();
         
 		results.address_components.forEach(addressComponent => {
-			console.log(`output Component : ${addressComponent.types} : ${addressComponent.long_name}`);
+			console.log(`output Component - ${addressComponent.types} : ${addressComponent.long_name}`);
 		});
 
 		for (var i = 0; i < results.address_components.length; i++) {
