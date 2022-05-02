@@ -1,16 +1,5 @@
 (function () {
 
-	const express = require("express");
-	const router = express.Router();
-	const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-
-	router.get("/",(req,res) => {
-		res.json({ success : "Hello Widget"})
-	});
-
-
-module.exports = router;
-
 	let _shadowRoot;
     let tmpl = document.createElement("template");
     tmpl.innerHTML = `
@@ -69,7 +58,7 @@ module.exports = router;
             if ( that._firstLoadLib === 0) {
 				 that._firstLoadLib = 1;
 				 
-                let googlemjs = `https://maps.googleapis.com/maps/api/js?v=weekly&key=${process.env.GOOGLEMAP_API_KEY}`;
+                let googlemjs = `https://maps.googleapis.com/maps/api/js?v=weekly&key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&`;
                 async function LoadLibs() {
                     try {
                         await loadScript( googlemjs , _shadowRoot);
