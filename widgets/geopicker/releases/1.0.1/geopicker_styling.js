@@ -12,11 +12,6 @@
                     </td>
                 </tr> 
                 <tr>
-                <td>Map Height</td>
-                <td>
-                   <input id="map_height" type="text" size="40" maxlength="40">
-                </td>
-            </tr> 
             </table>
         <input type="submit" style="display:none;">
     </fieldset>
