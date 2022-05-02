@@ -258,7 +258,7 @@
 				if (component.type == "locality")      { 	that._export_settings.City = addressComponent.long_name;}
 				if (component.type == "country")       { 	that._export_settings.Country = addressComponent.long_name;}
 
-			})
+			});
 			
 			
 		});
