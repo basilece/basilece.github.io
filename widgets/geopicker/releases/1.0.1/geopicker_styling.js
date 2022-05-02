@@ -27,14 +27,15 @@
 				this._submit.bind(this));
         }
 
-        _submit(e) {
+		_submit(e) {
 			e.preventDefault();
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
-					detail: {
-						properties: {
-							
-						}
+				detail: {
+					properties: {
+						mapWidth : 600,
+                        mapHeight : 400
 					}
+				}
 			}));
 		}
 
