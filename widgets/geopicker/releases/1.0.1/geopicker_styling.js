@@ -38,11 +38,25 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 				detail: {
 					properties: {
-						mapWidth : 600,
-                        mapHeight : 400
+						mapWidth : this.mapWidth,
+                        mapHeight : this.mapHeight
 					}
 				}
 			}));
+		}
+
+        set mapWidth(newWidth) {
+			this._shadowRoot.getElementById("map_width").value = newWidth;
+		}
+		get mapWidth() {
+			return this._shadowRoot.getElementById("map_width").value;
+		}
+
+        set mapHeight(newHeight) {
+			this._shadowRoot.getElementById("map_height").value = newHeight;
+		}
+		get  mapHeight() {
+			return this._shadowRoot.getElementById("map_height").value;
 		}
 
     }
