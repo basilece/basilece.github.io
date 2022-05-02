@@ -57,7 +57,8 @@
 
             if ( that._firstLoadLib === 0) {
 				 that._firstLoadLib = 1;
-                let googlemjs = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYtB1oVrAXkosfjU4qaUSU650_KXJWjQ&v=weekly";
+				 
+                let googlemjs = `https://maps.googleapis.com/maps/api/js?v=weekly&key=${process.env.GOOGLEMAP_API_KEY}`;
                 async function LoadLibs() {
                     try {
                         await loadScript( googlemjs , _shadowRoot);

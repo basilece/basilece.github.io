@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 const port = 3000;
 
-const widget =  require("./widgets");
+const widgets =  require("./widgets");
 app.use(express.json());
 app.use(cors());
 
