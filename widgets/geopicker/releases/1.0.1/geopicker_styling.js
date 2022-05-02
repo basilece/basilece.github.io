@@ -1,21 +1,22 @@
 (function () {
     let _shadowRoot;
     let tmpl = document.createElement("template");
-    tmpl.innerHTML = `<form id="form">
-    <fieldset>
-        <legend>Map Properties</legend>
-            <table>
-                <tr>
-                    <td>Map Width</td>
-                    <td>
-                       <input id="map_width" type="text" size="40" maxlength="40">
-                    </td>
-                </tr> 
-                <tr>
-            </table>
-        <input type="submit" style="display:none;">
-    </fieldset>
-</form>`;
+    tmpl.innerHTML = `
+	<form id="form">
+		<fieldset>
+			<legend>Colored Box Properties</legend>
+				<table>
+					<tr>
+						<td>Color</td>
+						<td>
+						   <input id="styling_color" type="text" size="40" maxlength="40">
+						</td>
+				    </tr> 
+				</table>
+			<input type="submit" style="display:none;">
+		</fieldset>
+	</form>
+	`;
 
     class GeopickerAps extends HTMLElement {
         constructor() {
