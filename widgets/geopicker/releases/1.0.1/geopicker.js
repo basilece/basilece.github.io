@@ -250,38 +250,26 @@
 		that._export_settings.TextAdressLong = results.geometry.location.lng();
 		that._export_settings.TextAdressLat = results.geometry.location.lat();
         
-		results.address_components.forEach(addressComponent => {
-			addressComponent.forEach(component => {
-				if (component.type == "street_number") { 	that._export_settings.StreetNo = addressComponent.long_name;}
-				if (component.type == "route")         { 	that._export_settings.Street = addressComponent.long_name;}
-				if (component.type == "postal_code")   { 	that._export_settings.PostalCode = addressComponent.long_name;}
-				if (component.type == "locality")      { 	that._export_settings.City = addressComponent.long_name;}
-				if (component.type == "country")       { 	that._export_settings.Country = addressComponent.long_name;}
 
-			});
-			
-			
-		});
-
-		// for (var i = 0; i < results.address_components.length; i++) {
-		// 	for (var j = 0; j < results.address_components[i].types.length; j++) {
-		// 	  if (results.address_components[i].types[j] == "street_number") {
-		// 		that._export_settings.StreetNo = results.address_components[i].long_name;
-		// 	  }
-		// 	  if (results.address_components[i].types[j] == "route") {
-		// 		that._export_settings.Street = results.address_components[i].long_name;
-		// 	  }
-		// 	  if (results.address_components[i].types[j] == "postal_code") {
-		// 		that._export_settings.PostalCode = results.address_components[i].long_name;
-		// 	  }
-		// 	  if (results.address_components[i].types[j] == "locality") {
-		// 		that._export_settings.City = results.address_components[i].long_name;
-		// 	  }
-		// 	  if (results.address_components[i].types[j] == "country") {
-		// 		that._export_settings.Country = results.address_components[i].long_name;
-		// 	  }
-		// 	}
-		//   }
+		for (var i = 0; i < results.address_components.length; i++) {
+			for (var j = 0; j < results.address_components[i].types.length; j++) {
+			  if (results.address_components[i].types[j] == "street_number") {
+				that._export_settings.StreetNo = results.address_components[i].long_name;
+			  }
+			  if (results.address_components[i].types[j] == "route") {
+				that._export_settings.Street = results.address_components[i].long_name;
+			  }
+			  if (results.address_components[i].types[j] == "postal_code") {
+				that._export_settings.PostalCode = results.address_components[i].long_name;
+			  }
+			  if (results.address_components[i].types[j] == "locality") {
+				that._export_settings.City = results.address_components[i].long_name;
+			  }
+			  if (results.address_components[i].types[j] == "country") {
+				that._export_settings.Country = results.address_components[i].long_name;
+			  }
+			}
+		  }
 
 		that.dispatchEvent(new CustomEvent("propertiesChanged", {
 			detail: {
