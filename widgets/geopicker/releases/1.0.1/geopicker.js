@@ -253,10 +253,10 @@
 		results.address_components.forEach(addressComponent => {
 			addressComponent.forEach(component => {
 				if (component.type == "street_number") { 	that._export_settings.StreetNo = addressComponent.long_name;}
-				if (component.type == "route") { 			that._export_settings.Street = addressComponent.long_name;}
-				if (component.type == "postal_code") { 		that._export_settings.PostalCode = addressComponent.long_name;}
-				if (component.type == "locality") { 		that._export_settings.City = addressComponent.long_name;}
-				if (component.type == "country") { 			that._export_settings.Country = addressComponent.long_name;}
+				if (component.type == "route")         { 	that._export_settings.Street = addressComponent.long_name;}
+				if (component.type == "postal_code")   { 	that._export_settings.PostalCode = addressComponent.long_name;}
+				if (component.type == "locality")      { 	that._export_settings.City = addressComponent.long_name;}
+				if (component.type == "country")       { 	that._export_settings.Country = addressComponent.long_name;}
 
 			})
 			
