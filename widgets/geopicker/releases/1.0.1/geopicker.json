@@ -15,6 +15,13 @@
 			"url": "https://basilece.github.io/widgets/geopicker/releases/1.0.1/geopicker.js",
 			"integrity": "",
 			"ignoreIntegrity": true
+		},
+		{
+			"kind": "styling",
+			"tag": "basilece-geopicker-aps",
+			"url": "https://basilece.github.io/widgets/geopicker/releases/1.0.1/geopicker_styling.js",
+			"integrity": "",
+			"ignoreIntegrity": true
 		}
 
 	],
