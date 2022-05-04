@@ -1,2 +1,3 @@
 widgets/restapi/resrapi.js
 .env
+/node_modules

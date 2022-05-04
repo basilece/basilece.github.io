@@ -4,13 +4,13 @@ const cors = require("cors");
 const app = express();
 const port = 3000;
 
-const widgets =  require("./widgets");
+const widgets =  require("./widgets/index");
 app.use(express.json());
 app.use(cors());
 
 
 //test route
-//app.get("/",(req,res) => res.json({ success : "Hello World"}));
+app.get("/",(req,res) => res.json({ success : "Hello World"}));
 app.get("index.html");
 
 app.use("/widgets", widgets);
