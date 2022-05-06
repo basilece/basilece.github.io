@@ -1,0 +1,183 @@
+{
+	"id": "basilece.sceneview",
+	"version": "1.0.1",
+	"name": "ArcGIS SceneView",
+	"description": "ArcGIS SceneView",
+	"newInstancePrefix": "Sceneview",
+	"icon": "https://basilece.github.io/widgets/SceneView/releases/1.0.1/icon.png",
+	"vendor": "basilece",
+	"eula": "",
+	"license": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "basilece-geopicker",
+			"url": "https://basilece.github.io/widgets/SceneView/releases/1.0.1/sceneview.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"TextVal": {
+			"type": "string",
+			"description": "This is the address",
+			"default" : "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA"
+		},
+		
+		"TextAdressLong": {
+			"type": "string",
+			"description": "This is the address longitude",
+			"default" : ""
+		},	
+	    "TextAdressLat": {
+			"type": "string",
+			"description": "This is the address latitude",
+			"default" : ""
+		},
+
+		"ExecuteValue": {
+			"type": "boolean",
+			"description": "This is a boolean for execution",
+			"default" : false
+		},
+
+		"Street": {
+			"type": "string",
+			"description": "Street (route)",
+			"default" : ""
+		},
+		
+		"StreetNo": {
+			"type": "string",
+			"description": "Street Number",
+			"default" : ""
+		},
+
+		"PostalCode": {
+			"type": "string",
+			"description": "Postal Code",
+			"default" : ""
+		},
+
+		"Country": {
+			"type": "string",
+			"description": "Country",
+			"default" : ""
+		},
+
+		"City": {
+			"type": "string",
+			"description": "City",
+			"default" : ""
+		},
+
+		"mapWidth": {
+			"type": "integer",
+			"description": "Map Width",
+			"default" : 600
+		},
+
+		"mapHeight": {
+			"type": "integer",
+			"description": "Map Height",
+			"default" : 400
+		}	
+
+		
+		
+	
+	},
+
+	"methods": {
+
+	"getGeolocationLong": {
+		"returnType": "string",
+		"description": "Returning Geolocation Longtitude",
+		"parameters": [],
+		"body": "return this.TextAdressLong;"
+      } ,
+
+	"Execute": {
+		"description": "Executing Geocoding Search",
+		"parameters": [{
+			"name": "vExecute",
+			"type": "boolean",
+			"description": "Set as true to execute"
+		}],
+		"body": "this.ExecuteValue = vExecute;"
+	},
+      
+      
+ 	"getGeolocationLat": {
+		"returnType": "string",
+		"description": "Returning the Geolocation Latitude",
+		"parameters": [],
+		"body": "return this.TextAdressLat;"
+      },
+
+	"getStreet": {
+		"returnType": "string",
+		"description": "Returning Street (Route)",
+		"parameters": [],
+		"body": "return this.Street;"
+      },
+
+	  "getStreetNo": {
+		"returnType": "string",
+		"description": "Returning Street Number",
+		"parameters": [],
+		"body": "return this.StreetNo;"
+      },
+
+	  "getPostalCode": {
+		"returnType": "string",
+		"description": "Returning Postal Code",
+		"parameters": [],
+		"body": "return this.PostalCode;"
+      },
+
+	  "getCountry": {
+		"returnType": "string",
+		"description": "Returning Country",
+		"parameters": [],
+		"body": "return this.Country;"
+      },
+
+	  "getCity": {
+		"returnType": "string",
+		"description": "Returning City",
+		"parameters": [],
+		"body": "return this.City;"
+      },
+
+	  
+	  "setAddressVal": {
+		"description": "set Address Text Value",
+		"parameters": [
+			{
+				"name": "newAddress",
+				"type": "string",
+				"description": "Type the new Address"
+			}
+		],
+		"body": "this.TextVal = newAddress;"
+	},
+
+	"getAddressVal": {
+		"returnType": "string",
+		"description": "Returning Full Address",
+		"parameters": [],
+		"body": "return this.TextVal;"
+      } 
+        
+        
+	},
+	"events": {
+		"onChange": {
+			"description": "Called when the value is changed"
+		},
+		"onStart": {
+			"description": "Execute Initialization of the map on start"
+		}
+	}
+}
