@@ -166,7 +166,7 @@
 
 
 
-	customElements.define("basilece-geopicker", Geopicker);
+	customElements.define("basilece-sceneview", SceneView);
 
 
 	//Utilities
@@ -183,11 +183,12 @@
 	
 		  });
 
+		  let mapcanvas = that.shadowRoot.getElementById("mapcanvas");
 		  const view = new MapView({
 			map: map,
 			center: [-118.805, 34.027], // Longitude, latitude
 			zoom: 13, // Zoom level
-			container: "mapcanvas" // Div element
+			container: mapcanvas // Div element
 		  })
 
 	
