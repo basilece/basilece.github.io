@@ -11,7 +11,7 @@
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "basilece-geopicker",
+			"tag": "basilece-sceneview",
 			"url": "https://basilece.github.io/widgets/SceneView/releases/1.0.1/sceneview.js",
 			"integrity": "",
 			"ignoreIntegrity": true
