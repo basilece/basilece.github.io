@@ -1,8 +1,5 @@
 (function () {
 
-	const mySceneView = require(["esri/views/SceneView"], (SceneView) => { AAPKa1a6981de3f5428caa4a30d6a896d398_0KdplPfGlzZeiNoUl7z5_6kPnpU1L3z7yaGw2w5Kq4gU4rRpJRWJMqDw7LY0Q9C });
-
-
 	let _shadowRoot;
     let tmpl = document.createElement("template");
     tmpl.innerHTML = `
@@ -63,16 +60,19 @@
             if ( that._firstLoadLib === 0) {
 				 that._firstLoadLib = 1;
 
-				// Create a basic SceneView instance with a basemap and world elevation
-				const view = new SceneView({
-					// An instance of Map or WebScene
-					map: new Map({
-					  basemap: "hybrid"
-					}),
-				  
-					// The id of a DOM element (may also be an actual DOM element)
-					container: "mapCanvas"
-				  });
+				 let arcgisjs = `https://js.arcgis.com/4.23/`;
+				 async function LoadLibs() {
+					 try {
+						 await loadScript( arcgisjs , _shadowRoot);
+					 } catch (e) {
+						 alert(e);
+					 } finally {
+						 loadthis( that, changedProperties);
+						 console.log(["that: ",that]);
+					 }
+				 }
+				 LoadLibs(); 
+
 				console.log(["this: ",this]); 
             }
 
@@ -173,14 +173,22 @@
     function loadthis( that, changedProperties){
   
 
-		var latlng = new google.maps.LatLng(-34.397, 150.644);
-		var mapOptions = {
-			zoom: 17,
-			center: latlng
-		}
+		require(["esri/config","esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) {
 
-		let mapcanvas = that.shadowRoot.getElementById("mapcanvas");
-		map = new google.maps.Map(mapcanvas, mapOptions);
+			esriConfig.apiKey = "AAPKa1a6981de3f5428caa4a30d6a896d398_0KdplPfGlzZeiNoUl7z5_6kPnpU1L3z7yaGw2w5Kq4gU4rRpJRWJMqDw7LY0Q9C";
+	
+			const map = new Map({
+			  basemap: "arcgis-topographic" // Basemap layer service
+			});
+	
+		  });
+
+		  const view = new MapView({
+			map: map,
+			center: [-118.805, 34.027], // Longitude, latitude
+			zoom: 13, // Zoom level
+			container: "mapcanvas" // Div element
+		  })
 
 	
 	}
