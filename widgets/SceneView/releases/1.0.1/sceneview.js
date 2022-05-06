@@ -1,6 +1,6 @@
 (function () {
 
-	require(["esri/views/SceneView"], (SceneView) => { AAPKa1a6981de3f5428caa4a30d6a896d398_0KdplPfGlzZeiNoUl7z5_6kPnpU1L3z7yaGw2w5Kq4gU4rRpJRWJMqDw7LY0Q9C });
+	const mySceneView = require(["esri/views/SceneView"], (SceneView) => { AAPKa1a6981de3f5428caa4a30d6a896d398_0KdplPfGlzZeiNoUl7z5_6kPnpU1L3z7yaGw2w5Kq4gU4rRpJRWJMqDw7LY0Q9C });
 
 
 	let _shadowRoot;
