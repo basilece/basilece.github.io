@@ -34,8 +34,8 @@
             this._export_settings.weatherTemp = "";
             this._export_settings.weatherCountry = "";
 			this._export_settings.weatherCity = "";
-			this._export_settings.weatherLong = "";
-			this._export_settings.weatherLat = "";
+			this._export_settings.weatherLong = "23.7283052";
+			this._export_settings.weatherLat = "37.9839412";
 
 
             this.addEventListener("click", event => {
