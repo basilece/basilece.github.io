@@ -40,13 +40,13 @@
 		"weatherLat": {
 			"type": "string",
 			"description": "This is lat",
-			"default" : ""
+			"default" : "37.9839412"
 		},
 
 		"weatherLong": {
 			"type": "string",
 			"description": "This is long",
-			"default" : ""
+			"default" : "23.7283052"
 		},
 		
 		"weatherCountry": {
