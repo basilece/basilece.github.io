@@ -51,6 +51,16 @@
         onCustomWidgetAfterUpdate(changedProperties) {
             console.log(changedProperties);
             var that = this;
+
+            that.dispatchEvent(new CustomEvent("propertiesChanged", {
+                detail: {
+                    properties: {
+                        weatherLat : that._export_settings.weatherLat,
+                        weatherLong : that._export_settings.weatherLong
+                    }
+                }
+            }));
+
             const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${that._export_settings.weatherLat}&lon=${that._export_settings.weatherLong}&appid=${API_KEY}`;
 			let request = new XMLHttpRequest;
 

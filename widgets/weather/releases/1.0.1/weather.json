@@ -29,7 +29,7 @@
 		"weatherTemp": {
 			"type": "integer",
 			"description": "This is Weather Temperature in Celcius",
-			"default" : ""
+			"default" : 0
 		},	
 	    "weatherCity": {
 			"type": "string",
@@ -40,7 +40,7 @@
 		"weatherLat": {
 			"type": "string",
 			"description": "This is lat",
-			"default" : false
+			"default" : ""
 		},
 
 		"weatherLong": {
