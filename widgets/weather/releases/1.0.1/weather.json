@@ -1,0 +1,137 @@
+{
+	"id": "basilece.weather",
+	"version": "1.0.1",
+	"name": "Weather Widget",
+	"description": "This is a weather widget from SAC Applications",
+	"newInstancePrefix": "Weather",
+	"icon": "https://basilece.github.io/widgets/weather/releases/1.0.1/icon.png",
+	"vendor": "basilece",
+	"eula": "",
+	"license": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "basilece-weather",
+			"url": "https://basilece.github.io/widgets/weather/releases/1.0.1/weather.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+
+
+	],
+	"properties": {
+		"weatherDesc": {
+			"type": "string",
+			"description": "This is the Weather Description",
+			"default" : ""
+		},
+		
+		"weatherTemp": {
+			"type": "integer",
+			"description": "This is Weather Temperature in Celcius",
+			"default" : ""
+		},	
+	    "weatherCity": {
+			"type": "string",
+			"description": "This is the City",
+			"default" : ""
+		},
+
+		"weatherLat": {
+			"type": "string",
+			"description": "This is lat",
+			"default" : false
+		},
+
+		"weatherLong": {
+			"type": "string",
+			"description": "This is long",
+			"default" : ""
+		},
+		
+		"weatherCountry": {
+			"type": "string",
+			"description": "This is country",
+			"default" : ""
+		}
+
+
+	},
+
+	"methods": {
+
+	"getWeatherDesc": {
+		"returnType": "string",
+		"description": "Returning weather description (eg. Clear, Cloudy etc)",
+		"parameters": [],
+		"body": "return this.weatherDesc;"
+      } ,
+
+          
+ 	"getWeatherTemp": {
+		"returnType": "integer",
+		"description": "Returning the curent Temperature",
+		"parameters": [],
+		"body": "return this.weatherTemp;"
+      },
+
+	"getWeatherCity": {
+		"returnType": "string",
+		"description": "Returning City",
+		"parameters": [],
+		"body": "return this.weatherCity;"
+      },
+
+	  "getWeatherCountry": {
+		"returnType": "string",
+		"description": "Returning  Country",
+		"parameters": [],
+		"body": "return this.weatherCountry;"
+      },
+
+	  "getLat": {
+		"returnType": "string",
+		"description": "Returning Latitude",
+		"parameters": [],
+		"body": "return this.weatherLat;"
+      },
+
+	  "getLong": {
+		"returnType": "string",
+		"description": "Returning Longitude",
+		"parameters": [],
+		"body": "return this.weatherLong;"
+      },
+	  
+	  "setLat": {
+		"description": "set Latitude",
+		"parameters": [
+			{
+				"name": "newLat",
+				"type": "string",
+				"description": "Input the Latitude"
+			}
+		],
+		"body": "this.weatherLat = newLat;"
+	},
+
+	"setLong": {
+		"description": "set Longitude",
+		"parameters": [
+			{
+				"name": "newLong",
+				"type": "string",
+				"description": "Input the Longitude"
+			}
+		],
+		"body": "this.weatherLat = newLong;"
+	}
+        
+        
+	},
+	"events": {
+		"onChange": {
+			"description": "Called when the value is changed"
+		}
+	}
+}
