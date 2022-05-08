@@ -60,28 +60,29 @@
 			request.open("GET", weatherURL);
 			request.send();
 
-			request.onload = () => {
+			request.onload = ()=> {
 				console.log(request);
 				if (request.status === 200){
-					console.log(JSON.parse(request.response));
+                    console.log(JSON.parse(request.response));
+
+                    var data = JSON.parse(request.responseText);
+                    that._export_settings.weatherTemp = data.main.temp;
+        
+                    that.dispatchEvent(new CustomEvent("propertiesChanged", {
+                        detail: {
+                            properties: {
+                                weatherTemp : that._export_settings.weatherTemp
+                              
+                            }
+                        }
+                    }));
+                    
 				} else {
 					console.log(`error ${request.status} ${request.statusText}`);
 				}
 
 			}
-            console.log(JSON.parse(request.response));
 
-            var data = JSON.parse(request.responseText);
-            that._export_settings.weatherTemp = data.main.temp;
-
-            that.dispatchEvent(new CustomEvent("propertiesChanged", {
-                detail: {
-                    properties: {
-                        weatherTemp : that._export_settings.weatherTemp
-                      
-                    }
-                }
-            }));
 
 
 
