@@ -54,7 +54,7 @@
             
 
             //const weatherlatlonURL = `https://api.openweathermap.org/data/2.5/weather?lat=${that._export_settings.weatherLat}&lon=${that._export_settings.weatherLong}&units=metric&appid=${API_KEY}`;
-			const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${that._export_settings.weatherCountry},${that._export_settings.weatherCity}&appid=${API_KEY}`
+			const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${that._export_settings.weatherCountry},${that._export_settings.weatherCity}&units=metric&appid=${API_KEY}`
             let request = new XMLHttpRequest;
 
 			request.open("GET", weatherURL);
@@ -76,7 +76,7 @@
                             }
                         }
                     }));
-                    
+
 				} else {
 					console.log(`error ${request.status} ${request.statusText}`);
 				}
