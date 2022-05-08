@@ -60,7 +60,7 @@
 			request.open("GET", weatherURL);
 			request.send();
 
-			request.onload = function()  {
+			request.onload = () =>  {
 				console.log(request);
 				if (request.status === 200){
                     console.log(JSON.parse(request.response));
@@ -82,6 +82,8 @@
 				}
 
 			}
+
+            request.onload();
 
 
 
