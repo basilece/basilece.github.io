@@ -1,5 +1,7 @@
 (function () {
 
+
+	
 	let _shadowRoot;
     let tmpl = document.createElement("template");
     tmpl.innerHTML = `
@@ -172,20 +174,13 @@
 	//Utilities
     function loadthis( that, changedProperties){
   
-
-		require(["esri/config","esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) {
-
-			esriConfig.apiKey = "AAPKa1a6981de3f5428caa4a30d6a896d398_0KdplPfGlzZeiNoUl7z5_6kPnpU1L3z7yaGw2w5Kq4gU4rRpJRWJMqDw7LY0Q9C";
-	
-			const map = new Map({
-			  basemap: "arcgis-topographic" // Basemap layer service
-			});
-	
-		  });
+        
+		
+        
 
 		  let mapcanvas = that.shadowRoot.getElementById("mapcanvas");
 		  const view = new MapView({
-			map: map,
+			map: Map,
 			center: [-118.805, 34.027], // Longitude, latitude
 			zoom: 13, // Zoom level
 			container: mapcanvas // Div element
