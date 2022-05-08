@@ -51,18 +51,11 @@
         onCustomWidgetAfterUpdate(changedProperties) {
             console.log(changedProperties);
             var that = this;
+            
 
-            that.dispatchEvent(new CustomEvent("propertiesChanged", {
-                detail: {
-                    properties: {
-                        weatherLat : that._export_settings.weatherLat,
-                        weatherLong : that._export_settings.weatherLong
-                    }
-                }
-            }));
-
-            const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${that._export_settings.weatherLat}&lon=${that._export_settings.weatherLong}&units=metric&appid=${API_KEY}`;
-			let request = new XMLHttpRequest;
+            //const weatherlatlonURL = `https://api.openweathermap.org/data/2.5/weather?lat=${that._export_settings.weatherLat}&lon=${that._export_settings.weatherLong}&units=metric&appid=${API_KEY}`;
+			const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${that._export_settings.weatherCountry},${that._export_settings.weatherCity}&appid=${API_KEY}`
+            let request = new XMLHttpRequest;
 
 			request.open("GET", weatherURL);
 			request.send();
@@ -124,9 +117,18 @@
             return this._export_settings.weatherCity;
         }
 
+        set weatherCity(value){
+			this._export_settings.weatherCity = value;
+		}
+
+
 		get weatherCountry() {
             return this._export_settings.weatherCountry;
         }
+
+        set weatherCountry(value){
+			this._export_settings.weatherCountry = value;
+		}
 
 		get weatherTemp() {
             return this._export_settings.weatherTemp;

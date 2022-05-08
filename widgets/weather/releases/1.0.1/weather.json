@@ -34,7 +34,7 @@
 	    "weatherCity": {
 			"type": "string",
 			"description": "This is the City",
-			"default" : ""
+			"default" : "Athens"
 		},
 
 		"weatherLat": {
@@ -52,7 +52,7 @@
 		"weatherCountry": {
 			"type": "string",
 			"description": "This is country",
-			"default" : ""
+			"default" : "Greece"
 		}
 
 
@@ -125,6 +125,30 @@
 			}
 		],
 		"body": "this.weatherLat = newLong;"
+	},
+
+	"setCountry": {
+		"description": "Set Country",
+		"parameters": [
+			{
+				"name": "newCountry",
+				"type": "string",
+				"description": "Input the Country"
+			}
+		],
+		"body": "this.weatherCountry = newCountry;"
+	},
+
+	"setCity": {
+		"description": "Set City",
+		"parameters": [
+			{
+				"name": "newCity",
+				"type": "string",
+				"description": "Input the City"
+			}
+		],
+		"body": "this.weatherCountry = newCity;"
 	}
         
         
