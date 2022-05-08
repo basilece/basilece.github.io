@@ -77,7 +77,8 @@
 
 			}
             console.log(JSON.parse(request.response));
-            data = JSON.parse(request.response);
+            
+            var data = JSON.parse(request.responseText);
             that_._export_settings.weatherTemp = data.main.temp;
 
             that.dispatchEvent(new CustomEvent("propertiesChanged", {
