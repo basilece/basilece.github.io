@@ -76,6 +76,7 @@
 				}
 
 			}
+            console.log(JSON.parse(request.response));
 
 
         }
